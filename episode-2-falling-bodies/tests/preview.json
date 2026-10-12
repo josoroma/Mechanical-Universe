@@ -1,0 +1,9 @@
+[
+  ["click", "#reset"],
+  ["eval", "({lang:document.documentElement.lang,parts:document.querySelectorAll('[data-part]').length,mode:document.querySelector('.stage').dataset.mode,time:document.querySelector('#model-time').textContent,width:document.documentElement.scrollWidth})"],
+  ["shot", "shots/desktop-light.png", ".page", 1],
+  ["click", "[data-mode=drop]"],
+  ["shot", "shots/drop-light.png", ".page", 1],
+  ["click", "#theme"],
+  ["shot", "shots/drop-dark.png", ".page", 1]
+]

@@ -1,0 +1,24 @@
+[
+  [
+    "wait",
+    150
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/gravity-dark-detail.png",
+    ".instrument[data-kind=gravity]",
+    4
+  ],
+  [
+    "shot",
+    "shots/electric-dark-detail.png",
+    ".instrument[data-kind=electric]",
+    4
+  ]
+]

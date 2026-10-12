@@ -1,0 +1,374 @@
+[
+  [
+    "wait",
+    150
+  ],
+  [
+    "eval",
+    "(()=>{window.stage=document.querySelector('.stage');if(!(document.documentElement.lang==='es'))throw Error(\"Idioma\");if(!(document.documentElement.scrollWidth<=innerWidth+1))throw Error(\"Desbordamiento horizontal\");if(!(document.getElementById('play-label').textContent==='Avanzar'))throw Error(\"Movimiento reducido\");})()"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.phase-Math.PI/36)<1e-7))throw Error(\"Teclado: 5 grados\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('play').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.phase-Math.PI/9)<1e-7))throw Error(\"Paso reducido: 15 grados\");})()"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.3,
+    0.5,
+    0.6,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase>1))throw Error(\"Arrastrar cambia la fase\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "move",
+    ".stage",
+    0.55,
+    0.52
+  ],
+  [
+    "shot",
+    "shots/hover-dark.png",
+    ".stage",
+    1
+  ],
+  [
+    "eval",
+    "document.activeElement.blur();scrollTo(0,0)"
+  ],
+  [
+    "wait",
+    150
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/pendulum-detail-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    "shots/lines-dark.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=10;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(10*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=0.1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-0.1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('angle').value=65;document.getElementById('angle').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('mass').value=1;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*9.81*Math.tan(65*Math.PI/180))<1e-8))throw Error(\"Lectura del péndulo\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-mode=platform]').click()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.15;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.15)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(0*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=90;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=180;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('radius').value=0.85;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=60;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=270;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));if(!(Math.abs(+stage.dataset.force-1*(60*Math.PI/30)**2*0.85)<1e-8))throw Error(\"Lectura de la plataforma\");})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('mass').value=0.25;document.getElementById('mass').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('radius').value=0.65;document.getElementById('radius').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('rpm').value=30;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('phase').value=0;document.getElementById('phase').dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "shot",
+    "shots/platform-detail-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-compare=mass]').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.force-.5*Math.PI**2*.65)<1e-8))throw Error(\"Comparación: doble de masa\");})()"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-compare=mass]').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.force-.25*Math.PI**2*.65)<1e-8))throw Error(\"Regreso a la masa inicial\");})()"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-compare=rpm]').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.force-.25*(2*Math.PI)**2*.65)<1e-8))throw Error(\"Comparación: doble de giro\");})()"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-compare=rpm]').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(+stage.dataset.force-.25*Math.PI**2*.65)<1e-8))throw Error(\"Regreso al giro inicial\");})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('rpm').value=0;document.getElementById('rpm').dispatchEvent(new Event('input',{bubbles:true}));if(!(document.getElementById('period-value').textContent==='Sin giro'))throw Error(\"Período en reposo\");if(!(document.getElementById('force-vector').style.display==='none'))throw Error(\"Sin fuerza en reposo\");if(!(document.getElementById('velocity-vector').getAttribute('d')===''))throw Error(\"Sin velocidad en reposo\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.body.dataset.theme==='light'))throw Error(\"Cambio de tema\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();document.activeElement.blur();scrollTo(0,0);return 'Interacción, extremos, comparaciones, reposo y tema: correctos';})()"
+  ]
+]

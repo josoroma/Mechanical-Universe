@@ -1,0 +1,195 @@
+[
+  [
+    "eval",
+    "(()=>{window.check=(v,m)=>{if(!v)throw new Error(m)};window.input=(id,v,event='input')=>{let e=document.getElementById(id);e.value=v;e.dispatchEvent(new Event(event,{bubbles:true}))};window.pose=(p,x,amp=1,a=0)=>{document.querySelector('[data-profile='+p+']').click();input('amplitude',amp);input('a',a);input('x',x)};window.data=()=>document.querySelector('.stage').dataset;document.getElementById('reset').click();check(document.documentElement.lang==='es','Idioma');check(document.querySelectorAll('#machine>[data-part]').length===96,'Piezas');check(!document.querySelector('script[src],link[rel=stylesheet]'),'Página autónoma');return 'HTML autónomo en español';})()"
+  ],
+  [
+    "eval",
+    "(()=>{pose('constant',6);check(Math.abs(Number(data().net)-6)<1e-8,'Integral constant');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('ramp',6);check(Math.abs(Number(data().net)-4.5)<1e-8,'Integral ramp');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('wave',6);check(Math.abs(Number(data().net)-5.4)<1e-8,'Integral wave');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('signed',6);check(Math.abs(Number(data().net)-0)<1e-8,'Integral signed');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('signed',4.5,1.2);check(Math.abs(Number(data().r)+43.2)<1e-8,'Radio negativo');check(Number(data().rate)<0,'Giro inverso');check(Number(data().geometric)>Number(data().net),'Área geométrica');document.activeElement.blur();window.scrollTo(0,0);})()"
+  ],
+  [
+    "wait",
+    280
+  ],
+  [
+    "shot",
+    "shots/desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/lines-light.png"
+  ],
+  [
+    "click",
+    "#theme"
+  ],
+  [
+    "eval",
+    "(()=>{pose('constant',6);check(Math.abs(Number(data().net)-6)<1e-8,'Integral constant');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('ramp',6);check(Math.abs(Number(data().net)-4.5)<1e-8,'Integral ramp');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('wave',6);check(Math.abs(Number(data().net)-5.4)<1e-8,'Integral wave');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('signed',6);check(Math.abs(Number(data().net)-0)<1e-8,'Integral signed');check(Math.abs(Number(data().turns)*3-Number(data().net))<1e-8,'Calibración');return {perfil:data().profile,area:data().net,vueltas:data().turns};})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{pose('signed',4.5,1.2);check(Math.abs(Number(data().r)+43.2)<1e-8,'Radio negativo');check(Number(data().rate)<0,'Giro inverso');check(Number(data().geometric)>Number(data().net),'Área geométrica');document.activeElement.blur();window.scrollTo(0,0);})()"
+  ],
+  [
+    "wait",
+    280
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/lines-dark.png"
+  ],
+  [
+    "eval",
+    "(()=>{pose('signed',6,1,4);check(Number(data().net)<0,'Integral negativa desde a=4');check(Math.abs(Number(data().geometric)+Number(data().net))<1e-8,'Magnitud negativa');check(document.getElementById('area-positive').getAttribute('d')==='','Sin área positiva');check(Number(document.getElementById('x').min)===4,'Límite del control');input('a',2);check(Number(data().x)===2&&Number(data().net)===0,'Recalibración de a');input('amplitude',.5);check(Number(data().net)===0,'Recalibración de altura');return 'Límites y reinicio correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{pose('wave',2.7);input('n',4,'change');window.coarse=Math.abs(Number(data().error));input('n',32,'change');check(Math.abs(Number(data().error))<coarse/50,'Convergencia');check(document.querySelectorAll('#rectangles rect:not([hidden])').length===32,'32 rectángulos');document.getElementById('show-rectangles').click();check(document.querySelectorAll('#rectangles rect:not([hidden])').length===0,'Ocultar rectángulos');return 'Rectángulos y convergencia correctos';})()"
+  ],
+  [
+    "scroll",
+    "#cancellation"
+  ],
+  [
+    "click",
+    "#cancellation"
+  ],
+  [
+    "eval",
+    "(()=>{check(Math.abs(Number(data().net))<1e-9,'Cancelación');check(Math.abs(Number(data().geometric)-18/Math.PI)<1e-8,'Área geométrica');check(data().finished==='true','Fin');return 'Cancelación correcta';})()"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{check(Math.abs(Number(data().x)-.1)<1e-8,'Flecha');})()"
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "key",
+    " ",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{check(Number(data().x)===0,'Avanzar desde el final');document.getElementById('play').click();check(Math.abs(Number(data().x)-.1)<1e-8,'Paso sin animación');})()"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.4,
+    0.5,
+    0.6,
+    0.5,
+    10
+  ],
+  [
+    "eval",
+    "(()=>{check(Number(data().x)>1.1,'Arrastre del aparato');return 'Teclado y arrastre correctos';})()"
+  ],
+  [
+    "click",
+    "#zoom"
+  ],
+  [
+    "eval",
+    "(()=>{check(Number(document.querySelector('.drawing').getAttribute('viewBox').split(' ')[2])<500,'Ampliación');})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "click",
+    "#zoom"
+  ],
+  [
+    "scroll",
+    ".curve"
+  ],
+  [
+    "drag",
+    ".curve",
+    0.2,
+    0.45,
+    0.7,
+    0.45,
+    10
+  ],
+  [
+    "eval",
+    "(()=>{check(Number(data().x)>4&&Number(data().x)<4.6,'Arrastre en gráfica');check(document.documentElement.scrollWidth<=innerWidth,'Desbordamiento horizontal');return 'Gráfica, ampliación y anchura correctas';})()"
+  ]
+]

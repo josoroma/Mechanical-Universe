@@ -1,0 +1,51 @@
+[
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();window.scrollTo(0,0);const speed=document.getElementById('speed');speed.value=.25;speed.dispatchEvent(new Event('change',{bubbles:true}));document.getElementById('play').click()})()"
+  ],
+  [
+    "sheet",
+    "shots/motion-light.png",
+    350,
+    8,
+    ".stage",
+    0.7,
+    [
+      260,
+      70,
+      520,
+      540
+    ],
+    4
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();document.getElementById('theme').click();const speed=document.getElementById('speed');speed.value=.25;speed.dispatchEvent(new Event('change',{bubbles:true}));document.getElementById('play').click()})()"
+  ],
+  [
+    "wait",
+    220
+  ],
+  [
+    "sheet",
+    "shots/motion-dark.png",
+    350,
+    8,
+    ".stage",
+    0.7,
+    [
+      260,
+      70,
+      520,
+      540
+    ],
+    4
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();({reproduccion:document.querySelector('.stage').dataset.playing,idioma:document.documentElement.lang})})()"
+  ]
+]

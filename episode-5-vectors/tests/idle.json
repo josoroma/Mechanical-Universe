@@ -1,0 +1,32 @@
+[
+  [
+    "until",
+    "document.querySelector('.stage').dataset.mode==='ab'",
+    13000
+  ],
+  [
+    "key",
+    " ",
+    ".stage"
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.settled==='true'"
+  ],
+  [
+    "eval",
+    "window.pauseAngle=document.querySelector('.stage').dataset.orientation"
+  ],
+  [
+    "wait",
+    350
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.orientation===window.pauseAngle && document.querySelector('.stage').dataset.playing==='false' && document.querySelector('.stage').dataset.touring==='false'"
+  ],
+  [
+    "eval",
+    "({tourReached:document.querySelector('.stage').dataset.mode,paused:document.querySelector('.stage').dataset.playing==='false'})"
+  ]
+]

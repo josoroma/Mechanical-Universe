@@ -1,0 +1,150 @@
+[
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{window.stage=document.querySelector('.stage');if(!(stage.dataset.auto==='true'))throw Error(\"Tour inicial\");window.before=+stage.dataset.phase;})()"
+  ],
+  [
+    "wait",
+    350
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase!==before))throw Error(\"Animación inicial\");})()"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "move",
+    ".stage",
+    0.5,
+    0.5
+  ],
+  [
+    "wait",
+    100
+  ],
+  [
+    "eval",
+    "(()=>{window.before=+stage.dataset.phase})()"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase===before))throw Error(\"Pausa automática al pasar el puntero\");})()"
+  ],
+  [
+    "move",
+    ".masthead",
+    0.5,
+    0.5
+  ],
+  [
+    "wait",
+    250
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase!==before))throw Error(\"Reanudar tras salir del aparato\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('play').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(stage.dataset.playing==='false'&&stage.dataset.auto==='false'))throw Error(\"Pausa manual\");})()"
+  ],
+  [
+    "eval",
+    "document.getElementById('play').click()"
+  ],
+  [
+    "sheet",
+    "shots/motion-pendulum.png",
+    300,
+    8,
+    ".stage",
+    0.7,
+    null,
+    4
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-mode=platform]').click()"
+  ],
+  [
+    "sheet",
+    "shots/motion-platform.png",
+    300,
+    8,
+    ".stage",
+    0.7,
+    null,
+    4
+  ],
+  [
+    "eval",
+    "(()=>{Object.defineProperty(document,'hidden',{value:true,configurable:true});document.dispatchEvent(new Event('visibilitychange'));window.before=+stage.dataset.phase;})()"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase===before))throw Error(\"Pausa en pestaña oculta\");})()"
+  ],
+  [
+    "eval",
+    "(()=>{delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));})()"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase!==before))throw Error(\"Reanudar pestaña visible\");})()"
+  ],
+  [
+    "eval",
+    "(()=>{window.spacer=document.createElement('div');spacer.style.height='2600px';document.body.appendChild(spacer);scrollTo(0,document.body.scrollHeight)})()"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "(()=>{window.before=+stage.dataset.phase;if(!(stage.dataset.active==='false'))throw Error(\"Aparato fuera de pantalla\");})()"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase===before))throw Error(\"Pausa fuera de pantalla\");})()"
+  ],
+  [
+    "eval",
+    "(()=>{spacer.remove();stage.scrollIntoView({block:'center'});})()"
+  ],
+  [
+    "wait",
+    250
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+stage.dataset.phase!==before))throw Error(\"Reanudar al volver a pantalla\");document.getElementById('play').click();return 'Movimiento, puntero, pestaña oculta y fuera de pantalla: correctos';})()"
+  ]
+]

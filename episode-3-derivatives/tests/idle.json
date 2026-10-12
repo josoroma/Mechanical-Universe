@@ -1,0 +1,32 @@
+[
+  [
+    "until",
+    "document.querySelector('.stage').dataset.playing==='true' && document.querySelector('.stage').dataset.touring==='true'"
+  ],
+  [
+    "eval",
+    "window.initialX=document.querySelector('.stage').dataset.x"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.x!==window.initialX"
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.mode==='tangent'",
+    15000
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.profile==='wave' && document.querySelector('.stage').dataset.mode==='secant'",
+    15000
+  ],
+  [
+    "eval",
+    "({touring:document.querySelector('.stage').dataset.touring,profile:document.querySelector('.stage').dataset.profile,mode:document.querySelector('.stage').dataset.mode})"
+  ]
+]

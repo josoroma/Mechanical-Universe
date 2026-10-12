@@ -1,0 +1,214 @@
+[
+  [
+    "wait",
+    150
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(document.documentElement.lang==='es','Idioma');ok(d.auto==='false','Movimiento reducido');ok(document.querySelectorAll('[data-part]').length===112,'Piezas');return 'Idioma, movimiento reducido y 112 piezas correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"attraction\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));for(const [k,v]of Object.entries({\"distance\":0.5,\"mass\":1,\"q1\":1,\"q2\":-1,\"gravity\":2.66972e-10,\"electric\":3.595020714480001e-8,\"signedElectric\":3.595020714480001e-8,\"ratio\":134.65909213250833,\"net\":3.621717914480001e-8}))ok(near(+d[k],v),'attraction: '+k);return 'Atracción: lecturas correctas';})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"repulsion\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));for(const [k,v]of Object.entries({\"distance\":0.5,\"mass\":1,\"q1\":1,\"q2\":1,\"gravity\":2.66972e-10,\"electric\":3.595020714480001e-8,\"signedElectric\":-3.595020714480001e-8,\"ratio\":134.65909213250833,\"net\":-3.5683235144800006e-8}))ok(near(+d[k],v),'repulsion: '+k);return 'Repulsión: lecturas correctas';})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"neutral\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));for(const [k,v]of Object.entries({\"distance\":0.5,\"mass\":1,\"q1\":0,\"q2\":0,\"gravity\":2.66972e-10,\"electric\":0,\"signedElectric\":0,\"ratio\":0,\"net\":2.66972e-10}))ok(near(+d[k],v),'neutral: '+k);return 'Sin carga: lecturas correctas';})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"near-equal\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));for(const [k,v]of Object.entries({\"distance\":0.5,\"mass\":1,\"q1\":0.086,\"q2\":0.086,\"gravity\":2.66972e-10,\"electric\":2.6588773204294076e-10,\"signedElectric\":-2.6588773204294076e-10,\"ratio\":0.9959386454120311,\"net\":1.084267957059212e-12}))ok(near(+d[k],v),'near-equal: '+k);return 'Casi iguales: lecturas correctas';})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('distance');el.value=1;el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(near(+d.gravity,6.6743e-11),'Inverso cuadrado gravedad');ok(near(+d.electric,8.987551786200002e-9),'Inverso cuadrado carga');ok(near(+d.ratio,134.65909213250833),'Razón invariante');return 'Distancia duplicada: ambas fuerzas divididas por cuatro';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('distance');el.value=0.2;el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('mass');el.value=5;el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('charge');el.value=2;el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-polarity=same]').click();})()"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=gravity]"
+  ],
+  [
+    "lines",
+    null,
+    ".instrument[data-kind=electric]"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(+d.signedElectric<0&&+document.querySelector('[data-kind=electric]').dataset.angle<0,'Repulsión geométrica');return 'Extremos de masa, carga y distancia correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();})()"
+  ],
+  [
+    "scroll",
+    ".instrument[data-kind=gravity] .stage"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".instrument[data-kind=gravity] .stage"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(near(+d.distance,.51),'Teclado');})()"
+  ],
+  [
+    "key",
+    "Home",
+    ".instrument[data-kind=gravity] .stage"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(near(+d.distance,.2),'Inicio');})()"
+  ],
+  [
+    "key",
+    "End",
+    ".instrument[data-kind=gravity] .stage"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(near(+d.distance,1),'Fin');})()"
+  ],
+  [
+    "drag",
+    ".instrument[data-kind=gravity] .stage",
+    0.7,
+    0.6,
+    0.3,
+    0.6,
+    12
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(+d.distance<.75&&+d.distance>.5,'Arrastre');ok(!document.querySelector('.dragging'),'Captura liberada');return 'Teclado y arrastre reales correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();document.getElementById('double-distance').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(near(+d.distance,1),'Ejemplo doble distancia');})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('neutral').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(+d.electric===0&&+d.gravity>0,'Quitar cargas');})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('demo').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.comparison-bench').dataset;const ok=(v,m)=>{if(!v)throw Error(m)};const near=(a,b)=>Math.abs(a-b)<1e-9*Math.max(1e-18,Math.abs(a),Math.abs(b));ok(d.auto==='false','Demo sin animación');ok(+d.electric>0,'Otro ejemplo');return 'Comparaciones y alternativa sin animación correctas';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();document.activeElement.blur();window.scrollTo(0,0);})()"
+  ],
+  [
+    "wait",
+    120
+  ]
+]

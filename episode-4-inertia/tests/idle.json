@@ -1,0 +1,32 @@
+[
+  [
+    "until",
+    "document.querySelector('.stage').dataset.mode==='maneuver'",
+    16000
+  ],
+  [
+    "until",
+    "Number(document.querySelector('.stage').dataset.progress)>0.04"
+  ],
+  [
+    "key",
+    " ",
+    ".stage"
+  ],
+  [
+    "eval",
+    "window.idleT=document.querySelector('.stage').dataset.progress"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "until",
+    "document.querySelector('.stage').dataset.progress===window.idleT && document.querySelector('.stage').dataset.playing==='false'"
+  ],
+  [
+    "eval",
+    "({tourReached:document.querySelector('.stage').dataset.mode,paused:document.querySelector('.stage').dataset.playing==='false'})"
+  ]
+]

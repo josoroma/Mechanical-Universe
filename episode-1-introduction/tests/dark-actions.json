@@ -1,0 +1,9 @@
+[
+  ["until", "document.body.dataset.theme==='dark' && document.querySelector('#theme').getAttribute('aria-label')==='Cambiar al tema claro'"],
+  ["lines", "shots/lines-ptolemaic-dark.png"],
+  ["click", "[data-mode='1']"],
+  ["lines", "shots/lines-copernican-dark.png"],
+  ["click", "[data-mode='2']"],
+  ["lines", "shots/lines-newtonian-dark-default.png"],
+  ["eval", "({passed:true,mode:window.orrery.state.shownMode,theme:document.body.dataset.theme})"]
+]

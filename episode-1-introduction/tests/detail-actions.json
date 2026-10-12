@@ -1,0 +1,17 @@
+[
+  ["eval", "window.orrery.setTime(0.22)"],
+  ["until", "Math.abs(window.orrery.state.time-0.22)<0.0001"],
+  ["shot", "shots/detail-mechanism-light.png", ".drawing", 4, [350, 100, 400, 230]],
+  ["shot", "shots/detail-saturn-light.png", ".drawing", 4, [665, 170, 140, 110]],
+  ["shot", "shots/detail-base-light.png", ".drawing", 4, [205, 380, 620, 190]],
+  ["click", "#theme"],
+  ["wait", 350],
+  ["shot", "shots/detail-mechanism-dark.png", ".drawing", 4, [350, 100, 400, 230]],
+  ["shot", "shots/detail-saturn-dark.png", ".drawing", 4, [665, 170, 140, 110]],
+  ["shot", "shots/detail-base-dark.png", ".drawing", 4, [205, 380, 620, 190]],
+  ["eval", "window.orrery.setTime(1.8)"],
+  ["until", "Math.abs(window.orrery.state.time-1.8)<0.0001"],
+  ["click", "#play"],
+  ["sheet", "shots/motion-sheet.png", 150, 6, ".drawing", 1, null, 3],
+  ["click", "#play"]
+]

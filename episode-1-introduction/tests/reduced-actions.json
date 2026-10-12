@@ -1,0 +1,19 @@
+[
+  ["until", "!window.orrery.state.playing && document.querySelector('#play').disabled"],
+  ["eval", "window.checkTime=window.orrery.state.time"],
+  ["wait", 500],
+  ["until", "window.orrery.state.time===window.checkTime"],
+  ["key", "3", ".stage"],
+  ["until", "window.orrery.state.shownMode===2 && window.orrery.state.opacity===1"],
+  ["key", "ArrowRight", ".stage"],
+  ["until", "window.orrery.state.time===0.245"],
+  ["eval", "document.querySelector('#eccentricity').value=0.4;document.querySelector('#eccentricity').dispatchEvent(new Event('input',{bubbles:true}))"],
+  ["until", "window.orrery.state.eccentricity===0.4"],
+  ["shot", "shots/phone-light.png", ".page"],
+  ["click", "#theme"],
+  ["wait", 350],
+  ["shot", "shots/phone-dark.png", ".page"],
+  ["until", "document.documentElement.scrollWidth<=innerWidth"],
+  ["lines", "shots/phone-lines.png"],
+  ["eval", "({passed:true,reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,overflow:document.documentElement.scrollWidth>innerWidth})"]
+]

@@ -1,0 +1,19 @@
+[
+  [
+    "until",
+    "document.querySelector('.stage').dataset.m1==='0.75'&&document.querySelector('.stage').dataset.m2==='0.75'",
+    10000
+  ],
+  [
+    "eval",
+    "if(document.querySelector('.stage').dataset.touring!=='true')throw new Error('El recorrido automático no está activo');document.getElementById('play').click();window.frozen=document.querySelector('.stage').dataset.time"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "eval",
+    "if(document.querySelector('.stage').dataset.touring!=='false'||document.querySelector('.stage').dataset.playing!=='false'||document.querySelector('.stage').dataset.time!==frozen)throw new Error('La interacción no detuvo el recorrido');'Recorrido automático y toma de control: correctos'"
+  ]
+]

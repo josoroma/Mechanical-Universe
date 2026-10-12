@@ -1,0 +1,16 @@
+[
+  ["scroll", "#reset"],
+  ["click", "#reset"],
+  ["eval", "(()=>{for(const id of ['a','b']){const e=document.getElementById(id);e.value='2.5';e.dispatchEvent(new Event('input',{bubbles:true}));}const e=document.getElementById('opening');e.value='30';e.dispatchEvent(new Event('input',{bubbles:true}));})()"],
+  ["scroll", ".stage"],
+  ["lines"],
+  ["shot", "shots/extended-light-4x.png", ".drawing", 4, [300, 180, 400, 380]],
+  ["scroll", "#theme"],
+  ["click", "#theme"],
+  ["scroll", ".stage"],
+  ["lines"],
+  ["shot", "shots/extended-dark-4x.png", ".drawing", 4, [300, 180, 400, 380]],
+  ["eval", "(()=>{for(const id of ['a','b']){const e=document.getElementById(id);e.value='1.5';e.dispatchEvent(new Event('input',{bubbles:true}));}const e=document.getElementById('opening');e.value='150';e.dispatchEvent(new Event('input',{bubbles:true}));})()"],
+  ["lines"],
+  ["shot", "shots/retracted-dark-4x.png", ".drawing", 4, [380, 200, 300, 260]]
+]

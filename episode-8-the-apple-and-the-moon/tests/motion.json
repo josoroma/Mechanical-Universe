@@ -1,0 +1,177 @@
+[
+  [
+    "eval",
+    "window.assert=(v,m)=>{if(!v)throw Error(m)};window.ds=()=>document.querySelector('.stage').dataset;assert(ds().automatic==='true','Demostración activa');document.getElementById('rate').value=960"
+  ],
+  [
+    "until",
+    "ds().playing==='true'",
+    4000
+  ],
+  [
+    "sheet",
+    "shots/motion-circle.png",
+    450,
+    8,
+    ".stage",
+    0.8,
+    null,
+    4
+  ],
+  [
+    "until",
+    "ds().kind==='ellipse'",
+    12000
+  ],
+  [
+    "eval",
+    "assert(ds().automatic==='true','La demostración cambia de ejemplo');window.clockT=Number(ds().time);window.clockWall=performance.now()"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "eval",
+    "(()=>{const ratio=(Number(ds().time)-clockT)/((performance.now()-clockWall)/1000);assert(ratio>650&&ratio<1100,'Reloj sin bucles duplicados: '+ratio);return ratio})()"
+  ],
+  [
+    "until",
+    "ds().kind==='escape'",
+    16000
+  ],
+  [
+    "until",
+    "ds().kind==='impact'",
+    6000
+  ],
+  [
+    "until",
+    "ds().kind==='circle'",
+    5000
+  ],
+  [
+    "eval",
+    "assert(ds().automatic==='true','La demostración completa el ciclo');document.querySelector('[data-preset=\"ellipse\"]').click();assert(ds().automatic==='false','El usuario toma el control')"
+  ],
+  [
+    "scroll",
+    "#play"
+  ],
+  [
+    "click",
+    "#play"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)>50,'Vuelo en marcha');window.hiddenT=Number(ds().time);Object.defineProperty(document,'hidden',{value:true,configurable:true});document.dispatchEvent(new Event('visibilitychange'))"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)===hiddenT,'Pausa en pestaña oculta');delete document.hidden;document.dispatchEvent(new Event('visibilitychange'))"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)>hiddenT,'Continúa al mostrar pestaña');window.spacer=document.createElement('div');spacer.style.height='2600px';document.body.append(spacer);scrollTo(0,document.body.scrollHeight)"
+  ],
+  [
+    "until",
+    "ds().visible==='false'",
+    3000
+  ],
+  [
+    "eval",
+    "window.offscreenT=Number(ds().time)"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)===offscreenT,'Pausa fuera de pantalla');spacer.remove();document.querySelector('.stage').scrollIntoView({block:'center'})"
+  ],
+  [
+    "until",
+    "ds().visible==='true'",
+    3000
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)>offscreenT,'Continúa en pantalla')"
+  ],
+  [
+    "scroll",
+    "#play"
+  ],
+  [
+    "click",
+    "#play"
+  ],
+  [
+    "eval",
+    "window.pausedT=Number(ds().time);assert(ds().playing==='false','Pausa manual')"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "assert(Number(ds().time)===pausedT,'Pausa estable');document.body.dataset.theme='dark';document.querySelector('[data-preset=\"escape\"]').click()"
+  ],
+  [
+    "click",
+    "#play"
+  ],
+  [
+    "sheet",
+    "shots/motion-escape-dark.png",
+    220,
+    8,
+    ".stage",
+    0.8,
+    null,
+    4
+  ],
+  [
+    "eval",
+    "document.getElementById('rate').value=120;if(ds().playing==='false')document.getElementById('play').click();assert(ds().playing==='true','Preparado para pausar con teclado')"
+  ],
+  [
+    "key",
+    " ",
+    ".stage"
+  ],
+  [
+    "eval",
+    "assert(ds().playing==='false','Teclado pausa');document.getElementById('time').value=700;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "wait",
+    1500
+  ],
+  [
+    "eval",
+    "assert(Math.abs(Number(ds().time)/Number(ds().duration)-.7)<.00001,'Seguimiento del tiempo converge');assert(!document.querySelector('.stage').classList.contains('dragging'),'Puntero liberado')"
+  ],
+  [
+    "lines"
+  ]
+]
