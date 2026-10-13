@@ -82,26 +82,6 @@ body, body[data-theme], body.iso, body.iso[data-theme] {
   --anatomy-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
   --earth-color: #0284c7;
   --copper-color: #d97736;
-  --enamel-paper: #2346a2;
-  --enamel-top: #3769ce;
-  --enamel-0: #14285a;
-  --enamel-1: #1b377a;
-  --enamel-2: #2852b1;
-  --enamel-3: #4a7bdb;
-  --enamel-lo: #80a7ed;
-  --enamel-mid: #b9d3ff;
-  --silver-paper: #94a9c3;
-  --silver-top: #e2eeff;
-  --silver-0: #425c7b;
-  --silver-1: #708bac;
-  --silver-2: #a7bedb;
-  --silver-3: #ccddf1;
-  --ivory-paper: #c6d6ed;
-  --ivory-top: #f4f8ff;
-  --ivory-0: #7e95b6;
-  --ivory-1: #a4bbd9;
-  --ivory-2: #d3e0f2;
-  --ivory-3: #e8f0fc;
   margin: 0;
   color: var(--foreground);
   background-color: var(--background);
@@ -144,14 +124,6 @@ body[data-theme="dark"], body.iso[data-theme="dark"], body.dark {
   --tile-shadow: 0 10px 32px #00000026;
   --earth-color: #67c8ff;
   --copper-color: #ffb47c;
-  --enamel-paper: #22448a;
-  --enamel-top: #3866b5;
-  --enamel-0: #112144;
-  --enamel-1: #1b3464;
-  --enamel-2: #2c5299;
-  --enamel-3: #4675c2;
-  --enamel-lo: #729ada;
-  --enamel-mid: #b1d0ff;
 }
 
 body .wordmark {

@@ -1,6 +1,8 @@
 import {readFileSync, writeFileSync} from 'node:fs';
 
-const css = readFileSync(new URL('./theme.css', import.meta.url), 'utf8');
+const css = ['theme.css', 'machine-materials.css']
+  .map(file => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
+  .join('\n');
 
 // Embed the collection theme so every generated page also works offline.
 export function writeThemedHtml(file, html) {

@@ -233,26 +233,6 @@ body, body[data-theme], body.iso, body.iso[data-theme] {
   --anatomy-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
   --earth-color: #0284c7;
   --copper-color: #d97736;
-  --enamel-paper: #2346a2;
-  --enamel-top: #3769ce;
-  --enamel-0: #14285a;
-  --enamel-1: #1b377a;
-  --enamel-2: #2852b1;
-  --enamel-3: #4a7bdb;
-  --enamel-lo: #80a7ed;
-  --enamel-mid: #b9d3ff;
-  --silver-paper: #94a9c3;
-  --silver-top: #e2eeff;
-  --silver-0: #425c7b;
-  --silver-1: #708bac;
-  --silver-2: #a7bedb;
-  --silver-3: #ccddf1;
-  --ivory-paper: #c6d6ed;
-  --ivory-top: #f4f8ff;
-  --ivory-0: #7e95b6;
-  --ivory-1: #a4bbd9;
-  --ivory-2: #d3e0f2;
-  --ivory-3: #e8f0fc;
   margin: 0;
   color: var(--foreground);
   background-color: var(--background);
@@ -295,14 +275,6 @@ body[data-theme="dark"], body.iso[data-theme="dark"], body.dark {
   --tile-shadow: 0 10px 32px #00000026;
   --earth-color: #67c8ff;
   --copper-color: #ffb47c;
-  --enamel-paper: #22448a;
-  --enamel-top: #3866b5;
-  --enamel-0: #112144;
-  --enamel-1: #1b3464;
-  --enamel-2: #2c5299;
-  --enamel-3: #4675c2;
-  --enamel-lo: #729ada;
-  --enamel-mid: #b1d0ff;
 }
 
 body .wordmark {
@@ -490,6 +462,132 @@ body a.episode-entry:focus-visible { outline-offset: -4px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Graphite laboratory instruments, independent of the colorful interface. */
+body.iso, body.iso[data-theme] {
+  --enamel-paper: #20242c;
+  --enamel-top: #292d35;
+  --enamel-0: #101318;
+  --enamel-1: #171b22;
+  --enamel-2: #232831;
+  --enamel-3: #303640;
+  --enamel-lo: #505865;
+  --enamel-mid: #78818f;
+  --metal-paper: #33373e;
+  --metal-top: #484e58;
+  --metal-0: #191c22;
+  --metal-1: #252a32;
+  --metal-2: #343b45;
+  --metal-3: #474f5b;
+  --metal-hi: #a8b1bf;
+  --metal-mid: #798391;
+  --metal-lo: #596370;
+  --metal-faint: #414a56;
+  --material-line: #798391;
+  --wood-color: #20232a;
+  --wood-paper: #20232a;
+  --wood-top: #2b2f37;
+  --wood-0: #111419;
+  --wood-1: #191d24;
+  --wood-2: #242932;
+  --wood-3: #303640;
+  --wood-hi: #737c89;
+  --wood-lo: #3b424d;
+  --iron-paper: #1d2128;
+  --iron-top: #343b45;
+  --iron-0: #0e1116;
+  --iron-1: #181d24;
+  --iron-2: #252c36;
+  --iron-3: #333d49;
+  --silver-paper: #4c5663;
+  --silver-top: #929eae;
+  --silver-0: #303946;
+  --silver-1: #4e5b6b;
+  --silver-2: #657587;
+  --silver-3: #7e8da0;
+  --ivory-paper: #cfcdc6;
+  --ivory-top: #e8e5dd;
+  --ivory-0: #626972;
+  --ivory-1: #9a9fa6;
+  --ivory-2: #c4c6c8;
+  --ivory-3: #deded9;
+}
+
+/* Slightly lift the graphite faces and seams against the dark figure well. */
+body.iso[data-theme="dark"] {
+  --enamel-top: #323740;
+  --enamel-2: #2b313b;
+  --enamel-3: #3b424e;
+  --enamel-lo: #626d7d;
+  --enamel-mid: #8a96a6;
+  --wood-top: #303640;
+  --wood-hi: #8b96a6;
+  --metal-top: #515b69;
+  --metal-hi: #b2bdcd;
+  --metal-mid: #8c99ad;
+  --metal-lo: #68778c;
+}
+
+/* Smoked glass keeps the generator and the Millikan apparatus subdued. */
+body .drawing .material-iron {
+  --anatomy-hi: #a4afbf;
+  --anatomy-mid: #7d899b;
+  --anatomy-lo: #69778b;
+  --anatomy-faint: #424e5f;
+  --anatomy-dot: #a4afbf;
+}
+body .drawing .material-glass {
+  --anatomy-paper: #677b82;
+  --anatomy-top: #b6c6cb;
+  --anatomy-shade-0: #354950;
+  --anatomy-shade-1: #526a72;
+  --anatomy-shade-2: #7a9198;
+  --anatomy-shade-3: #a6babf;
+  --anatomy-hi: #d5e1e4;
+  --anatomy-mid: #405c64;
+  --anatomy-lo: #6d858d;
+}
+
+/* Small painted decks identify the two gliders without coloring the bench. */
+body .drawing [data-part="A.deck"] .material-brass {
+  --anatomy-paper: #304965;
+  --anatomy-top: #496c95;
+  --anatomy-shade-0: #192b40;
+  --anatomy-shade-1: #263d57;
+  --anatomy-shade-2: #365471;
+  --anatomy-shade-3: #496a8c;
+  --anatomy-hi: #7899bf;
+  --anatomy-mid: #9ab5d4;
+  --anatomy-lo: #526d8c;
+}
+body .drawing [data-part="B.deck"] .material-enamel {
+  --anatomy-paper: #264b4a;
+  --anatomy-top: #3e7270;
+  --anatomy-shade-0: #142e2e;
+  --anatomy-shade-1: #20413f;
+  --anatomy-shade-2: #2d5855;
+  --anatomy-shade-3: #3e7270;
+  --anatomy-hi: #86aaa7;
+  --anatomy-mid: #9bbcb8;
+  --anatomy-lo: #526f6d;
+}
+/* The Earth is the subject, so its ocean keeps a recognizable blue. */
+body .drawing [data-part="earth.face"] .material-enamel {
+  --anatomy-paper: #284d70;
+  --anatomy-top: #396b96;
+  --anatomy-shade-0: #172e45;
+  --anatomy-shade-1: #23415e;
+  --anatomy-shade-2: #315a80;
+  --anatomy-shade-3: #477ba6;
+  --anatomy-hi: #b3d1e8;
+  --anatomy-mid: #83abc9;
+  --anatomy-lo: #668dab;
+}
+body .drawing .shadow { fill: #050609; opacity: .12; }
+body[data-theme="dark"] .drawing .shadow { opacity: .3; }
+body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
+  box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
 </style></head><body class="iso" data-theme="light"><div class="page"><header class="masthead"><a class="wordmark" href="../episode-1-introduction/index.html"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema oscuro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>

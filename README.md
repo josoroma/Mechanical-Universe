@@ -20,7 +20,9 @@ Cada carpeta de episodio conserva su código fuente, documentación, pruebas y l
 
 ## Temas de la colección
 
-`theme.css` define la paleta compartida, inspirada en Luma: azul, violeta y turquesa, superficies claras o azul marino, títulos con degradado y tarjetas redondeadas. Conserva colores distintos para las magnitudes físicas y adapta los materiales de las máquinas a la misma paleta. Los controles de tema de cada página siguen seleccionando la versión clara u oscura.
+`theme.css` define la paleta de la interfaz, inspirada en Luma: azul, violeta y turquesa, superficies claras o azul marino, títulos con degradado y tarjetas redondeadas. Conserva colores distintos para las magnitudes físicas. Los controles de tema de cada página siguen seleccionando la versión clara u oscura.
+
+`machine-materials.css` define por separado el acabado de los instrumentos: grafito, acero oscuro, vidrio ahumado y escalas claras en ambos temas. El cobre y los colores que identifican elementos físicos conservan su función; los carros A y B tienen pequeñas plataformas azules y turquesas. Las caras y las juntas se aclaran ligeramente en el tema oscuro para conservar el relieve.
 
 `theme.mjs` integra estos estilos al final de cada HTML completo. No hay fuentes, bibliotecas ni hojas de estilo que deban descargarse. Los archivos `page.html` de algunos episodios son plantillas parciales; reciben el tema cuando su generador produce las páginas completas.
 
@@ -30,7 +32,7 @@ Para actualizar las 33 páginas publicadas después de modificar el tema:
 node build-all.mjs
 ```
 
-También puedes ejecutar el `build.mjs` de un episodio. Mantén `theme.css` y `theme.mjs` en la carpeta superior al copiar el código fuente para regenerarlo. Los HTML finales son autónomos.
+También puedes ejecutar el `build.mjs` de un episodio. Mantén `theme.css`, `machine-materials.css` y `theme.mjs` en la carpeta superior al copiar el código fuente para regenerarlo. Los HTML finales son autónomos.
 
 Para comprobar el cambio de tema de cada página, el contraste de la paleta y los tamaños de 1440 y 390 px, con Chrome instalado:
 
