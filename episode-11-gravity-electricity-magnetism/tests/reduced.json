@@ -1,0 +1,157 @@
+[
+  [
+    "eval",
+    "window.initialTheme=document.body.dataset.theme"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.documentElement.lang===\"es\" && document.querySelector(\"#gravity\").dataset.auto===\"false\"))throw Error(\"Comprobación: document.documentElement.lang==='es' && document.querySelector('#gravity').dataset.auto==='false'\");return \"correcto\"})()"
+  ],
+  [
+    "key",
+    "End",
+    "#gravity .stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#gravity\").dataset.distance===.3))throw Error(\"Comprobación: +document.querySelector('#gravity').dataset.distance===.3\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "key",
+    "Home",
+    "#gravity .stage"
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"[data-preset=heavy]\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#gravity\").dataset.mass===30))throw Error(\"Comprobación: +document.querySelector('#gravity').dataset.mass===30\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#one-turn\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge===12 && Math.abs(+document.querySelector(\"#electric\").dataset.voltage-1000)<1e-9))throw Error(\"Comprobación: +document.querySelector('#electric').dataset.charge===12 && +document.querySelector('#electric').dataset.voltage===1000\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<11;i++)document.querySelector(\"#one-turn\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge===144))throw Error(\"Comprobación: +document.querySelector('#electric').dataset.charge===144\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "#electric"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#show-current\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"[data-kind=magnetic]\").dataset.angle<0))throw Error(\"Comprobación: +document.querySelector('[data-kind=magnetic]').dataset.angle<0\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#reverse\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"[data-kind=magnetic]\").dataset.angle>0))throw Error(\"Comprobación: +document.querySelector('[data-kind=magnetic]').dataset.angle>0\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#zero-current\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"[data-kind=magnetic]\").dataset.angle===0))throw Error(\"Comprobación: +document.querySelector('[data-kind=magnetic]').dataset.angle===0\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#discharge\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge===0))throw Error(\"Comprobación: +document.querySelector('#electric').dataset.charge===0\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#leak\").value=\"damp\";document.querySelector(\"#leak\").dispatchEvent(new Event(\"change\"))"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector(\"#leak\").value===\"damp\"))throw Error(\"Comprobación: document.querySelector('#leak').value==='damp'\");return \"correcto\"})()"
+  ],
+  [
+    "key",
+    "End",
+    "#electric .stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.rpm===120))throw Error(\"Comprobación: +document.querySelector('#electric').dataset.rpm===120\");return \"correcto\"})()"
+  ],
+  [
+    "key",
+    " ",
+    "#electric .stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge===12 && +document.querySelector(\"#electric\").dataset.rpm===0))throw Error(\"Comprobación: +document.querySelector('#electric').dataset.charge===12 && +document.querySelector('#electric').dataset.rpm===0\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{const ids=[...document.querySelectorAll(\"[id]\")].map(x=>x.id);if(new Set(ids).size!==ids.length)throw Error(\"Identificadores duplicados\");return \"IDs únicos\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#theme\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.body.dataset.theme===window.initialTheme)throw Error(\"El tema no cambió\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#theme\").click()"
+  ]
+]

@@ -1,0 +1,60 @@
+const $=id=>document.getElementById(id),reduced=matchMedia('(prefers-reduced-motion: reduce)'),TAU=2*Math.PI;
+const fmt=(n,d=2)=>n.toLocaleString('es-CR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const keys={gravity:['mass','distance'],electric:['rpm','leak'],magnetic:['current']};
+const figures=[...document.querySelectorAll('.instrument')].map(el=>{const machine=el.querySelector('.machine'),refs=new Map([...machine.children].map(x=>[x.dataset.part,x]));return {el,kind:el.dataset.kind,P:S.PROJECTIONS[el.dataset.kind],machine,refs,stage:el.querySelector('.stage'),cache:new WeakMap(),order:'',stamp:'',visible:true,hover:false,slots:new Map([...refs].filter(([,r])=>r.querySelector('.iso-fill')).map(([name,r])=>[name,{fill:r.querySelector('.iso-fill'),top:r.querySelector('.iso-top'),outline:r.querySelector('.iso-edge'),shades:[...r.querySelectorAll('.iso-shade')]}]))};});
+let current={...O.DEFAULTS},target={...current},charge=0,phase=0,pending=0,manualRate=0,ground=false,auto=!reduced.matches,paused=false,tour=0,last=0,raf=0,drag=null;
+const view=kind=>figures.find(f=>f.kind===kind),hover=()=>figures.some(f=>f.hover),active=()=>!document.hidden&&figures.some(f=>f.visible)&&!(auto&&hover());
+const unsettled=kind=>keys[kind].some(k=>typeof target[k]==='number'&&Math.abs(current[k]-target[k])>1e-7);
+const running=()=>!paused&&(auto||figures.some(f=>f.visible&&unsettled(f.kind))||view('electric').visible&&(current.rpm>0||charge>0||pending>0));
+function controls(){for(const id of ['mass','distance','rpm','current']){$(id).value=target[id];$(id).setAttribute('aria-valuetext',fmt(target[id],id==='distance'?2:id==='current'?1:0)+(id==='mass'?' kilogramos':id==='distance'?' metros':id==='rpm'?' revoluciones por minuto':' amperios'));} $('leak').value=target.leak;
+  for(const f of figures){const id=f.kind==='gravity'?'distance':f.kind==='electric'?'rpm':'current';f.stage.setAttribute('aria-valuenow',target[id]);f.stage.setAttribute('aria-valuetext',$(id).getAttribute('aria-valuetext'));}
+  const presets={far:{mass:15,distance:.3},near:{mass:15,distance:.12},heavy:{mass:30,distance:.12}};document.querySelectorAll('[data-preset]').forEach(b=>b.setAttribute('aria-pressed',String(Object.entries(presets[b.dataset.preset]).every(([k,v])=>target[k]===v))));
+}
+function draw(f){
+  const stamp=(f.kind==='gravity'?[current.mass,current.distance]:f.kind==='electric'?[charge,phase]:[current.current]).join('/');if(stamp===f.stamp)return;f.stamp=stamp;
+  const parts=S.scene(current,f.kind,false,charge,phase);
+  for(const part of parts)if(part.dynamic){const s=part.shape,root=f.refs.get(part.name);if(s.type==='ball'||s.type==='cylinder'){const at=s.type==='ball'?s.at:[s.x,s.y,s.z];root.firstElementChild.setAttribute('transform',K.translateAlong(f.P,at));}else{const slots=f.slots.get(part.name),paths=S.pathsOf(s,f.P);for(const key of ['fill','top','outline'])slots[key].setAttribute('d',paths[key]||'');slots.shades.forEach((el,i)=>el.setAttribute('d',paths.shades?.[i]||''));}}
+  if(f.kind==='electric'){const F=G.frameAlong([0,0,105],[1,0,0]),radial=[0,Math.sin(phase),Math.cos(phase)],a=Math.atan2(G.dot3(radial,F.v),G.dot3(radial,F.u));f.refs.get('drum').querySelector('.rotor-lines').setAttribute('d',G.ribsOf(F,-38,38,26,20,f.P,{phase:a,seams:true}));}
+  const order=D.orderParts(parts,f.P,f.cache),stampOrder=order.join('|');if(stampOrder!==f.order){const frag=document.createDocumentFragment();for(const name of order)frag.append(f.refs.get(name));f.machine.append(frag);f.order=stampOrder;}
+}
+function render(){
+  figures.forEach(draw);const g=O.gravity(current),e=O.electric(charge,current),m=O.magnetic(current.current);
+  for(const id of ['mass','distance','rpm','current'])$(id+'-value').textContent=fmt(current[id],id==='distance'?2:id==='current'?1:0)+(id==='mass'?' kg':id==='distance'?' m':id==='rpm'?' rpm':' A');
+  $('gravity-force').textContent=fmt(g.force*1e9,3);$('gravity-angle').textContent=fmt(g.angle*180/Math.PI,3);$('gravity-note').textContent=`r efectiva = ${fmt(g.nearest,3)} m · brazo ampliado ×4 · tamaños ilustrativos`;
+  $('electric-charge').textContent=fmt(charge,1);$('electric-voltage').textContent=fmt(e.voltage/1000,2);$('electric-note').textContent=`Aporte: ${fmt(e.generated+manualRate,1)} nC/s · fuga: ${fmt(e.loss,1)} nC/s · energía: ${fmt(e.energy*1000,3)} mJ`;
+  view('electric').el.querySelector('.stage-state').textContent=ground?'Conductor a tierra':pending>0?'Una vuelta manual':charge>.05?'Las cargas iguales se repelen':'Conductor sin carga apreciable';
+  $('magnetic-angle').textContent=fmt(Math.abs(m.angle)*180/Math.PI,1)+'°';$('magnetic-direction').textContent=Math.abs(m.current)<1e-7?'hacia el norte':m.current>0?'al oeste del norte':'al este del norte';$('magnetic-note').textContent=`Campo del hilo: ${fmt(m.field*1e6,1)} μT · campo terrestre horizontal: 25 μT.`;
+  $('compare-mass').textContent=target.mass>17?'Volver a 5 kg ↗':'Comparar 5 y 30 kg ↗';$('compare-leak').textContent=target.leak==='dry'?'Probar un ambiente húmedo ↗':'Volver a un ambiente seco ↗';
+  $('demo').textContent=reduced.matches?'Ver otro ejemplo':paused?'▶ Reanudar demostración':auto?'Ⅱ Pausar demostración':'▶ Ver demostración';$('demo').setAttribute('aria-pressed',String(auto&&!paused));
+  $('status').textContent=reduced.matches?'Sin animación: usa «Una vuelta»':paused?'Relojes en pausa':auto&&hover()?'Pausa al señalar':auto?'Demostración automática':'Exploración manual';
+  $('reverse').disabled=target.current===0;
+  for(const f of figures){f.el.dataset.visible=f.visible;f.el.dataset.auto=auto;f.el.dataset.active=active();f.el.dataset.moving=unsettled(f.kind);}
+  Object.assign(view('gravity').el.dataset,{angle:g.angle,torque:g.torque,force:g.force,distance:g.distance,mass:g.mass,nearest:g.nearest});Object.assign(view('electric').el.dataset,{charge,voltage:e.voltage,phase,rpm:current.rpm,ground,pending,angle:e.angle});Object.assign(view('magnetic').el.dataset,{angle:m.angle,current:m.current,field:m.field});
+}
+function wake(){if(reduced.matches){current={...target};render();return;}render();if(!raf&&active()&&running()){last=0;raf=requestAnimationFrame(frame);}}
+function setValues(values,message=''){auto=false;paused=false;target=O.settings({...target,...values});current.leak=target.leak;ground=false;controls();if(message)$('announcement').textContent=message;wake();}
+function oneTurn(){setValues({rpm:0},'Una vuelta aporta 12 nanoculombios antes de las fugas.');current.rpm=0;ground=false;if(reduced.matches){charge+=O.PER_TURN;phase=(phase+TAU)%TAU;render();}else{pending+=TAU;wake();}}
+function discharge(){setValues({rpm:0},'Conductor conectado a tierra.');current.rpm=0;pending=0;manualRate=0;ground=true;if(reduced.matches){charge=0;ground=false;}wake();}
+function demo(){if(reduced.matches){const near=target.distance>.2;setValues({mass:near?30:5,distance:near?.12:.3,current:near?3:-3},'Otro ejemplo, sin animación.');charge=near?144:36;render();return;}if(auto&&!paused){auto=false;paused=true;}else{auto=true;paused=false;tour=0;ground=false;}wake();}
+function frame(now){
+  raf=0;if(!active()){last=0;render();return;}const dt=last?Math.min(.05,(now-last)/1000):0;last=now;
+  if(!paused){
+    if(auto){tour+=dt;if(view('gravity').visible){target.distance=.21-.09*Math.sin(tour*.24);target.mass=15+10*Math.sin(tour*.14);}if(view('electric').visible)target.rpm=40;if(view('magnetic').visible)target.current=4*Math.sin(tour*.25);controls();}
+    const alpha=1-Math.exp(-dt/.2);for(const f of figures)if(f.visible)for(const k of keys[f.kind])if(typeof target[k]==='number'){current[k]+=(target[k]-current[k])*alpha;if(Math.abs(target[k]-current[k])<1e-7)current[k]=target[k];}
+    if(view('electric').visible){const manual=Math.min(pending,dt*TAU/.8);pending=Math.max(0,pending-manual);manualRate=dt?manual/dt/TAU*O.PER_TURN:0;const step=dt*current.rpm/60*TAU+manual;phase=(phase+step)%TAU;const rpm=dt?step/dt*60/TAU:current.rpm;charge=O.advanceCharge(charge,rpm,current.leak,dt,ground);if(ground&&charge===0)ground=false;}
+  }
+  render();if(running()&&active())raf=requestAnimationFrame(frame);else last=0;
+}
+for(const id of ['mass','distance','rpm','current'])$(id).addEventListener('input',()=>setValues({[id]:+$(id).value}));$('leak').addEventListener('change',()=>setValues({leak:$('leak').value}));
+const presets={far:{mass:15,distance:.3},near:{mass:15,distance:.12},heavy:{mass:30,distance:.12}};document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>setValues(presets[b.dataset.preset],'Configuración de la balanza: '+b.textContent.toLowerCase()+'.')));
+$('one-turn').addEventListener('click',oneTurn);$('discharge').addEventListener('click',discharge);$('stop').addEventListener('click',()=>{pending=0;manualRate=0;current.rpm=0;setValues({rpm:0},'Manivela detenida; la carga se pierde por las fugas.');});$('reverse').addEventListener('click',()=>setValues({current:-target.current},'Sentido de la corriente invertido.'));$('zero-current').addEventListener('click',()=>setValues({current:0},'Sin corriente: la brújula señala al norte.'));$('show-current').addEventListener('click',()=>setValues({current:3},'Corriente de 3 amperios hacia el norte.'));
+$('compare-mass').addEventListener('click',()=>{setValues({mass:target.mass>17?5:30,distance:.18});$('gravity').scrollIntoView({block:'start',behavior:reduced.matches?'auto':'smooth'});});$('compare-leak').addEventListener('click',()=>{setValues({leak:target.leak==='dry'?'damp':'dry'});$('electric').scrollIntoView({block:'start',behavior:reduced.matches?'auto':'smooth'});});$('demo').addEventListener('click',demo);
+$('reset').addEventListener('click',()=>{charge=0;phase=0;pending=0;manualRate=0;ground=false;current={...O.DEFAULTS};setValues(O.DEFAULTS,'Los tres instrumentos se han restablecido.');});
+for(const f of figures){const id=f.kind==='gravity'?'distance':f.kind==='electric'?'rpm':'current',lo=f.kind==='gravity'?.12:f.kind==='electric'?0:-5,hi=f.kind==='gravity'?.3:f.kind==='electric'?120:5,step=f.kind==='gravity'?.01:f.kind==='electric'?5:.1;
+  f.stage.addEventListener('keydown',e=>{if(e.target!==f.stage)return;if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End',' '].includes(e.key))e.preventDefault();if(e.key.startsWith('Arrow'))setValues({[id]:target[id]+(['ArrowRight','ArrowUp'].includes(e.key)?1:-1)*step*(e.shiftKey?5:1)});if(e.key==='Home')setValues({[id]:lo});if(e.key==='End')setValues({[id]:hi});if(e.key===' '){if(f.kind==='electric')oneTurn();else demo();}});
+  f.stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;setValues({});drag={stage:f.stage,x:e.clientX,start:target[id],pointer:e.pointerId};f.stage.setPointerCapture(e.pointerId);f.stage.classList.add('dragging');});f.stage.addEventListener('pointermove',e=>{if(drag?.stage===f.stage&&drag.pointer===e.pointerId)setValues({[id]:drag.start+(e.clientX-drag.x)/f.stage.clientWidth*(hi-lo)});});const release=()=>{if(drag?.stage===f.stage){drag=null;f.stage.classList.remove('dragging');}};for(const type of ['pointerup','pointercancel','lostpointercapture'])f.stage.addEventListener(type,release);
+  f.el.addEventListener('pointerenter',()=>{f.hover=true;wake();});f.el.addEventListener('pointerleave',()=>{f.hover=false;wake();});f.el.addEventListener('focusin',()=>{auto=false;paused=false;wake();});
+}
+const observer=new IntersectionObserver(entries=>{for(const e of entries){const f=figures.find(f=>f.stage===e.target);f.visible=e.isIntersecting;}last=0;wake();},{threshold:.02});figures.forEach(f=>observer.observe(f.stage));document.addEventListener('visibilitychange',()=>{last=0;wake();});
+reduced.addEventListener('change',()=>{auto=false;paused=false;pending=0;manualRate=0;last=0;wake();});
+function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}$('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});themeLabel();controls();wake();

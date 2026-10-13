@@ -1,0 +1,92 @@
+[
+  [
+    "eval",
+    "document.querySelector(\"[data-preset=heavy]\").click();for(let i=0;i<12;i++)document.querySelector(\"#one-turn\").click();document.querySelector(\"#show-current\").click();document.activeElement.blur();scrollTo(0,0)"
+  ],
+  [
+    "wait",
+    100
+  ],
+  [
+    "shot",
+    "shots/desktop-final.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-gravity-light.png",
+    "#gravity .stage",
+    4
+  ],
+  [
+    "shot",
+    "shots/junctions-electric-light.png",
+    "#electric .stage",
+    4
+  ],
+  [
+    "shot",
+    "shots/junctions-magnetic-light.png",
+    "[data-kind=magnetic] .stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "lines",
+    null,
+    "#electric"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-gravity-dark.png",
+    "#gravity .stage",
+    4
+  ],
+  [
+    "shot",
+    "shots/junctions-electric-dark.png",
+    "#electric .stage",
+    4
+  ],
+  [
+    "shot",
+    "shots/junctions-magnetic-dark.png",
+    "[data-kind=magnetic] .stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "lines",
+    null,
+    "#electric"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ]
+]

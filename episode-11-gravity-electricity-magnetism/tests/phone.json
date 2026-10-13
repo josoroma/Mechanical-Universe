@@ -1,0 +1,26 @@
+[
+  [
+    "eval",
+    "document.querySelector(\"[data-preset=heavy]\").click();for(let i=0;i<12;i++)document.querySelector(\"#one-turn\").click();document.querySelector(\"#show-current\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.documentElement.scrollWidth<=innerWidth))throw Error(\"Comprobación: document.documentElement.scrollWidth<=innerWidth\");return \"correcto\"})()"
+  ],
+  [
+    "shot",
+    "shots/phone-light.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/phone-dark.png",
+    ".page",
+    1
+  ]
+]

@@ -9,7 +9,7 @@ export const episodes=[
   ['La manzana y la Luna','episode-8-the-apple-and-the-moon'],
   ['Movimiento circular','episode-9-moving-in-circles'],
   ['Fuerzas fundamentales','episode-10-fundamental-forces'],
-  ['Gravedad, electricidad y magnetismo'],
+  ['Gravedad, electricidad y magnetismo','episode-11-gravity-electricity-magnetism'],
   ['El experimento de Millikan'],
   ['Conservación de la energía'],
   ['Energía potencial'],

@@ -1,0 +1,29 @@
+[
+  [
+    "eval",
+    "(()=>{if(!(document.body.dataset.theme===\"dark\"))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#one-turn\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge===12))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    "#gravity"
+  ],
+  [
+    "lines",
+    null,
+    "#electric"
+  ],
+  [
+    "lines",
+    null,
+    "[data-kind=magnetic]"
+  ]
+]

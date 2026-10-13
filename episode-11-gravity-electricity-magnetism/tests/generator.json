@@ -1,0 +1,100 @@
+[
+  [
+    "eval",
+    "document.querySelector(\"#discharge\").click()"
+  ],
+  [
+    "until",
+    "+document.querySelector(\"#electric\").dataset.charge===0",
+    6000
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#one-turn\").click()"
+  ],
+  [
+    "until",
+    "+document.querySelector(\"#electric\").dataset.pending===0 && +document.querySelector(\"#electric\").dataset.charge>0",
+    4000
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge>11 && +document.querySelector(\"#electric\").dataset.charge<12))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#rpm\").value=120;document.querySelector(\"#rpm\").dispatchEvent(new Event(\"input\"))"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#stop\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.rpm===0))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "window.stoppedQ=+document.querySelector(\"#electric\").dataset.charge"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge<window.stoppedQ))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#demo\").click();document.querySelector(\"#demo\").click();window.pausedQ=document.querySelector(\"#electric\").dataset.charge"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector(\"#electric\").dataset.charge===window.pausedQ))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.querySelector(\"#demo\").click()"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge>+window.pausedQ))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "Object.defineProperty(document,\"hidden\",{configurable:true,get:()=>true});document.dispatchEvent(new Event(\"visibilitychange\"));window.hiddenQ=document.querySelector(\"#electric\").dataset.charge"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector(\"#electric\").dataset.charge===window.hiddenQ))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ],
+  [
+    "eval",
+    "delete document.hidden;document.dispatchEvent(new Event(\"visibilitychange\"))"
+  ],
+  [
+    "wait",
+    300
+  ],
+  [
+    "eval",
+    "(()=>{if(!(+document.querySelector(\"#electric\").dataset.charge>+window.hiddenQ))throw Error(\"Comprobación del generador o de visibilidad\");return \"correcto\"})()"
+  ]
+]
