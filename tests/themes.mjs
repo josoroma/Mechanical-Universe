@@ -91,7 +91,7 @@ try {
     const state = await evaluate(inspect);
     assert.equal(state.lang, 'es', page.file);
     assert.equal(state.theme, expected, page.file);
-    assert.equal(state.background, expected==='dark'?'rgb(9, 15, 33)':'rgb(245, 248, 255)', page.file);
+    assert.equal(state.background, expected==='dark'?'rgb(10, 10, 10)':'rgb(245, 248, 255)', page.file);
     assert.equal(state.weight, '800', page.file);
     assert(state.scroll <= width+1, `${page.file} ${width}: horizontal overflow ${state.scroll}`);
     assert.deepEqual(state.contrastProblems, [], `${page.file}: contrast`);

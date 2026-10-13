@@ -20,7 +20,7 @@ Cada carpeta de episodio conserva su código fuente, documentación, pruebas y l
 
 ## Temas de la colección
 
-`theme.css` define la paleta de la interfaz, inspirada en Luma: azul, violeta y turquesa, superficies claras o azul marino, títulos con degradado y tarjetas redondeadas. Conserva colores distintos para las magnitudes físicas. Los controles de tema de cada página siguen seleccionando la versión clara u oscura.
+`theme.css` define la paleta de la interfaz, inspirada en Luma: azul, violeta y turquesa, superficies claras o negras y grises, títulos con degradado y tarjetas redondeadas. El tema oscuro conserva la cuadrícula y los difuminados suaves. Las tablas tienen espacio interior y desplazamiento horizontal dentro de su tarjeta cuando hace falta; las secciones seleccionadas se distinguen por el fondo y el texto, sin una línea inferior. Conserva colores distintos para las magnitudes físicas. Los controles de tema de cada página siguen seleccionando la versión clara u oscura.
 
 `machine-materials.css` define por separado el acabado de los instrumentos: grafito, acero oscuro, vidrio ahumado y escalas claras en ambos temas. El cobre y los colores que identifican elementos físicos conservan su función; los carros A y B tienen pequeñas plataformas azules y turquesas. Las caras y las juntas se aclaran ligeramente en el tema oscuro para conservar el relieve.
 

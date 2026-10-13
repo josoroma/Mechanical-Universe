@@ -192,6 +192,9 @@ body.iso[data-theme="dark"]{--metal-top:#c5aa72;--metal-hi:#e7d3a0;--enamel-top:
   --glow-violet: #a78bfa18;
   --tile-shadow: 0 8px 28px #203f8010;
   --heading-gradient: linear-gradient(105deg, var(--brand-blue), var(--brand-violet) 55%, var(--brand-teal));
+  --surface-start: var(--brand-blue);
+  --surface-middle: var(--brand-violet);
+  --surface-end: var(--brand-teal);
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -249,29 +252,32 @@ body, body[data-theme], body.iso, body.iso[data-theme] {
 
 body[data-theme="dark"], body.iso[data-theme="dark"], body.dark {
   color-scheme: dark;
-  --background: #090f21;
-  --foreground: #f0f5ff;
+  --background: #0a0a0a;
+  --foreground: #f4f4f5;
   --card-foreground: var(--foreground);
   --popover-foreground: var(--foreground);
   --accent-foreground: var(--foreground);
   --sidebar-foreground: var(--foreground);
   --sidebar-accent-foreground: var(--foreground);
-  --card: #121e35;
+  --card: #161616;
   --primary: oklch(0.424 0.199 265.638);
   --primary-foreground: oklch(0.97 0.014 254.604);
-  --secondary: #1c2c49;
-  --secondary-foreground: #e4edff;
-  --muted-foreground: #b2c0d8;
+  --secondary: #232323;
+  --secondary-foreground: #e4e4e7;
+  --muted-foreground: #b8b8bd;
   --destructive: #fda4af;
-  --border: #304363;
-  --input: #697f9f;
+  --border: #363636;
+  --input: #767676;
   --ring: #93c5fd;
   --sidebar-primary: oklch(0.623 0.214 259.815);
   --brand-blue: #85baff;
   --brand-violet: #bda3ff;
   --brand-teal: #5ee3cf;
   --brand-pink: #f6a0cd;
-  --grid-ink: #92b5ff07;
+  --surface-start: #b8b8b8;
+  --surface-middle: #b8b8b8;
+  --surface-end: #b8b8b8;
+  --grid-ink: #ffffff06;
   --glow-blue: #2563eb12;
   --glow-violet: #8b5cf61a;
   --tile-shadow: 0 10px 32px #00000026;
@@ -323,10 +329,10 @@ body .laboratory > .controls {
   box-shadow: var(--tile-shadow);
 }
 body :is(.card-heading, .instrument-heading, .controls-heading, .balance-heading) {
-  background: linear-gradient(110deg, color-mix(in srgb, var(--brand-blue) 9%, var(--card)), color-mix(in srgb, var(--brand-violet) 6%, var(--card)));
+  background: linear-gradient(110deg, color-mix(in srgb, var(--surface-start) 9%, var(--card)), color-mix(in srgb, var(--surface-middle) 6%, var(--card)));
 }
 body :is(.stage, .optic-stage) {
-  background: radial-gradient(ellipse at 50% 45%, color-mix(in srgb, var(--brand-blue) 7%, var(--card)), var(--card) 72%);
+  background: radial-gradient(ellipse at 50% 45%, color-mix(in srgb, var(--surface-start) 7%, var(--card)), var(--card) 72%);
 }
 body :is(.era-selector, .profiles, .profile-selector, .phase-buttons) {
   border-color: var(--border);
@@ -336,11 +342,17 @@ body :is(.era-selector, .profiles, .profile-selector, .phase-buttons) {
 }
 body :is(.era-selector, .profiles) + .exhibit { border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
 body :is(.era-button, .profile, .profile-button)[aria-pressed="true"] {
-  background: color-mix(in srgb, var(--brand-blue) 11%, var(--card));
+  background: color-mix(in srgb, var(--surface-start) 11%, var(--card));
   color: var(--brand-blue);
 }
+/* Selected sections use their fill and text color, without a bottom marker. */
+body :is(.era-button, .profile, .profile-button)[aria-pressed="true"]::after {
+  content: none;
+  display: none;
+}
+body .planet-button[aria-pressed="true"] { border-bottom-color: transparent; color: var(--brand-blue); }
 body :is(.era-number, .profile-number, .idea-number, .law-number) { color: var(--brand-violet); opacity: 1; font-weight: 700; }
-body :is(.steps-ribbon, .chapter-nav) { border-radius: 12px; padding-left: 12px; padding-right: 12px; background: color-mix(in srgb, var(--brand-blue) 5%, var(--card)); }
+body :is(.steps-ribbon, .chapter-nav) { border-radius: 12px; padding-left: 12px; padding-right: 12px; background: color-mix(in srgb, var(--surface-start) 5%, var(--card)); }
 body .readings :is(strong, .metric strong),
 body :is(.measurement, .energy-values, .system-motion, .field-readings, .gravity-readings, .observation-readings) strong,
 body :is(.total-reading, .ratio, .net-value) strong {
@@ -349,9 +361,9 @@ body :is(.total-reading, .ratio, .net-value) strong {
   font-variant-numeric: tabular-nums;
   letter-spacing: -.055em;
 }
-body :is(.readings, .measurement, .energy-values) { background: color-mix(in srgb, var(--brand-blue) 4%, var(--card)); }
-body .system-card { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-violet) 6%, var(--card)), var(--card) 70%); }
-body .system-card:nth-child(2n) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-teal) 7%, var(--card)), var(--card) 70%); }
+body :is(.readings, .measurement, .energy-values) { background: color-mix(in srgb, var(--surface-start) 4%, var(--card)); }
+body .system-card { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-middle) 6%, var(--card)), var(--card) 70%); }
+body .system-card:nth-child(2n) { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-end) 7%, var(--card)), var(--card) 70%); }
 body .system-bar { height: 9px; border-radius: 999px; }
 body :is(.energy-key, .swatch, .legend-dot) { flex-shrink: 0; }
 body .playback { border-radius: 12px; border-color: var(--border); background: var(--card); }
@@ -361,14 +373,27 @@ body :is(.ideas, .laws) article + article {
   padding: 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-blue) 7%, var(--card)), var(--card));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--surface-start) 7%, var(--card)), var(--card));
 }
-body :is(.ideas, .laws) article:nth-child(2) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-violet) 8%, var(--card)), var(--card)); }
-body :is(.ideas, .laws) article:nth-child(3) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-teal) 8%, var(--card)), var(--card)); }
+body :is(.ideas, .laws) article:nth-child(2) { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-middle) 8%, var(--card)), var(--card)); }
+body :is(.ideas, .laws) article:nth-child(3) { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-end) 8%, var(--card)), var(--card)); }
 body :is(.ideas, .laws) p { font-size: 12px; }
+/* Inset the whole table, including its caption and any result below it. */
+body :is(.table-wrap, .notebook-table) {
+  min-width: 0;
+  max-width: 100%;
+  padding: 24px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--input) transparent;
+}
+body :is(.table-wrap, .notebook-table) table { width: 100%; }
+body :is(.table-wrap, .notebook-table) caption { margin: 0 0 16px; line-height: 1.5; }
+body :is(.table-wrap, .notebook-table) :is(th, td) { padding: 14px 12px; line-height: 1.6; }
 body .notebook-table th { background: var(--secondary); color: var(--foreground); }
-body .notebook-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--brand-blue) 3%, var(--card)); }
-body .model-notes { border-radius: 12px; padding: 16px; border: 1px solid var(--border); background: color-mix(in srgb, var(--brand-teal) 5%, var(--card)); }
+body .notebook-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface-start) 3%, var(--card)); }
+body .model-notes { border-radius: 12px; padding: 16px; border: 1px solid var(--border); background: color-mix(in srgb, var(--surface-end) 5%, var(--card)); }
 body .end-mark { font-family: var(--font-sans); font-style: normal; font-weight: 600; }
 
 body :is(button, select) { border-radius: 9px; }
@@ -424,17 +449,18 @@ body .collection-progress::-moz-progress-bar { background: var(--heading-gradien
 body .index-heading { border-bottom: 0; padding: 22px 0; }
 body .index-heading h2 { font-size: 13px; font-weight: 700; }
 body .episodes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-body .episode { --tile-accent: var(--brand-blue); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+body .episode { --tile-accent: var(--brand-blue); --tile-surface: var(--tile-accent); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+body[data-theme="dark"] .episode, body.dark .episode { --tile-surface: var(--surface-start); }
 body .episode:nth-child(4n+2) { --tile-accent: var(--brand-violet); }
 body .episode:nth-child(4n+3) { --tile-accent: var(--brand-teal); }
 body .episode:nth-child(4n) { --tile-accent: var(--brand-pink); }
-body .episode[data-available="true"] { box-shadow: var(--tile-shadow); background: linear-gradient(135deg, color-mix(in srgb, var(--tile-accent) 7%, var(--card)), var(--card) 80%); }
+body .episode[data-available="true"] { box-shadow: var(--tile-shadow); background: linear-gradient(135deg, color-mix(in srgb, var(--tile-surface) 7%, var(--card)), var(--card) 80%); }
 body .episode-entry { grid-template-columns: 40px minmax(0, 1fr) 16px; gap: 12px; min-height: 102px; padding: 18px 16px; height: 100%; }
 body .episode-number { display: grid; place-items: center; width: 40px; height: 40px; font: 700 14px var(--font-sans); border-radius: 11px; color: var(--muted-foreground); background: var(--secondary); }
 body a.episode-entry .episode-number { color: var(--tile-accent); background: color-mix(in srgb, var(--tile-accent) 12%, var(--card)); }
 body .episode-title { font: 650 17px/1.35 var(--font-sans); letter-spacing: -.025em; }
 body .episode-arrow { color: var(--tile-accent); }
-body a.episode-entry:hover { background: color-mix(in srgb, var(--tile-accent) 9%, var(--card)); }
+body a.episode-entry:hover { background: color-mix(in srgb, var(--tile-surface) 9%, var(--card)); }
 body a.episode-entry:hover .episode-title { color: var(--tile-accent); }
 body .episode[data-available="false"] { background: color-mix(in srgb, var(--background) 70%, var(--card)); }
 body .episode[data-available="false"] .episode-title { font-weight: 500; }
@@ -450,6 +476,8 @@ body a.episode-entry:focus-visible { outline-offset: -4px; }
   body :is(.ideas, .laws) article + article { margin-top: 16px; }
   body :is(.ideas, .laws) article { padding: 20px; }
   body :is(.steps-ribbon, .chapter-nav) { padding-left: 8px; padding-right: 8px; }
+  body :is(.table-wrap, .notebook-table) { padding: 16px; }
+  body :is(.table-wrap, .notebook-table) :is(th, td) { padding: 12px 10px; }
 }
 @media (max-width: 640px) {
   body .episodes { grid-template-columns: minmax(0, 1fr); gap: 12px; }
