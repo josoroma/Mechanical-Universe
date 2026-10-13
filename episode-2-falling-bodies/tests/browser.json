@@ -1,5 +1,9 @@
 [
   [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
     "click",
     "#reset"
   ],

@@ -11,14 +11,15 @@ import {chromePort} from '../episode-16-harmonic-motion/scripts/chrome-port.mjs'
 const root = fileURLToPath(new URL('../', import.meta.url));
 const out = join(root, 'shots', 'themes');
 mkdirSync(out, {recursive: true});
-const pages = [{file:'index.html', number:0, theme:'light'}];
+const pages = [{file:'index.html', number:0, theme:'dark'}];
 for (const {number, folder} of episodes.filter(episode => episode.folder)) {
-  pages.push({file:`${folder}/index.html`, number, theme:'light'});
+  pages.push({file:`${folder}/index.html`, number, theme:'dark'});
   pages.push({file:`${folder}/episode-${number}-dark.html`, number, theme:'dark'});
 }
 for (const {file} of pages) {
   const html = readFileSync(join(root, file), 'utf8');
   assert.equal((html.match(/data-collection-theme="luma"/g) || []).length, 1, file);
+  assert.match(html, /<body\b[^>]*\bdata-theme="dark"/, `${file}: dark theme before JavaScript`);
   assert(!/<(?:link|script)[^>]+(?:href|src)=/i.test(html), `External runtime asset: ${file}`);
 }
 const binary = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -57,7 +58,7 @@ try {
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   await send('Runtime.enable'); await send('Page.enable');
   await send('Emulation.setEmulatedMedia', {features:[{name:'prefers-reduced-motion', value:'reduce'}]});
-  await send('Page.addScriptToEvaluateOnNewDocument', {source:'try{localStorage.clear()}catch{}'});
+  const clearStorage = await send('Page.addScriptToEvaluateOnNewDocument', {source:'try{localStorage.clear()}catch{}'});
   const inspect = String.raw`(() => {
     const style = getComputedStyle(document.body);
     const canvas = document.createElement('canvas'); canvas.width=canvas.height=1;
@@ -91,6 +92,7 @@ try {
     const state = await evaluate(inspect);
     assert.equal(state.lang, 'es', page.file);
     assert.equal(state.theme, expected, page.file);
+    assert.equal(await evaluate('document.getElementById("theme").getAttribute("aria-label")'), expected==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro', `${page.file}: theme action label`);
     assert.equal(state.background, expected==='dark'?'rgb(10, 10, 10)':'rgb(245, 248, 255)', page.file);
     assert.equal(state.weight, '800', page.file);
     assert(state.scroll <= width+1, `${page.file} ${width}: horizontal overflow ${state.scroll}`);
@@ -114,22 +116,35 @@ try {
       await wait(250);
       for(let tries=0;tries<20 && !await evaluate('Boolean(document.querySelector("h1") && document.getElementById("theme"))');tries++)await wait(100);
       await check(page, width, page.theme);
-      const key = `${width}-${page.theme}`;
-      if(!boards.has(key))boards.set(key,[]);
-      boards.get(key).push({label:page.number?`Episodio ${page.number}`:'Índice',data:await screenshot(width,width===390?1500:1300,width===390?.8:1/3)});
-      // Exercise the actual event handler on both the light and dark documents.
+      const captureReview = async theme => {
+        if(!page.file.endsWith('index.html'))return;
+        const key = `${width}-${theme}`;
+        if(!boards.has(key))boards.set(key,[]);
+        boards.get(key).push({label:page.number?`Episodio ${page.number}`:'Índice',data:await screenshot(width,width===390?1500:1300,width===390?.8:1/3)});
+      };
+      await captureReview(page.theme);
+      // Exercise the actual event handler on canonical pages and legacy routes.
       await evaluate('document.getElementById("theme").click()');
-      await check(page, width, page.theme==='dark'?'light':'dark');
-      if(page.number===0) {
-        const other=`${width}-dark`;
-        if(!boards.has(other))boards.set(other,[]);
-        boards.get(other).push({label:'Índice',data:await screenshot(width,width===390?1500:1300,width===390?.8:1/3)});
-      }
+      const otherTheme = page.theme==='dark'?'light':'dark';
+      await check(page, width, otherTheme);
+      await captureReview(otherTheme);
       configurations+=2;
       assert.deepEqual(problems, [], page.file);
       console.log(`${width}px · ${page.file} · ambos temas, contraste y disposición correctos`);
     }
   }
+  // The default must not override a visitor's saved choice on the index.
+  await send('Page.removeScriptToEvaluateOnNewDocument', {identifier:clearStorage.result.identifier});
+  await send('Page.navigate', {url:pathToFileURL(join(root,'index.html')).href});
+  await wait(250);
+  for(const saved of ['light','dark','invalid']) {
+    await evaluate(`localStorage.setItem('mechanical-universe-theme',${JSON.stringify(saved)})`);
+    await send('Page.reload');
+    await wait(250);
+    await check(pages[0],390,saved==='light'?'light':'dark');
+  }
+  assert.deepEqual(problems, [], 'Saved theme preference');
+  console.log('Índice: preferencias guardadas clara y oscura correctas; un valor inválido conserva el tema oscuro.');
   // Compose review sheets in the browser; intermediate captures stay in memory.
   await send('Page.navigate',{url:'about:blank'});
   for(const [key,frames] of boards) {

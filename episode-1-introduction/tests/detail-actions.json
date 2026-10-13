@@ -1,4 +1,8 @@
 [
+  [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
   ["eval", "window.orrery.setTime(0.22)"],
   ["until", "Math.abs(window.orrery.state.time-0.22)<0.0001"],
   ["shot", "shots/detail-mechanism-light.png", ".drawing", 4, [350, 100, 400, 230]],

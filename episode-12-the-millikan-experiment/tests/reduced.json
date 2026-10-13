@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "if(document.body.dataset.theme!=='light')document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
     "(()=>{if(!(document.querySelector('.laboratory').dataset.reduced==='true'&&document.querySelector('.laboratory').dataset.auto==='false'&&Number(document.querySelector('.laboratory').dataset.clock)===0))throw Error(\"Sin movimiento automático\");return \"Sin movimiento automático · correcto\"})()"
   ],
   [

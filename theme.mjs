@@ -1,5 +1,7 @@
 import {readFileSync, writeFileSync} from 'node:fs';
 
+export const DEFAULT_THEME = 'dark';
+
 const css = ['theme.css', 'machine-materials.css']
   .map(file => readFileSync(new URL(`./${file}`, import.meta.url), 'utf8'))
   .join('\n');

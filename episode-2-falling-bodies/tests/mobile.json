@@ -1,5 +1,9 @@
 [
   [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
     "until",
     "document.querySelector('#play-label').textContent==='Avanzar' && document.querySelector('.stage').dataset.playing==='false'"
   ],

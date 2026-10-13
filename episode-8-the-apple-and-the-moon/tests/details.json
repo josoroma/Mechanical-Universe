@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
+    "eval",
     "window.assert=(v,m)=>{if(!v)throw Error(m)};window.input=(id,v)=>{const el=document.getElementById(id);el.value=v;el.dispatchEvent(new Event('input',{bubbles:true}))};window.ds=()=>document.querySelector('.stage').dataset;assert(document.documentElement.lang==='es','Idioma');assert(document.querySelectorAll('script[src],link[rel=\"stylesheet\"],img[src]').length===0,'Autónomo');assert(ds().automatic==='false','Movimiento reducido');"
   ],
   [

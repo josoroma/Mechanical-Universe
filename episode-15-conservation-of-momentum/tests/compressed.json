@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
+    "eval",
     "(()=>{const e=document.getElementById(\"mass-b\");e.value=\"0.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
   ],
   [

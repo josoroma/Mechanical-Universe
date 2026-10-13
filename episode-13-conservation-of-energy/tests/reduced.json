@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
+    "eval",
     "(()=>{if(!(document.querySelector('.laboratory').dataset.reduced==='true'&&document.querySelector('.laboratory').dataset.auto==='false'&&Number(document.querySelector('.laboratory').dataset.time)===0))throw Error(\"Inicio sin animación\");return \"Inicio sin animación · correcto\"})()"
   ],
   [

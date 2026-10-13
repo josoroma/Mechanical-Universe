@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
+    "eval",
     "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(condition,message)=>{if(!condition)throw Error(message);return message+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
   ],
   [

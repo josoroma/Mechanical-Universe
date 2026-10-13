@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "if(document.body.dataset.theme!=='light')document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
     "(()=>{if(!(document.documentElement.scrollWidth<=innerWidth&&innerWidth===390))throw Error(\"Sin desbordamiento en móvil\");return \"Sin desbordamiento en móvil · correcto\"})()"
   ],
   [

@@ -1,4 +1,8 @@
 [
+  [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
   ["until", "!window.orrery.state.playing && document.querySelector('#play').disabled"],
   ["eval", "window.checkTime=window.orrery.state.time"],
   ["wait", 500],

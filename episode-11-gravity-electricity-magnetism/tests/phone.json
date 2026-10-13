@@ -1,6 +1,10 @@
 [
   [
     "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
+  [
+    "eval",
     "document.querySelector(\"[data-preset=heavy]\").click();for(let i=0;i<12;i++)document.querySelector(\"#one-turn\").click();document.querySelector(\"#show-current\").click()"
   ],
   [

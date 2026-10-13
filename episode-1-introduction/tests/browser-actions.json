@@ -1,4 +1,8 @@
 [
+  [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
   ["eval", "window.orrery.setTime(0.22)"],
   ["until", "!window.orrery.state.playing && Math.abs(window.orrery.state.time-0.22)<0.001"],
   ["until", "document.querySelector('[data-planet=mercury]').disabled && !document.querySelector('[data-planet=mars]').disabled"],

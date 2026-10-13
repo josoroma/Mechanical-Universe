@@ -1,5 +1,9 @@
 [
   [
+    "eval",
+    "document.body.dataset.theme='dark';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema claro')"
+  ],
+  [
     "wait",
     150
   ],

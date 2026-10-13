@@ -1,4 +1,8 @@
 [
+  [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
   ["scroll", "#reset"],
   ["click", "#reset"],
   ["until", "document.querySelector('.stage').dataset.settled==='true'"],

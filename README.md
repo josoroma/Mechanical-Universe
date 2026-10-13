@@ -2,7 +2,7 @@
 
 Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–16 están disponibles como explicaciones interactivas; los episodios 17–52 figuran como pendientes y no tienen enlaces vacíos.
 
-Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz incluye temas claro y oscuro y se adapta a pantallas pequeñas.
+Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
 
 Sitio: <https://josoroma.github.io/Mechanical-Universe/>
 
@@ -24,7 +24,9 @@ Cada carpeta de episodio conserva su código fuente, documentación, pruebas y l
 
 `machine-materials.css` define por separado el acabado de los instrumentos: grafito, acero oscuro, vidrio ahumado y escalas claras en ambos temas. El cobre y los colores que identifican elementos físicos conservan su función; los carros A y B tienen pequeñas plataformas azules y turquesas. Las caras y las juntas se aclaran ligeramente en el tema oscuro para conservar el relieve.
 
-`theme.mjs` integra estos estilos al final de cada HTML completo. No hay fuentes, bibliotecas ni hojas de estilo que deban descargarse. Los archivos `page.html` de algunos episodios son plantillas parciales; reciben el tema cuando su generador produce las páginas completas.
+`theme.mjs` define `DEFAULT_THEME` como oscuro e integra estos estilos al final de cada HTML completo. No hay fuentes, bibliotecas ni hojas de estilo que deban descargarse. Los archivos `page.html` de algunos episodios son plantillas parciales; reciben el tema cuando su generador produce las páginas completas. Las rutas `episode-N-dark.html` siguen disponibles.
+
+[AGENTS.md](AGENTS.md) documenta el idioma, la paleta, los materiales, el espacio de las tablas y las reglas de selección para conservar este diseño en futuros episodios.
 
 Para actualizar las 33 páginas publicadas después de modificar el tema:
 

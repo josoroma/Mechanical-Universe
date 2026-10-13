@@ -1,4 +1,8 @@
 [
+  [
+    "eval",
+    "document.body.dataset.theme='light';document.getElementById('theme').setAttribute('aria-label','Cambiar al tema oscuro')"
+  ],
   ["scroll", "#reset"],
   ["click", "#reset"],
   ["eval", "(()=>{for(const id of ['a','b']){const e=document.getElementById(id);e.value='2.5';e.dispatchEvent(new Event('input',{bubbles:true}));}const e=document.getElementById('opening');e.value='30';e.dispatchEvent(new Event('input',{bubbles:true}));})()"],
