@@ -1,0 +1,93 @@
+[
+  [
+    "eval",
+    "(()=>{if(!(document.documentElement.scrollWidth<=innerWidth&&innerWidth===390))throw Error(\"Móvil sin desbordamiento\");return \"Móvil sin desbordamiento · correcto\"})()"
+  ],
+  [
+    "shot",
+    "shots/mobile-light.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "for(let i=0;i<8;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.records==='1'&&Math.abs(Number(document.querySelector('.laboratory').dataset.time)-2)<1e-9))throw Error(\"Observación desde móvil\");return \"Observación desde móvil · correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"friction\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<12;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur();scrollTo(0,0)"
+  ],
+  [
+    "shot",
+    "shots/mobile-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.thermal)>0&&Math.abs(Number(document.querySelector('.laboratory').dataset.error))/Number(document.querySelector('.laboratory').dataset.initial)<1e-6))throw Error(\"Rozamiento en móvil\");return \"Rozamiento en móvil · correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.5,
+    0.5,
+    0.3,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.height0)<26))throw Error(\"Arrastre en móvil\");return \"Arrastre en móvil · correcto\"})()"
+  ],
+  [
+    "scroll",
+    "#height"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    "#height"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.height0)>21))throw Error(\"Control nativo por teclado\");return \"Control nativo por teclado · correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.documentElement.scrollWidth<=innerWidth))throw Error(\"Ancho móvil tras interactuar\");return \"Ancho móvil tras interactuar · correcto\"})()"
+  ]
+]

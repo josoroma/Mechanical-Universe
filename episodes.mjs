@@ -11,7 +11,7 @@ export const episodes=[
   ['Fuerzas fundamentales','episode-10-fundamental-forces'],
   ['Gravedad, electricidad y magnetismo','episode-11-gravity-electricity-magnetism'],
   ['El experimento de Millikan','episode-12-the-millikan-experiment'],
-  ['Conservación de la energía'],
+  ['Conservación de la energía','episode-13-conservation-of-energy'],
   ['Energía potencial'],
   ['Conservación de la cantidad de movimiento'],
   ['Movimiento armónico'],

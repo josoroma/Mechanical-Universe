@@ -1,0 +1,204 @@
+[
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.reduced==='true'&&document.querySelector('.laboratory').dataset.auto==='false'&&Number(document.querySelector('.laboratory').dataset.time)===0))throw Error(\"Inicio sin animación\");return \"Inicio sin animación · correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.records==='1'&&document.getElementById('record').disabled))throw Error(\"Observación inicial sin duplicados\");return \"Observación inicial sin duplicados · correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"step\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<7;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(Number(document.querySelector('.laboratory').dataset.time)-2)<1e-9&&document.querySelector('.laboratory').dataset.records==='3'&&document.getElementById('record').disabled))throw Error(\"Tres observaciones por avance manual\");return \"Tres observaciones por avance manual · correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.height)<26&&Number(document.querySelector('.laboratory').dataset.speed)>0&&Number(document.querySelector('.laboratory').dataset.thermal)===0&&Math.abs(Number(document.querySelector('.laboratory').dataset.error))<.01))throw Error(\"Conversión de potencial a cinética\");return \"Conversión de potencial a cinética · correcto\"})()"
+  ],
+  [
+    "eval",
+    "window.reference={x:Number(document.querySelector('.laboratory').dataset.x),v:Number(document.querySelector('.laboratory').dataset.v),energy:Number(document.querySelector('.laboratory').dataset.total)}"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur();scrollTo(0,0)"
+  ],
+  [
+    "shot",
+    "shots/desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-light.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mass\");e.value=\"1000\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.mass)===1000&&Number(document.querySelector('.laboratory').dataset.time)===0&&document.querySelector('.laboratory').dataset.records==='0'))throw Error(\"Otra masa prepara una nueva prueba\");return \"Otra masa prepara una nueva prueba · correcto\"})()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<8;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Math.abs(Number(document.querySelector('.laboratory').dataset.x)-window.reference.x)<1e-9&&Math.abs(Number(document.querySelector('.laboratory').dataset.v)-window.reference.v)<1e-9&&Math.abs(Number(document.querySelector('.laboratory').dataset.total)-2*window.reference.energy)<.01))throw Error(\"Doble masa, misma trayectoria y doble energía\");return \"Doble masa, misma trayectoria y doble energía · correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"friction\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<8;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.gamma)===.09&&Number(document.querySelector('.laboratory').dataset.thermal)>100&&Math.abs(Number(document.querySelector('.laboratory').dataset.error))/Number(document.querySelector('.laboratory').dataset.initial)<1e-6))throw Error(\"Energía térmica y balance con rozamiento\");return \"Energía térmica y balance con rozamiento · correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{const bar=document.querySelector('.energy-bar'),width=[...bar.children].reduce((sum,e)=>sum+e.getBoundingClientRect().width,0);if(Math.abs(width-bar.getBoundingClientRect().width)>.1)throw Error('Barra de energía con longitud constante');return 'Barra de energía con longitud constante · correcto'})()"
+  ],
+  [
+    "shot",
+    "shots/friction-state.png",
+    ".energy-balance",
+    1
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"friction\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"height\");e.value=\"12\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(let i=0;i<64;i++){document.getElementById('step').click();if(Number(document.querySelector('.laboratory').dataset.x)>=0)throw Error('El carrito cruza una loma inaccesible')}return 'Regresa antes de la loma · correcto'})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.turns)>=2&&Number(document.querySelector('.laboratory').dataset.height)<=12.0001))throw Error(\"Retorno con altura limitada por la energía\");return \"Retorno con altura limitada por la energía · correcto\"})()"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.height0==='8'&&document.querySelector('.stage').getAttribute('aria-valuenow')==='8'))throw Error(\"Altura mínima con teclado\");return \"Altura mínima con teclado · correcto\"})()"
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.height0==='30'))throw Error(\"Altura máxima con teclado\");return \"Altura máxima con teclado · correcto\"})()"
+  ],
+  [
+    "key",
+    "ArrowLeft",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.height0==='29'))throw Error(\"Paso de un metro\");return \"Paso de un metro · correcto\"})()"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.5,
+    0.5,
+    0.3,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "(()=>{if(!(Number(document.querySelector('.laboratory').dataset.height0)>=24&&Number(document.querySelector('.laboratory').dataset.height0)<=26))throw Error(\"Ajuste por arrastre\");return \"Ajuste por arrastre · correcto\"})()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"reset\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.querySelector('.laboratory').dataset.height0==='26'&&document.querySelector('.laboratory').dataset.mass==='500'&&document.querySelector('.laboratory').dataset.gamma==='0'&&document.querySelector('.laboratory').dataset.records==='0'&&Number(document.querySelector('.laboratory').dataset.time)===0))throw Error(\"Restablecimiento completo\");return \"Restablecimiento completo · correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(document.documentElement.lang==='es'&&document.documentElement.scrollWidth<=innerWidth))throw Error(\"Español y ancho de escritorio\");return \"Español y ancho de escritorio · correcto\"})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!(new Set([...document.querySelectorAll('[id]')].map(el=>el.id)).size===document.querySelectorAll('[id]').length))throw Error(\"Identificadores únicos\");return \"Identificadores únicos · correcto\"})()"
+  ]
+]
