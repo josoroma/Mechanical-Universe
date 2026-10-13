@@ -1,0 +1,115 @@
+[
+  [
+    "eval",
+    "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(c,m)=>{if(!c)throw Error(m);return m+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
+  ],
+  [
+    "eval",
+    "check(innerWidth===390&&document.documentElement.scrollWidth<=innerWidth,\"Móvil sin desbordamiento\")"
+  ],
+  [
+    "shot",
+    "shots/mobile-light.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"angle\");e.value=\"45\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"length\");e.value=\"1.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<12;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/mobile-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "drag",
+    ".stage",
+    0.5,
+    0.5,
+    0.3,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "check(n('angle')<45,\"Arrastre en móvil\")"
+  ],
+  [
+    "scroll",
+    "#angle"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "eval",
+    "window.previousAngle=n('angle')"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    "#angle"
+  ],
+  [
+    "eval",
+    "check(n('angle')>window.previousAngle,\"Deslizador nativo por teclado\")"
+  ],
+  [
+    "scroll",
+    "#phase"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "key",
+    "Home",
+    "#phase"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    "#phase"
+  ],
+  [
+    "eval",
+    "check(n('time')>0&&n('time')<n('Ts')/100,\"Exploración de fase por teclado\")"
+  ],
+  [
+    "eval",
+    "check(document.documentElement.scrollWidth<=innerWidth,\"Sin desbordamiento después de interactuar\")"
+  ]
+]

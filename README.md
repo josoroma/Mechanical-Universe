@@ -1,6 +1,6 @@
 # El universo mecánico
 
-Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–15 están disponibles como explicaciones interactivas; los episodios 16–52 figuran como pendientes y no tienen enlaces vacíos.
+Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–16 están disponibles como explicaciones interactivas; los episodios 17–52 figuran como pendientes y no tienen enlaces vacíos.
 
 Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz incluye temas claro y oscuro y se adapta a pantallas pequeñas.
 

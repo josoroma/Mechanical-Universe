@@ -14,7 +14,7 @@ export const episodes=[
   ['Conservación de la energía','episode-13-conservation-of-energy'],
   ['Energía potencial','episode-14-potential-energy'],
   ['Conservación de la cantidad de movimiento','episode-15-conservation-of-momentum'],
-  ['Movimiento armónico'],
+  ['Movimiento armónico','episode-16-harmonic-motion'],
   ['Resonancia'],
   ['Ondas'],
   ['Momento angular'],

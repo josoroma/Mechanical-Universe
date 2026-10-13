@@ -1,0 +1,242 @@
+[
+  [
+    "eval",
+    "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(c,m)=>{if(!c)throw Error(m);return m+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
+  ],
+  [
+    "eval",
+    "check(d().reduced==='true'&&d().auto==='false'&&n('time')===0,\"Movimiento reducido manual\")"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "check(n('time')===0,\"Estado inicial inmóvil\")"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "check(n('records')===1,\"Sin duplicar el mismo instante\")"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"phase\");e.value=\"90\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "check(near(n('time'),n('Ts')/4)&&Math.abs(n('springX'))<1e-10&&n('springV')<0&&n('springU')<1e-12,\"Cuarto de período del resorte\")"
+  ],
+  [
+    "eval",
+    "check(n('records')===1,\"Explorar la fase conserva el cuaderno\")"
+  ],
+  [
+    "eval",
+    "check(near(n('springE'),n('springE0'))&&near(n('pendulumE'),n('pendulumE0')),\"Cada energía se conserva\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"phase\");e.value=\"180\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "check(near(n('springX'),-.12)&&Math.abs(n('springV'))<1e-10,\"Retorno izquierdo\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "check(n('records')===3&&document.getElementById('record').disabled,\"Límite de tres observaciones\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"compare\").click()"
+  ],
+  [
+    "eval",
+    "check(document.querySelectorAll('#records tr').length===3&&Number(document.querySelectorAll('#records tr')[1].children[1].textContent.replace(',','.'))===0,\"Comparación de tres instantes\")"
+  ],
+  [
+    "shot",
+    "shots/desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-light.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"angle\");e.value=\"45\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "check(n('records')===0&&n('Tp')/n('T0')>1.039&&n('Tp')/n('T0')<1.041,\"Amplitud grande aumenta el período\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"linear\").click()"
+  ],
+  [
+    "eval",
+    "check(d().linear==='true'&&near(n('Tp'),n('T0')),\"Aproximación armónica explícita\")"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"phase\");e.value=\"270\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "check(near(n('springQ'),n('pendulumQ'))&&near(n('springNormalizedV'),n('pendulumNormalizedV')),\"Estados normalizados en fase\")"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<3;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "check(n('angle')===0&&n('pendulumTheta')===0&&n('pendulumOmega')===0&&n('pendulumE')===0&&document.getElementById('pendulum-period').textContent==='—'&&n('springE')>0,\"Péndulo en equilibrio sin división entre cero\")"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mass\");e.value=\"0.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"length\");e.value=\"1.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "check(n('mass')===.4&&n('length')===1.4&&document.querySelectorAll('[data-part^=\"spring.weight.\"]').length===9,\"Masa y longitud actualizan el aparato\")"
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"linear\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<12;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "check(Math.abs(n('pendulumError'))<1e-9,\"Péndulo exacto con longitud máxima\")"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "shot",
+    "shots/swing-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/swing-light.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "key",
+    "ArrowLeft",
+    ".stage"
+  ],
+  [
+    "eval",
+    "check(n('angle')===44,\"Teclado de amplitud\")"
+  ],
+  [
+    "eval",
+    "document.querySelector('.stage').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',shiftKey:true,bubbles:true}))"
+  ],
+  [
+    "eval",
+    "check(n('angle')===45,\"Mayús y límite angular\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"reset\").click()"
+  ],
+  [
+    "eval",
+    "check(n('angle')===15&&n('mass')===.2&&n('length')===1&&d().linear==='false'&&n('time')===0&&n('records')===0,\"Restablecer parámetros\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"release\").click()"
+  ],
+  [
+    "eval",
+    "check(d().paused==='true'&&n('time')===0,\"Liberación manual sin animación\")"
+  ]
+]
