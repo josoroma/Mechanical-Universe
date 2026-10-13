@@ -1,0 +1,44 @@
+[
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mass-b\");e.value=\"0.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"velocity-a\");e.value=\"80\";e.dispatchEvent(new Event(\"input\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"velocity-b\");e.value=\"-0.2\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<11;i++)document.getElementById('step').click()"
+  ],
+  [
+    "shot",
+    "shots/compressed-light.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById('theme').click()"
+  ],
+  [
+    "shot",
+    "shots/compressed-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ]
+]

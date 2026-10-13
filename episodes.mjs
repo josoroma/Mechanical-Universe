@@ -13,7 +13,7 @@ export const episodes=[
   ['El experimento de Millikan','episode-12-the-millikan-experiment'],
   ['Conservación de la energía','episode-13-conservation-of-energy'],
   ['Energía potencial','episode-14-potential-energy'],
-  ['Conservación de la cantidad de movimiento'],
+  ['Conservación de la cantidad de movimiento','episode-15-conservation-of-momentum'],
   ['Movimiento armónico'],
   ['Resonancia'],
   ['Ondas'],

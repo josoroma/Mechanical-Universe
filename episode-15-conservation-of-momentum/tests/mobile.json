@@ -1,0 +1,110 @@
+[
+  [
+    "eval",
+    "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(c,m)=>{if(!c)throw Error(m);return m+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
+  ],
+  [
+    "eval",
+    "check(innerWidth===390&&document.documentElement.scrollWidth<=innerWidth,\"Móvil sin desbordamiento\")"
+  ],
+  [
+    "shot",
+    "shots/mobile-light.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "document.getElementById(\"compare\").click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mass-b\");e.value=\"0.4\";e.dispatchEvent(new Event(\"change\",{bubbles:true}))})()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<11;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/mobile-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "drag",
+    ".stage",
+    0.5,
+    0.5,
+    0.3,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "check(n('vA0')<.6,\"Arrastre en móvil\")"
+  ],
+  [
+    "scroll",
+    "#velocity-a"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "eval",
+    "window.previousVelocity=n('vA0')"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    "#velocity-a"
+  ],
+  [
+    "eval",
+    "check(n('vA0')>window.previousVelocity,\"Deslizador nativo por teclado\")"
+  ],
+  [
+    "scroll",
+    "#mass-b"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "key",
+    "ArrowUp",
+    "#mass-b"
+  ],
+  [
+    "eval",
+    "check(n('massB')<.4,\"Selector de masa nativo\")"
+  ],
+  [
+    "eval",
+    "check(document.documentElement.scrollWidth<=innerWidth,\"Sin desbordamiento después de interactuar\")"
+  ]
+]
