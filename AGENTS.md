@@ -7,6 +7,7 @@ Estas instrucciones se aplican al índice y a todos los episodios de esta carpet
 - Escribe toda la interfaz y el contenido educativo en español correcto: títulos, controles, explicaciones, unidades, mensajes y etiquetas accesibles.
 - Crea cada episodio en su carpeta `episode-N-…/`, dentro de esta colección, con su fuente editable y un `index.html` autónomo.
 - Mantén los títulos y la disponibilidad de los 52 episodios en `episodes.mjs`. No enlaces episodios pendientes.
+- El icono y el texto «El universo mecánico» de la cabecera forman un enlace al índice de la colección: `../index.html` desde los episodios e `index.html` desde el propio índice. No los dirijas al episodio 1. Conserva su aspecto de marca y el foco visible del teclado.
 
 ## Tema predeterminado
 
