@@ -25,6 +25,7 @@ Estas instrucciones se aplican al índice y a todos los episodios de esta carpet
 - Usa esquinas de aproximadamente `1rem`, sombras suaves y jerarquías claras entre títulos, explicaciones, lecturas y controles.
 - Las secciones seleccionadas se distinguen por su fondo y su texto. No añadas líneas inferiores, bordes inferiores de acento ni pseudoelementos de subrayado para indicar la selección. Conserva el indicador de foco del teclado.
 - Da espacio interior a toda la tarjeta de una tabla, incluido el título y el resultado: 24 px en escritorio y 16 px en móvil. Las celdas usan 14 × 12 px en escritorio y 12 × 10 px en móvil. Si una tabla no cabe, permite desplazamiento horizontal dentro de su tarjeta, sin desbordar la página.
+- Los encabezados y las bandas de lecturas con fondo también necesitan espacio interior: 24 px en escritorio y 16 px en móvil; las lecturas de una columna lateral usan 16 px. Los títulos, las cifras, las unidades y las claves de color deben quedar separados de los bordes. Adapta las columnas de energía al ancho disponible para evitar recortes.
 
 ## Instrumentos y simulaciones
 

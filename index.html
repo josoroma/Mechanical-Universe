@@ -184,6 +184,7 @@ body .laboratory > .controls {
   box-shadow: var(--tile-shadow);
 }
 body :is(.card-heading, .instrument-heading, .controls-heading, .balance-heading) {
+  padding: 24px;
   background: linear-gradient(110deg, color-mix(in srgb, var(--surface-start) 9%, var(--card)), color-mix(in srgb, var(--surface-middle) 6%, var(--card)));
 }
 body :is(.stage, .optic-stage) {
@@ -216,7 +217,12 @@ body :is(.total-reading, .ratio, .net-value) strong {
   font-variant-numeric: tabular-nums;
   letter-spacing: -.055em;
 }
-body :is(.readings, .measurement, .energy-values) { background: color-mix(in srgb, var(--surface-start) 4%, var(--card)); }
+body :is(.readings, .measurement, .energy-values) {
+  padding: 24px;
+  background: color-mix(in srgb, var(--surface-start) 4%, var(--card));
+}
+body .story .readings { padding: 16px; }
+body .energy-values { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
 body .system-card { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-middle) 6%, var(--card)), var(--card) 70%); }
 body .system-card:nth-child(2n) { background: linear-gradient(135deg, color-mix(in srgb, var(--surface-end) 7%, var(--card)), var(--card) 70%); }
 body .system-bar { height: 9px; border-radius: 999px; }
@@ -331,6 +337,7 @@ body a.episode-entry:focus-visible { outline-offset: -4px; }
   body :is(.ideas, .laws) article + article { margin-top: 16px; }
   body :is(.ideas, .laws) article { padding: 20px; }
   body :is(.steps-ribbon, .chapter-nav) { padding-left: 8px; padding-right: 8px; }
+  body :is(.card-heading, .instrument-heading, .controls-heading, .balance-heading, .readings, .measurement, .energy-values) { padding: 16px; }
   body :is(.table-wrap, .notebook-table) { padding: 16px; }
   body :is(.table-wrap, .notebook-table) :is(th, td) { padding: 12px 10px; }
 }
