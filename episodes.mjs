@@ -10,7 +10,7 @@ export const episodes=[
   ['Movimiento circular','episode-9-moving-in-circles'],
   ['Fuerzas fundamentales','episode-10-fundamental-forces'],
   ['Gravedad, electricidad y magnetismo','episode-11-gravity-electricity-magnetism'],
-  ['El experimento de Millikan'],
+  ['El experimento de Millikan','episode-12-the-millikan-experiment'],
   ['Conservación de la energía'],
   ['Energía potencial'],
   ['Conservación de la cantidad de movimiento'],

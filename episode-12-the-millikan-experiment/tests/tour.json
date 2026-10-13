@@ -1,0 +1,13 @@
+[
+  ["slow", 3],
+  ["until", "document.querySelector('.laboratory').dataset.serial==='2'&&document.querySelector('.laboratory').dataset.spawning==='false'", 15000],
+  ["eval", "(()=>{const d=document.querySelector('.laboratory').dataset;if(d.auto!=='true'||d.n!=='6'||Math.abs(Number(d.u))>500||Math.abs(Number(d.z))>.0013)throw Error('Ciclo automático incorrecto');return 'Ciclo completo y nueva gota · correcto'})()"],
+  ["slow", 1],
+  ["scroll", ".playback"],
+  ["wait", 500],
+  ["click", "#tour"],
+  ["eval", "(()=>{if(document.querySelector('.laboratory').dataset.auto!=='false')throw Error('No se desactiva la demostración');return 'Demostración desactivada mediante clic real · correcto'})()"],
+  ["click", "#tour"],
+  ["eval", "document.activeElement.blur()"],
+  ["eval", "(()=>{if(document.querySelector('.laboratory').dataset.auto!=='true')throw Error('No se activa la demostración');return 'Demostración reactivada mediante clic real · correcto'})()"]
+]
