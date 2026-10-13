@@ -1,0 +1,189 @@
+[
+  [
+    "eval",
+    "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(condition,message)=>{if(!condition)throw Error(message);return message+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
+  ],
+  [
+    "eval",
+    "check(d().reduced==='true'&&d().auto==='false'&&n('time')===0,\"Movimiento reducido sin reloj automático\")"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "check(n('time')===0,\"Estado inicial inmóvil\")"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<1;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "check(near(n('time'),.1)&&n('solidX')<n('hollowX')&&n('solidSpeed')>n('hollowSpeed'),\"Primera bajada con rotación\")"
+  ],
+  [
+    "eval",
+    "check(near(n('solidKrot')/n('solidKtr'),.4)&&near(n('hollowKrot')/n('hollowKtr'),2/3),\"Reparto correcto de energía\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<7;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "check(d().records==='3'&&document.getElementById('record').disabled,\"Cuaderno limitado a tres observaciones\")"
+  ],
+  [
+    "eval",
+    "check(['solid','hollow','spring'].every(id=>Math.abs(n(id+'Error'))<1e-9),\"Conservación de cada energía\")"
+  ],
+  [
+    "eval",
+    "check(['solid','hollow','spring'].every(id=>Math.abs(['U','Ktr','Krot'].reduce((s,k)=>s+document.getElementById(id+'-bar-'+k).getBoundingClientRect().width,0)-document.querySelector('#'+id+'-bar-U').parentElement.getBoundingClientRect().width)<.1),\"Barras coherentes con la energía\")"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "shot",
+    "shots/junctions-dark.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<1;i++)document.getElementById('step').click()"
+  ],
+  [
+    "shot",
+    "shots/junctions-light.png",
+    ".stage",
+    4
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<1;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "check(n('amplitude')===0&&['solid','hollow','spring'].every(id=>['X','Speed','U','Ktr','Krot'].every(k=>n(id+k)===0)),\"Equilibrio en el mínimo\")"
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "key",
+    "ArrowLeft",
+    ".stage"
+  ],
+  [
+    "eval",
+    "check(n('amplitude')===.49,\"Control por teclado\")"
+  ],
+  [
+    "eval",
+    "document.querySelector('.stage').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',shiftKey:true,bubbles:true}))"
+  ],
+  [
+    "eval",
+    "check(n('amplitude')===.5,\"Límite y paso de cinco centímetros\")"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-side=\"-1\"]').click()"
+  ],
+  [
+    "eval",
+    "check(n('solidX')===-.5&&n('springX')===-.5&&n('solidSpeed')===0&&d().records==='0',\"Nueva salida por la izquierda\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"stiffness\").click()"
+  ],
+  [
+    "eval",
+    "check(n('factor')===2&&near(n('springTotal'),2*n('solidTotal'))&&document.getElementById('well-curve').getAttribute('d')!==document.getElementById('spring-curve').getAttribute('d'),\"Rigidez doble y potenciales distintos\")"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"reset\").click()"
+  ],
+  [
+    "eval",
+    "check(n('amplitude')===.35&&n('factor')===1&&n('side')===1&&n('time')===0&&d().records==='0',\"Restablecer parámetros\")"
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"release\").click()"
+  ],
+  [
+    "eval",
+    "check(d().paused==='true'&&n('time')===0,\"Preparación manual sin animación\")"
+  ]
+]

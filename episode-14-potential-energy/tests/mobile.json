@@ -1,0 +1,105 @@
+[
+  [
+    "eval",
+    "window.d=()=>document.querySelector('.laboratory').dataset;window.n=k=>Number(d()[k]);window.check=(condition,message)=>{if(!condition)throw Error(message);return message+' · correcto'};window.near=(a,b,t=1e-9)=>Math.abs(a-b)<t"
+  ],
+  [
+    "eval",
+    "check(innerWidth===390&&document.documentElement.scrollWidth<=innerWidth,\"Móvil sin desbordamiento\")"
+  ],
+  [
+    "shot",
+    "shots/mobile-light.png",
+    ".page",
+    1
+  ],
+  [
+    "eval",
+    "for(let i=0;i<8;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"stiffness\").click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<5;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"record\").click()"
+  ],
+  [
+    "eval",
+    "document.querySelector('[data-side=\"-1\"]').click()"
+  ],
+  [
+    "eval",
+    "for(let i=0;i<6;i++)document.getElementById('step').click()"
+  ],
+  [
+    "eval",
+    "document.getElementById(\"theme\").click()"
+  ],
+  [
+    "shot",
+    "shots/mobile-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    null,
+    ".apparatus"
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "drag",
+    ".stage",
+    0.5,
+    0.5,
+    0.3,
+    0.5,
+    8
+  ],
+  [
+    "eval",
+    "check(n('amplitude')<.35,\"Arrastre en móvil\")"
+  ],
+  [
+    "scroll",
+    "#amplitude"
+  ],
+  [
+    "wait",
+    500
+  ],
+  [
+    "eval",
+    "window.previousAmplitude=n('amplitude')"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    "#amplitude"
+  ],
+  [
+    "eval",
+    "check(n('amplitude')>window.previousAmplitude,\"Deslizador nativo por teclado\")"
+  ],
+  [
+    "eval",
+    "check(document.documentElement.scrollWidth<=innerWidth,\"Sin desbordamiento después de interactuar\")"
+  ]
+]
