@@ -18,6 +18,28 @@ Un episodio solo recibe un enlace cuando tiene una carpeta asignada y existe su 
 
 Cada carpeta de episodio conserva su código fuente, documentación, pruebas y licencia del kit Anatomy. Las capturas de revisión y los registros locales se excluyen de Git.
 
+## Temas de la colección
+
+`theme.css` define la paleta compartida, inspirada en Luma: azul, violeta y turquesa, superficies claras o azul marino, títulos con degradado y tarjetas redondeadas. Conserva colores distintos para las magnitudes físicas y adapta los materiales de las máquinas a la misma paleta. Los controles de tema de cada página siguen seleccionando la versión clara u oscura.
+
+`theme.mjs` integra estos estilos al final de cada HTML completo. No hay fuentes, bibliotecas ni hojas de estilo que deban descargarse. Los archivos `page.html` de algunos episodios son plantillas parciales; reciben el tema cuando su generador produce las páginas completas.
+
+Para actualizar las 33 páginas publicadas después de modificar el tema:
+
+```sh
+node build-all.mjs
+```
+
+También puedes ejecutar el `build.mjs` de un episodio. Mantén `theme.css` y `theme.mjs` en la carpeta superior al copiar el código fuente para regenerarlo. Los HTML finales son autónomos.
+
+Para comprobar el cambio de tema de cada página, el contraste de la paleta y los tamaños de 1440 y 390 px, con Chrome instalado:
+
+```sh
+node tests/themes.mjs
+```
+
+La prueba también comprueba que se muestran las máquinas y que los textos principales no se recortan. Guarda cuatro hojas de revisión en `shots/themes/`. Puedes indicar otro navegador Chromium mediante `CHROME_PATH`.
+
 ## GitHub Pages
 
 El sitio es estático y se publica desde la raíz de la rama `main`. `.nojekyll` permite servir directamente los archivos. Los enlaces de los episodios son relativos y funcionan dentro de `/Mechanical-Universe/`.

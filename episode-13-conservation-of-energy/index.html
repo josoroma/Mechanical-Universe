@@ -137,6 +137,350 @@ body.iso[data-theme="dark"]{--metal-top:#c5aa72;--metal-hi:#e7d3a0;--enamel-top:
 @media(max-width:1100px) and (min-width:761px){.page{padding:25px 30px}h1{font-size:52px}.intro-copy{max-width:245px;font-size:11px}.laboratory{grid-template-columns:minmax(0,1fr) 270px;gap:16px}.card-heading{padding:18px}.card-heading h2{font-size:25px}.formula{font-size:17px}.stage,.iso-plate .drawing{height:460px}.stage-corners span:last-child{display:none}.readings strong{font-size:29px}.energy-values{gap:15px}.energy-values>div{flex-wrap:wrap}.energy-name{min-width:100px}.energy-values strong{font-size:28px}.notebook{gap:23px}.notebook-table th,.notebook-table td{padding-left:10px;padding-right:10px}}
 @media(max-width:760px){.page{padding:19px 18px 24px}.masthead{padding-bottom:17px}.wordmark{font-size:16px;gap:8px}.brand-mark{width:24px;height:24px}.folio{display:none}.intro{display:block;padding:29px 0 24px}.eyebrow{font-size:9px;letter-spacing:1px}h1{font-size:39px;letter-spacing:-1.7px}.intro-copy{max-width:none;font-size:12px;margin-top:20px}.steps-ribbon{gap:15px;justify-content:space-between;font-size:9px}.steps-ribbon span{gap:6px}.steps-ribbon b{font-size:9px}.laboratory{display:block;margin-top:18px}.controls{margin-top:20px}.card-heading{padding:18px;gap:8px}.card-heading h2{font-size:25px}.formula{font-size:15px}.card-heading .tag{font-size:7px;letter-spacing:.8px}.stage,.iso-plate .drawing{height:270px}.stage-corners,.stage-bottom{left:14px;right:14px;font-size:7px}.stage-corners span:last-child,.stage-bottom span:last-child{display:none}.readings{padding:18px 17px;gap:10px}.readings strong{font-size:28px}.readings .unit{font-size:8px;margin-left:3px}.readings .meta-label{font-size:7px;letter-spacing:.2px}.apparatus-note{padding:17px 20px}.control-field{padding:21px 22px 0}.control-field label,.control-field output{font-size:12px}.controls-actions button{font-size:11px;padding:10px}.controls-heading{padding:22px}.friction-control p,.control-note{font-size:11px}.rate-control{font-size:11px}.prediction p:last-child{font-size:12px}.keyboard-note{font-size:10px}.playback{flex-wrap:wrap;gap:10px;padding:13px}.playback .readout{font-size:9px;flex:1}.motion-note{flex-basis:100%;margin:0;font-size:9px}.balance-heading{display:block}.balance-heading h2{font-size:29px}.total{margin-top:18px;gap:9px}.total strong{font-size:31px}.total>span:first-child{margin-right:auto}.energy-bar{margin-top:18px;height:15px}.energy-values{display:block}.energy-values>div+div{margin-top:18px}.energy-name{font-size:11px}.energy-values strong{font-size:27px}.balance-foot{display:block;font-size:9px}.balance-foot span{display:block}.balance-foot span+span{margin-top:7px}.notebook{display:block;padding:27px 0}.notebook h2{font-size:31px}.notebook-table{margin-top:23px}.notebook-table th{font-size:8px;padding:12px 8px}.notebook-table td{font-size:10px;padding:13px 8px}.notebook-bottom{padding:12px 10px;font-size:8px}.ideas{display:block;padding:0 0 25px}.ideas article{padding-top:24px}.ideas article+article{padding:24px 0 0;margin-top:24px;border-left:0;border-top:1px solid var(--line)}.ideas h2{font-size:24px}.caption{padding:22px 0}.model-notes{font-size:10px}.model-notes>div{display:block}.model-notes p+p{margin-top:15px}.episode-nav{display:block;font-size:11px;line-height:1.8}.episode-nav a{display:block;margin-top:9px}.end-mark{display:block;margin-top:16px}.source-links{gap:10px 15px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><style data-collection-theme="luma">
+/* Shared Luma-inspired theme. Embedded by theme.mjs in every complete HTML. */
+:root {
+  --background: #f5f8ff;
+  --foreground: #15213b;
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.488 0.243 264.376);
+  --primary-foreground: oklch(0.97 0.014 254.604);
+  --secondary: #edf2ff;
+  --secondary-foreground: #253a67;
+  --muted-foreground: #52617a;
+  --accent-foreground: var(--foreground);
+  --destructive: #be123c;
+  --border: #cfdaee;
+  --input: #8595ad;
+  --ring: #2563eb;
+  --chart-1: oklch(0.845 0.143 164.978);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.596 0.145 163.225);
+  --chart-4: oklch(0.508 0.118 165.612);
+  --chart-5: oklch(0.432 0.095 166.913);
+  --radius: 1rem;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: oklch(0.546 0.245 262.881);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --brand-blue: #1d4ed8;
+  --brand-violet: #7c3aed;
+  --brand-teal: #0f766e;
+  --brand-pink: #be185d;
+  --grid-ink: #2452b30a;
+  --glow-blue: #60a5fa15;
+  --glow-violet: #a78bfa18;
+  --tile-shadow: 0 8px 28px #203f8010;
+  --heading-gradient: linear-gradient(105deg, var(--brand-blue), var(--brand-violet) 55%, var(--brand-teal));
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Bridge the older episodes' drawing and UI tokens to the shared palette. */
+body, body[data-theme], body.iso, body.iso[data-theme] {
+  color-scheme: light;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --accent-foreground: var(--foreground);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --heading-gradient: linear-gradient(105deg, var(--brand-blue), var(--brand-violet) 55%, var(--brand-teal));
+  --page: var(--background);
+  --paper: var(--background);
+  --panel: var(--card);
+  --ink: var(--foreground);
+  --subtle: var(--muted-foreground);
+  --secondary: #edf2ff;
+  --pending: var(--muted-foreground);
+  --line: var(--border);
+  --accent: var(--brand-blue);
+  --muted: var(--muted-foreground);
+  --tint: var(--secondary);
+  --wash: var(--secondary);
+  --focus: var(--ring);
+  --positive: var(--brand-teal);
+  --negative: var(--brand-pink);
+  --potential: var(--brand-violet);
+  --kinetic: var(--brand-teal);
+  --thermal: var(--brand-pink);
+  --anatomy-page: var(--background);
+  --anatomy-card: var(--card);
+  --anatomy-text: var(--foreground);
+  --anatomy-muted: var(--muted-foreground);
+  --anatomy-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --earth-color: #0284c7;
+  --copper-color: #d97736;
+  --enamel-paper: #2346a2;
+  --enamel-top: #3769ce;
+  --enamel-0: #14285a;
+  --enamel-1: #1b377a;
+  --enamel-2: #2852b1;
+  --enamel-3: #4a7bdb;
+  --enamel-lo: #80a7ed;
+  --enamel-mid: #b9d3ff;
+  --silver-paper: #94a9c3;
+  --silver-top: #e2eeff;
+  --silver-0: #425c7b;
+  --silver-1: #708bac;
+  --silver-2: #a7bedb;
+  --silver-3: #ccddf1;
+  --ivory-paper: #c6d6ed;
+  --ivory-top: #f4f8ff;
+  --ivory-0: #7e95b6;
+  --ivory-1: #a4bbd9;
+  --ivory-2: #d3e0f2;
+  --ivory-3: #e8f0fc;
+  margin: 0;
+  color: var(--foreground);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(ellipse 75% 600px at 90% 0, var(--glow-violet), transparent),
+    radial-gradient(ellipse 65% 650px at 0 350px, var(--glow-blue), transparent),
+    linear-gradient(var(--grid-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-ink) 1px, transparent 1px);
+  background-size: auto, auto, 64px 64px, 64px 64px;
+  font-family: var(--font-sans);
+}
+
+body[data-theme="dark"], body.iso[data-theme="dark"], body.dark {
+  color-scheme: dark;
+  --background: #090f21;
+  --foreground: #f0f5ff;
+  --card-foreground: var(--foreground);
+  --popover-foreground: var(--foreground);
+  --accent-foreground: var(--foreground);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-accent-foreground: var(--foreground);
+  --card: #121e35;
+  --primary: oklch(0.424 0.199 265.638);
+  --primary-foreground: oklch(0.97 0.014 254.604);
+  --secondary: #1c2c49;
+  --secondary-foreground: #e4edff;
+  --muted-foreground: #b2c0d8;
+  --destructive: #fda4af;
+  --border: #304363;
+  --input: #697f9f;
+  --ring: #93c5fd;
+  --sidebar-primary: oklch(0.623 0.214 259.815);
+  --brand-blue: #85baff;
+  --brand-violet: #bda3ff;
+  --brand-teal: #5ee3cf;
+  --brand-pink: #f6a0cd;
+  --grid-ink: #92b5ff07;
+  --glow-blue: #2563eb12;
+  --glow-violet: #8b5cf61a;
+  --tile-shadow: 0 10px 32px #00000026;
+  --earth-color: #67c8ff;
+  --copper-color: #ffb47c;
+  --enamel-paper: #22448a;
+  --enamel-top: #3866b5;
+  --enamel-0: #112144;
+  --enamel-1: #1b3464;
+  --enamel-2: #2c5299;
+  --enamel-3: #4675c2;
+  --enamel-lo: #729ada;
+  --enamel-mid: #b1d0ff;
+}
+
+body .wordmark {
+  font-family: var(--font-sans);
+  font-weight: 750;
+  letter-spacing: -.035em;
+}
+body .brand-mark { stroke-width: 1.2; stroke: var(--brand-blue); }
+body .intro > div { min-width: 0; }
+body h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+body h1 em {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  color: var(--brand-blue);
+  background: var(--heading-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body :is(h2, h3, .era-name, .profile-name) {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+body :is(h2, h3) em { font-family: inherit; font-style: normal; font-weight: inherit; color: var(--brand-violet); }
+body :is(.eyebrow, .tag) { color: var(--brand-blue); font-weight: 650; }
+body :is(.folio, .source-label, .keyboard-hint, .range-labels, .corner, .stage-corners, .optic-meta) { color: var(--muted-foreground); }
+body .intro-copy { font-size: 13px; }
+body .intro-copy strong { font-weight: 600; }
+
+body :is(.exhibit.iso-plate, .apparatus.iso-plate, .instrument.iso-plate, .observation.iso-plate),
+body :is(.system-card, .plot-panel, .graph-panel, .energy-panel, .notebook-table, .table-wrap, .net-panel, .gravity-panel, .sum-panel),
+body .laboratory > .controls {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--tile-shadow);
+}
+body :is(.card-heading, .instrument-heading, .controls-heading, .balance-heading) {
+  background: linear-gradient(110deg, color-mix(in srgb, var(--brand-blue) 9%, var(--card)), color-mix(in srgb, var(--brand-violet) 6%, var(--card)));
+}
+body :is(.stage, .optic-stage) {
+  background: radial-gradient(ellipse at 50% 45%, color-mix(in srgb, var(--brand-blue) 7%, var(--card)), var(--card) 72%);
+}
+body :is(.era-selector, .profiles, .profile-selector, .phase-buttons) {
+  border-color: var(--border);
+  background: var(--card);
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+}
+body :is(.era-selector, .profiles) + .exhibit { border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
+body :is(.era-button, .profile, .profile-button)[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--brand-blue) 11%, var(--card));
+  color: var(--brand-blue);
+}
+body :is(.era-number, .profile-number, .idea-number, .law-number) { color: var(--brand-violet); opacity: 1; font-weight: 700; }
+body :is(.steps-ribbon, .chapter-nav) { border-radius: 12px; padding-left: 12px; padding-right: 12px; background: color-mix(in srgb, var(--brand-blue) 5%, var(--card)); }
+body .readings :is(strong, .metric strong),
+body :is(.measurement, .energy-values, .system-motion, .field-readings, .gravity-readings, .observation-readings) strong,
+body :is(.total-reading, .ratio, .net-value) strong {
+  font-family: var(--font-sans);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.055em;
+}
+body :is(.readings, .measurement, .energy-values) { background: color-mix(in srgb, var(--brand-blue) 4%, var(--card)); }
+body .system-card { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-violet) 6%, var(--card)), var(--card) 70%); }
+body .system-card:nth-child(2n) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-teal) 7%, var(--card)), var(--card) 70%); }
+body .system-bar { height: 9px; border-radius: 999px; }
+body :is(.energy-key, .swatch, .legend-dot) { flex-shrink: 0; }
+body .playback { border-radius: 12px; border-color: var(--border); background: var(--card); }
+
+body :is(.ideas, .laws) article,
+body :is(.ideas, .laws) article + article {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--brand-blue) 7%, var(--card)), var(--card));
+}
+body :is(.ideas, .laws) article:nth-child(2) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-violet) 8%, var(--card)), var(--card)); }
+body :is(.ideas, .laws) article:nth-child(3) { background: linear-gradient(135deg, color-mix(in srgb, var(--brand-teal) 8%, var(--card)), var(--card)); }
+body :is(.ideas, .laws) p { font-size: 12px; }
+body .notebook-table th { background: var(--secondary); color: var(--foreground); }
+body .notebook-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--brand-blue) 3%, var(--card)); }
+body .model-notes { border-radius: 12px; padding: 16px; border: 1px solid var(--border); background: color-mix(in srgb, var(--brand-teal) 5%, var(--card)); }
+body .end-mark { font-family: var(--font-sans); font-style: normal; font-weight: 600; }
+
+body :is(button, select) { border-radius: 9px; }
+body button { min-height: 34px; }
+body input[type="range"] { height: 28px; }
+body :is(.actions, .controls-actions, .presets, .notebook-actions, .side-buttons, .frame-buttons, .distance-presets, .increment-actions, .thresholds, .landmarks, .marks, .mechanism-key, .preset-list, .polarity) button,
+body :is(.play, .ideas button, .laws button) {
+  border: 1px solid var(--input);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--foreground);
+  font-weight: 550;
+}
+body :is(.actions, .controls-actions, .presets, .notebook-actions, .side-buttons, .frame-buttons, .distance-presets, .increment-actions, .thresholds, .landmarks, .marks, .mechanism-key, .preset-list, .polarity) button:hover,
+body :is(.play, .ideas button, .laws button):hover { background: var(--secondary); border-color: var(--brand-blue); }
+body :is(.actions, .controls-actions, .experiment .actions, .playback) .primary,
+body .play, body .playback .play {
+  color: var(--primary-foreground);
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+body :is(.actions, .controls-actions, .experiment .actions, .playback) .primary:hover,
+body .play:hover, body .playback .play:hover { background: color-mix(in srgb, var(--primary) 88%, #000); border-color: var(--primary); }
+body :is(.side-buttons, .frame-buttons, .distance-presets, .landmarks, .marks, .mechanism-key, .preset-list, .polarity) button[aria-pressed="true"] {
+  color: var(--brand-blue);
+  background: var(--secondary);
+  border-color: var(--brand-blue);
+}
+body select { border-color: var(--input); background-color: var(--card); color: var(--foreground); }
+body input { accent-color: var(--primary); }
+body .theme-toggle { width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px; border: 1px solid var(--input); background: var(--card); box-shadow: 0 2px 5px #00000008; }
+body .theme-toggle:hover { background: var(--secondary); }
+body .theme-toggle svg { stroke: var(--brand-blue); }
+body :is(button, a, input, select, summary, [tabindex]):focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+body ::selection { background: color-mix(in srgb, var(--brand-violet) 25%, var(--card)); color: var(--foreground); }
+
+/* Color is functional: blue/violet and teal stay distinct in phase/energy plots. */
+body .optic-rim { fill: #132547; stroke: #6f98eb; }
+body .optic-face { fill: #0e1b34; }
+body .optic-rule { stroke: #7199c9; }
+body .optic-major { stroke: #88d7ff; }
+body .oil-halo { fill: #66e7d4; }
+body .oil-body { fill: #f9d97e; stroke: #fff3ce; }
+
+/* The collection index is a grid of numbered episode tiles. */
+body .collection-status { padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--tile-shadow); }
+body .collection-count, body .collection-count strong { font-family: var(--font-sans); font-weight: 750; }
+body .collection-count strong { color: var(--brand-blue); }
+body .collection-progress { height: 7px; border-radius: 999px; overflow: hidden; }
+body .collection-progress::-webkit-progress-value { background: var(--heading-gradient); border-radius: 999px; }
+body .collection-progress::-moz-progress-bar { background: var(--heading-gradient); border-radius: 999px; }
+body .index-heading { border-bottom: 0; padding: 22px 0; }
+body .index-heading h2 { font-size: 13px; font-weight: 700; }
+body .episodes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+body .episode { --tile-accent: var(--brand-blue); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--card); }
+body .episode:nth-child(4n+2) { --tile-accent: var(--brand-violet); }
+body .episode:nth-child(4n+3) { --tile-accent: var(--brand-teal); }
+body .episode:nth-child(4n) { --tile-accent: var(--brand-pink); }
+body .episode[data-available="true"] { box-shadow: var(--tile-shadow); background: linear-gradient(135deg, color-mix(in srgb, var(--tile-accent) 7%, var(--card)), var(--card) 80%); }
+body .episode-entry { grid-template-columns: 40px minmax(0, 1fr) 16px; gap: 12px; min-height: 102px; padding: 18px 16px; height: 100%; }
+body .episode-number { display: grid; place-items: center; width: 40px; height: 40px; font: 700 14px var(--font-sans); border-radius: 11px; color: var(--muted-foreground); background: var(--secondary); }
+body a.episode-entry .episode-number { color: var(--tile-accent); background: color-mix(in srgb, var(--tile-accent) 12%, var(--card)); }
+body .episode-title { font: 650 17px/1.35 var(--font-sans); letter-spacing: -.025em; }
+body .episode-arrow { color: var(--tile-accent); }
+body a.episode-entry:hover { background: color-mix(in srgb, var(--tile-accent) 9%, var(--card)); }
+body a.episode-entry:hover .episode-title { color: var(--tile-accent); }
+body .episode[data-available="false"] { background: color-mix(in srgb, var(--background) 70%, var(--card)); }
+body .episode[data-available="false"] .episode-title { font-weight: 500; }
+body a.episode-entry:focus-visible { outline-offset: -4px; }
+
+@media (max-width: 1100px) {
+  body .episodes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  body h1 { letter-spacing: -.05em; }
+  body .intro-copy { font-size: 12px; }
+  body .wordmark { font-size: 15px; }
+  body :is(.ideas, .laws) article + article { margin-top: 16px; }
+  body :is(.ideas, .laws) article { padding: 20px; }
+  body :is(.steps-ribbon, .chapter-nav) { padding-left: 8px; padding-right: 8px; }
+}
+@media (max-width: 640px) {
+  body .episodes { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  body .episode-entry { min-height: 86px; padding: 16px; }
+  body .episode-title { font-size: 18px; }
+  body .collection-status { padding: 18px; }
+  body .index-heading { align-items: flex-start; gap: 12px; }
+  body .legend { flex-wrap: wrap; justify-content: flex-end; }
+}
+@media (forced-colors: active) {
+  body h1 em { background: none; -webkit-text-fill-color: CanvasText; color: CanvasText; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 </style></head><body class="iso" data-theme="light"><div class="page"><header class="masthead"><a class="wordmark" href="../index.html"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Un laboratorio de ideas · 13 / 52</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema oscuro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 13 <span>·</span> Conservación de la energía</p><h1 id="page-title">La altura se convierte<br><em>en movimiento.</em></h1></div><p class="intro-copy">Un carrito baja, atraviesa un valle y vuelve a subir. Su energía cambia de forma a cada instante.<strong>Sin rozamiento, lo que pierde en altura lo gana en rapidez.</strong></p></section>
 <div class="steps-ribbon"><span><b>01</b> Elige una altura</span><span><b>02</b> Suelta el carrito</span><span><b>03</b> Sigue la energía</span></div>

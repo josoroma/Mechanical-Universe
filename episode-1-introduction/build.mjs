@@ -1,4 +1,5 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import {writeThemedHtml} from '../theme.mjs';
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import * as K from "./kit/iso-kit.mjs";
@@ -41,6 +42,6 @@ const body = `<div class="page">
 const css = K.ISO_CSS + "\n" + source("styles.css");
 for (const [name, theme] of [["index.html", "light"], ["episode-1-dark.html", "dark"]]) {
   const html = `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Episodio 1 de El universo mecánico: explora los modelos ptolemaico, copernicano y newtoniano con un gran planetario mecánico interactivo."><title>Introducción — El universo mecánico</title><style>${css}</style></head><body class="iso" data-theme="${theme}">${body}<script type="module">${runtime}</script></body></html>`;
-  writeFileSync(join(HERE, name), html);
+  writeThemedHtml(join(HERE, name), html);
   console.log(`wrote ${name} · ${fixed.count} fixed solids · standalone ${theme} theme`);
 }
