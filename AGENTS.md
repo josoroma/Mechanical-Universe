@@ -41,4 +41,5 @@ Estas instrucciones se aplican al índice y a todos los episodios de esta carpet
 - Abre las capturas generadas. Para cambios en tablas o selectores, revisa también esas zonas, porque pueden quedar fuera de las capturas iniciales de página.
 - Los escenarios de captura deben elegir explícitamente el tema que describen, sin depender del tema predeterminado del sitio.
 - Para cambios en el modelo o en la geometría, ejecuta además las pruebas y auditorías pertinentes del episodio y las comprobaciones de Anatomy.
+- Conserva la recuperación del reloj al volver con Atrás/Adelante o a una pestaña: renueva la solicitud de animación sin borrar la pausa manual. Al terminar una prueba, reproducir debe permitir repetirla. Comprueba estos casos con `node tests/playback.mjs`.
 - Conserva el funcionamiento sin conexión. No incluyas capturas ni archivos temporales en Git; usa `shots/` y `.scratch/`, que están excluidos.

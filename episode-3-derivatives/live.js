@@ -202,3 +202,5 @@ new IntersectionObserver((entries) => {
 reduced.addEventListener("change", () => { if (reduced.matches) { stop(); state.x = targetX; } render(); schedule(); });
 rebuild(); explain(); render();
 nodes.theme.setAttribute("aria-label", `Cambiar al tema ${document.body.dataset.theme === "dark" ? "claro" : "oscuro"}`);
+
+MechanicalPlayback.bind({stop:()=>{if(frameId)cancelAnimationFrame(frameId);frameId=0;previous=null;},refresh:()=>{visible=MechanicalPlayback.inView(stage);},resume:()=>{render();schedule();}});

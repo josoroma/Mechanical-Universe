@@ -173,3 +173,5 @@ document.addEventListener("visibilitychange", () => { previous = null; if (docum
 new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; previous = null; if (!visible && frameId) { cancelAnimationFrame(frameId); frameId = 0; } schedule(); }, { threshold: 0.05 }).observe(stage);
 reduced.addEventListener("change", () => { pause(); state = { ...target }; zoomMix = zoom ? 1 : 0; render(); });
 syncControls(); render(); themeLabel(); schedule();
+
+MechanicalPlayback.bind({stop:()=>{if(frameId)cancelAnimationFrame(frameId);frameId=0;previous=null;},refresh:()=>{visible=MechanicalPlayback.inView(stage);},resume:()=>{render();schedule();}});

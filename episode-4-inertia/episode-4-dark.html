@@ -606,7 +606,23 @@ body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
   box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
-</style></head><body class="iso" data-theme="dark"><div class="page">
+</style><script data-playback-lifecycle>
+// Embedded in each standalone episode; no network request is required.
+window.MechanicalPlayback={
+ inView(...elements){return elements.some(el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.top<innerHeight&&r.left<innerWidth;});},
+ bind({stop,resume,refresh}){
+  // A restored document can retain an RAF id whose callback was discarded.
+  // Keep the reader's play/pause choice; only renew the browser's clock.
+  const recover=()=>{stop();refresh();if(!document.hidden)resume();};
+  addEventListener('pagehide',stop);
+  addEventListener('pageshow',recover);
+  addEventListener('focus',recover);
+  document.addEventListener('visibilitychange',recover);
+  document.addEventListener('click',event=>{if(event.target.closest('#play,#demo'))recover();},true);
+ }
+};
+
+</script></head><body class="iso" data-theme="dark"><div class="page">
 <header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 04 <span>·</span> Inercia</p><h1 id="page-title">Moverse sin<br><em>sentir el viaje.</em></h1></div><p class="intro-copy">Imagina un barco que navega sin sacudidas.<br>Dentro, todo comparte su movimiento.<br><strong>¿Qué puede revelar un péndulo?</strong></p></section>
 <div class="era-selector" role="group" aria-label="Elige un experimento"><button type="button" class="era-button" data-mode="rest" aria-pressed="false"><span class="era-number">01</span><span><span class="era-name">En reposo</span><span class="era-subtitle">Todo permanece en calma</span></span><span class="era-date">v = 0</span></button><button type="button" class="era-button" data-mode="uniform" aria-pressed="true"><span class="era-number">02</span><span><span class="era-name">Velocidad constante</span><span class="era-subtitle">El movimiento se comparte</span></span><span class="era-date">a = 0</span></button><button type="button" class="era-button" data-mode="maneuver" aria-pressed="false"><span class="era-number">03</span><span><span class="era-name">Arrancar y frenar</span><span class="era-subtitle">El péndulo acusa el cambio</span></span><span class="era-date">a ≠ 0</span></button></div>
@@ -2825,4 +2841,6 @@ document.addEventListener("visibilitychange", () => { previous = null; if (docum
 new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; previous = null; if (!visible && frameId) { cancelAnimationFrame(frameId); frameId = 0; } schedule(); }, { threshold: 0.05 }).observe(stage);
 reduced.addEventListener("change", () => { pause(); viewMix = targetMix(); render(); });
 render(); themeLabel(); schedule();
+
+MechanicalPlayback.bind({stop:()=>{if(frameId)cancelAnimationFrame(frameId);frameId=0;previous=null;},refresh:()=>{visible=MechanicalPlayback.inView(stage);},resume:()=>{render();schedule();}});
 </script></body></html>

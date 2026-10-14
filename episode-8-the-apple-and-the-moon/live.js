@@ -80,3 +80,5 @@ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;stage.datas
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;last=0;}else wake();});
 reduced.addEventListener('change',()=>{if(reduced.matches){automatic=playing=false;cancelAnimationFrame(frame);frame=0;t=target;render();}else{render();wake();}});
 prepare();gravityRender();render();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(frame)cancelAnimationFrame(frame);frame=0;last=0;},refresh:()=>{visible=MechanicalPlayback.inView(stage);drag=null;},resume:()=>{render();wake();}});

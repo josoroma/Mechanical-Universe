@@ -611,7 +611,23 @@ body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
   box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
-</style></head><body class="iso" data-theme="dark"><div class="page">
+</style><script data-playback-lifecycle>
+// Embedded in each standalone episode; no network request is required.
+window.MechanicalPlayback={
+ inView(...elements){return elements.some(el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.top<innerHeight&&r.left<innerWidth;});},
+ bind({stop,resume,refresh}){
+  // A restored document can retain an RAF id whose callback was discarded.
+  // Keep the reader's play/pause choice; only renew the browser's clock.
+  const recover=()=>{stop();refresh();if(!document.hidden)resume();};
+  addEventListener('pagehide',stop);
+  addEventListener('pageshow',recover);
+  addEventListener('focus',recover);
+  document.addEventListener('visibilitychange',recover);
+  document.addEventListener('click',event=>{if(event.target.closest('#play,#demo'))recover();},true);
+ }
+};
+
+</script></head><body class="iso" data-theme="dark"><div class="page">
 <header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 09 <span>·</span> Movimiento circular</p><h1 id="page-title">Girar es cambiar<br><em>de dirección.</em></h1></div><p class="intro-copy">La rapidez puede ser constante.<br>La velocidad, en cambio, siempre apunta hacia otro lado.<br><strong>Descubre qué fuerza mantiene el círculo.</strong></p></section>
 <div class="profiles" role="group" aria-label="Elige un experimento"><button type="button" class="profile" data-mode="pendulum" aria-pressed="true"><span class="profile-number">01</span><span><span class="profile-name">Péndulo cónico</span><span class="profile-math">La tensión sostiene y desvía</span></span></button><button type="button" class="profile" data-mode="platform" aria-pressed="false"><span class="profile-number">02</span><span><span class="profile-name">Plataforma giratoria</span><span class="profile-math">El hilo tira hacia el centro</span></span></button></div>
@@ -2642,6 +2658,7 @@ const $=id=>document.getElementById(id),stage=document.querySelector('.stage'),m
 const reduced=matchMedia('(prefers-reduced-motion: reduce)'),cache=new WeakMap();
 const refs=new Map([...machine.children].map(el=>[el.dataset.part,el]));
 let state={...O.DEFAULTS},phase=0,playing=!reduced.matches,auto=!reduced.matches,visible=true,hover=false,drag=null,last=0,tour=0,renderedMode='',ordered='',dirty=true;
+let raf=0;
 const fmt=(n,d=2)=>n.toLocaleString('es-CR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const norm=p=>(p%O.TAU+O.TAU)%O.TAU;
 let cordRefs,bodyRef,markerRef=refs.get('rotor.marker').firstElementChild;
@@ -2720,6 +2737,7 @@ reduced.addEventListener('change',()=>{playing=!reduced.matches;auto=false;dirty
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}
 themeLabel();$('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});
 function frame(now){
+  raf=0;
   const dt=last?Math.min(.05,(now-last)/1000):0;last=now;
   if(visible&&!document.hidden&&!reduced.matches&&!(auto&&hover)&&!drag){
     if(auto){tour+=dt;const segment=Math.floor(tour/10)%4,t=tour%10/10;
@@ -2728,7 +2746,9 @@ function frame(now){
     }
     if(playing){phase=norm(phase+O.snapshot(state).omega*+$('rate').value*dt);render();}
   }
-  requestAnimationFrame(frame);
+  raf=requestAnimationFrame(frame);
 }
-render();requestAnimationFrame(frame);
+render();raf=requestAnimationFrame(frame);
+
+MechanicalPlayback.bind({stop:()=>{if(raf)cancelAnimationFrame(raf);raf=0;last=0;},refresh:()=>{visible=MechanicalPlayback.inView(stage);hover=document.querySelector('.exhibit').matches(':hover');drag=null;},resume:()=>{render();if(!raf)raf=requestAnimationFrame(frame);}});
 </script></body></html>

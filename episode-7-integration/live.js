@@ -134,3 +134,5 @@ new IntersectionObserver(entries=>{visible=entries.at(-1).isIntersecting;cancel(
 reduced.addEventListener("change",()=>{manual();x=target;zoomMix=zoom?1:0;render();});
 window.addEventListener("resize",()=>{layout();render();});
 layout();sync();render();themeLabel();schedule();
+
+MechanicalPlayback.bind({stop:()=>{cancel();},refresh:()=>{visible=MechanicalPlayback.inView(stage);hover=stage.matches(':hover');focused=document.querySelector("main").contains(document.activeElement);drag=null;},resume:()=>{render();schedule();}});

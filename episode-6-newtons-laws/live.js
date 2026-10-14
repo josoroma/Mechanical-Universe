@@ -137,3 +137,5 @@ document.addEventListener("visibilitychange",()=>{previous=null;if(document.hidd
 new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;previous=null;if(!visible&&frame){cancelAnimationFrame(frame);frame=0;}schedule();},{threshold:.05}).observe(stage);
 reduced.addEventListener("change",()=>{pause();zoomMix=zoom?1:0;render();});
 syncControls();render();themeLabel();schedule();
+
+MechanicalPlayback.bind({stop:()=>{if(frame)cancelAnimationFrame(frame);frame=0;previous=null;},refresh:()=>{visible=MechanicalPlayback.inView(stage);},resume:()=>{render();schedule();}});

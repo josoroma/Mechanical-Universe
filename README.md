@@ -34,7 +34,7 @@ Para actualizar las 53 páginas publicadas después de modificar el tema:
 node build-all.mjs
 ```
 
-También puedes ejecutar el `build.mjs` de un episodio. Mantén `theme.css`, `machine-materials.css` y `theme.mjs` en la carpeta superior al copiar el código fuente para regenerarlo. Los HTML finales son autónomos.
+También puedes ejecutar el `build.mjs` de un episodio. Mantén `theme.css`, `machine-materials.css`, `theme.mjs` y `playback.js` en la carpeta superior al copiar el código fuente para regenerarlo. Los HTML finales son autónomos.
 
 Para comprobar el cambio de tema de cada página, el contraste de la paleta y los tamaños de 1440 y 390 px, con Chrome instalado:
 
@@ -43,6 +43,8 @@ node tests/themes.mjs
 ```
 
 La prueba también comprueba que se muestran las máquinas y que los textos principales no se recortan. Guarda cuatro hojas de revisión en `shots/themes/`. Puedes indicar otro navegador Chromium mediante `CHROME_PATH`.
+
+`node tests/playback.mjs` comprueba la recuperación del reloj al navegar con Atrás, restaurar una página y volver de una pestaña oculta, a 1440 y 390 px. También verifica que no se dupliquen los relojes y que los episodios 17–26 conserven la pausa manual y puedan repetir el recorrido al terminar.
 
 ## GitHub Pages
 

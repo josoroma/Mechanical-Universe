@@ -627,7 +627,23 @@ body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
   box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
-</style></head><body class="iso" data-theme="dark"><div class="page"><header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
+</style><script data-playback-lifecycle>
+// Embedded in each standalone episode; no network request is required.
+window.MechanicalPlayback={
+ inView(...elements){return elements.some(el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.top<innerHeight&&r.left<innerWidth;});},
+ bind({stop,resume,refresh}){
+  // A restored document can retain an RAF id whose callback was discarded.
+  // Keep the reader's play/pause choice; only renew the browser's clock.
+  const recover=()=>{stop();refresh();if(!document.hidden)resume();};
+  addEventListener('pagehide',stop);
+  addEventListener('pageshow',recover);
+  addEventListener('focus',recover);
+  document.addEventListener('visibilitychange',recover);
+  document.addEventListener('click',event=>{if(event.target.closest('#play,#demo'))recover();},true);
+ }
+};
+
+</script></head><body class="iso" data-theme="dark"><div class="page"><header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 10 <span>·</span> Fuerzas fundamentales</p><h1 id="page-title">Dos fuerzas.<br><em>Una misma distancia.</em></h1></div><p class="intro-copy">La masa atrae. La carga puede atraer o repeler.<br>Dos balanzas revelan una semejanza matemática y una diferencia física.<br><strong>Acerca las esferas y compara las lecturas.</strong></p></section>
 <div class="profiles" role="group" aria-label="Elige una comparación"><button type="button" class="profile" data-preset="attraction" aria-pressed="true"><span class="profile-number">01</span><span><span class="profile-name">Atracción</span><span class="profile-math">Cargas de signos opuestos</span></span></button><button type="button" class="profile" data-preset="repulsion" aria-pressed="false"><span class="profile-number">02</span><span><span class="profile-name">Repulsión</span><span class="profile-math">Cargas del mismo signo</span></span></button><button type="button" class="profile" data-preset="neutral" aria-pressed="false"><span class="profile-number">03</span><span><span class="profile-name">Sin carga</span><span class="profile-math">La gravedad permanece</span></span></button><button type="button" class="profile" data-preset="near-equal" aria-pressed="false"><span class="profile-number">04</span><span><span class="profile-name">Casi iguales</span><span class="profile-math">Fuerzas que casi se compensan</span></span></button></div>
 <section class="settings-strip" aria-label="Propiedades de las esferas"><div class="setting"><label for="distance">Distancia entre centros <output id="distance-value" for="distance">0,50 m</output></label><input type="range" id="distance" min="0.2" max="1" step="0.01" value="0.5"><div class="range-labels"><span>0,20 m</span><span>1,00 m</span></div></div><div class="setting"><label for="mass">Masa de cada esfera <output id="mass-value" for="mass">1,00 kg</output></label><input type="range" id="mass" min="0.5" max="5" step="0.1" value="1"><div class="range-labels"><span>0,50 kg</span><span>5,00 kg</span></div></div><div class="setting"><label for="charge">Magnitud de cada carga <output id="charge-value" for="charge">1,000 nC</output></label><input type="range" id="charge" min="0" max="2" step="0.001" value="1"><div class="polarity" role="group" aria-label="Signos de las cargas"><button type="button" data-polarity="opposite" aria-pressed="true">+ y −</button><button type="button" data-polarity="same" aria-pressed="false">+ y +</button></div></div></section>
@@ -2784,4 +2800,6 @@ reduced.addEventListener('change',()=>{auto=false;paused=false;last=0;wake();});
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}
 $('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});
 themeLabel();controls();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(raf)cancelAnimationFrame(raf);raf=0;last=0;},refresh:()=>{for(const f of figures)intersections.set(f.stage,MechanicalPlayback.inView(f.stage));visible=[...intersections.values()].some(Boolean);hover=figures.some(f=>f.el.matches(':hover'));drag=null;},resume:()=>{wake();}});
 </script></body></html>

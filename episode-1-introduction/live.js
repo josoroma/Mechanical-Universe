@@ -170,3 +170,5 @@ $("#theme").setAttribute("aria-label", document.body.dataset.theme === "dark" ? 
 eraCopy();
 paintMechanism();
 run();
+
+MechanicalPlayback.bind({stop:()=>{if(frame)cancelAnimationFrame(frame);frame=0;last=0;},refresh:()=>{state.visible=MechanicalPlayback.inView(stage);},resume:()=>{updateReadout();run();}});

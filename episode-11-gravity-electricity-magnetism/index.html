@@ -616,7 +616,23 @@ body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
   box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
-</style></head><body class="iso" data-theme="dark"><div class="page"><header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Un laboratorio de ideas · 11 / 52</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
+</style><script data-playback-lifecycle>
+// Embedded in each standalone episode; no network request is required.
+window.MechanicalPlayback={
+ inView(...elements){return elements.some(el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.top<innerHeight&&r.left<innerWidth;});},
+ bind({stop,resume,refresh}){
+  // A restored document can retain an RAF id whose callback was discarded.
+  // Keep the reader's play/pause choice; only renew the browser's clock.
+  const recover=()=>{stop();refresh();if(!document.hidden)resume();};
+  addEventListener('pagehide',stop);
+  addEventListener('pageshow',recover);
+  addEventListener('focus',recover);
+  document.addEventListener('visibilitychange',recover);
+  document.addEventListener('click',event=>{if(event.target.closest('#play,#demo'))recover();},true);
+ }
+};
+
+</script></head><body class="iso" data-theme="dark"><div class="page"><header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Un laboratorio de ideas · 11 / 52</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 11 <span>·</span> Gravedad, electricidad y magnetismo</p><h1 id="page-title">Lo invisible<br><em>mueve la materia.</em></h1></div><p class="intro-copy">Un hilo que se tuerce. Dos esferas que se separan. Una aguja que cambia de rumbo.<br>Las fuerzas se revelan en sus efectos.<strong>Acerca las masas, gira la manivela y desvía la brújula.</strong></p></section>
 <nav class="chapter-nav" aria-label="Instrumentos del episodio"><a href="#gravity"><span>01</span> Gravedad</a><a href="#electric"><span>02</span> Electricidad</a><a href="#magnetism"><span>03</span> Magnetismo</a></nav>
 <section class="bench" aria-label="Balanza y generador interactivos">
@@ -2747,4 +2763,6 @@ for(const f of figures){const id=f.kind==='gravity'?'distance':f.kind==='electri
 const observer=new IntersectionObserver(entries=>{for(const e of entries){const f=figures.find(f=>f.stage===e.target);f.visible=e.isIntersecting;}last=0;wake();},{threshold:.02});figures.forEach(f=>observer.observe(f.stage));document.addEventListener('visibilitychange',()=>{last=0;wake();});
 reduced.addEventListener('change',()=>{auto=false;paused=false;pending=0;manualRate=0;last=0;wake();});
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}$('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});themeLabel();controls();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(raf)cancelAnimationFrame(raf);raf=0;last=0;},refresh:()=>{for(const f of figures){f.visible=MechanicalPlayback.inView(f.stage);f.hover=f.el.matches(':hover');}drag=null;},resume:()=>{wake();}});
 </script></body></html>

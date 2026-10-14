@@ -26,7 +26,7 @@ function render(draw=true){const s=O.sample(state);if(draw)paint(s);renderPlot(s
   put('encounter-note',!state.encounter?'No hay contacto dentro del tramo observado.':`Contacto desde ${fmt(state.contact,3)} hasta ${fmt(Math.min(state.end,state.contact+state.duration),3)} s.`);
   const phases={'aproximación':'Antes del contacto','compresión':'Los resortes se comprimen','expansión':'Los resortes se expanden','separación':'Los deslizadores se separan'};put('motion-state',pending?'Preparando una nueva prueba':s.done?'Fin del tramo observado':!state.encounter?'Movimiento uniforme · sin encuentro':phases[s.phase]);
   put('status',reduced.matches?'Movimiento reducido · avance manual':auto&&(hover||focusHold)?'Demostración en pausa':pending?'Preparando una nueva prueba':s.done?auto?'Fin del tramo · próxima repetición':'Fin del tramo observado':paused?'Reloj en pausa':auto?'Demostración automática':'Exploración libre');
-  put('play',paused?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches||!!pending||s.done;$('step').disabled=!!pending||s.done;
+  put('play',s.done?'▶ Repetir':paused||auto&&(hover||focusHold)?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches||!!pending;$('step').disabled=!!pending||s.done;
   put('launch',reduced.matches?'Volver al inicio':pending?armed?'Preparando…':'Lanzar al preparar':'Lanzar los deslizadores');$('launch').disabled=!!pending&&armed;
   $('record').disabled=!!pending||records.length>=3||Math.abs(s.t-lastRecorded)<1e-8;$('compare').disabled=!!pending||!state.encounter||state.contact+state.duration>=state.end;
   $('tour').setAttribute('aria-pressed',String(auto));put('tour',reduced.matches?'Preparar demostración':'Demostración');
@@ -42,7 +42,7 @@ function stopClock(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;}
 function tick(now){raf=0;if(!enabled()){last=0;return;}const dt=last?Math.min(1/30,Math.max(0,(now-last)/1000)):0;last=now;frame(dt);render();if(needsFrames())raf=requestAnimationFrame(tick);else last=0;}
 function wake(){if(enabled()&&needsFrames()&&!raf){last=0;raf=requestAnimationFrame(tick);}}
 function step(){if(pending||O.sample(state).done)return;manual();paused=true;state=O.advance(state,.05);render();say(`Tiempo del modelo: ${fmt(state.t)} segundos.`);}
-function togglePlay(){if(reduced.matches||pending||O.sample(state).done)return;manual();paused=!paused;render(false);wake();}
+function togglePlay(){if(reduced.matches||pending)return;if(O.sample(state).done){prepare(true);return;}const held=auto&&(hover||focusHold);manual();paused=held?false:!paused;render(false);wake();}
 function chooseVelocity(value){params={...params,vA:O.clamp(Math.round(value/5)*5,20,80)/100};prepare();}
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}
 $('mass-b').addEventListener('change',event=>{params={...params,massB:Number(event.target.value)};prepare();});$('velocity-b').addEventListener('change',event=>{params={...params,vB:Number(event.target.value)};prepare();});$('velocity-a').addEventListener('input',event=>chooseVelocity(Number(event.target.value)));
@@ -62,3 +62,5 @@ document.querySelector('.page').addEventListener('focusin',event=>{if(event.targ
 document.addEventListener('visibilitychange',()=>{stopClock();render(false);wake();});new IntersectionObserver(entries=>{visible=entries.at(-1).isIntersecting;stopClock();render(false);wake();}).observe(lab);
 reduced.addEventListener('change',()=>{stopClock();manual();paused=true;if(pending){applyPreparation();pending=null;}opacity=1;render();wake();});
 bind();themeLabel();describe();renderRecords();render();wake();
+
+MechanicalPlayback.bind({stop:()=>{stopClock();},refresh:()=>{visible=MechanicalPlayback.inView(lab,document.querySelector('.playback'));hover=lab.matches(':hover');focusHold=!!document.activeElement?.closest('.laboratory,.playback');drag=null;stage.classList.remove('dragging');},resume:()=>{render(false);wake();}});

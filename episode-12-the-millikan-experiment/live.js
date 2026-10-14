@@ -43,7 +43,7 @@ function render(){
   else if(fallVelocity!==null){const radius=O.radiusFromFall(fallVelocity);put('measure-data',`Caída: 0,20 mm en ${fmt(measurement.elapsed,3)} s\nvcaída = ${fmt(fallVelocity*1e6,2)} μm/s · radio = ${fmt(radius*1e6,3)} μm`);}
   else put('measure-data','Primero mide la caída sin campo.\nAsí podrás inferir el radio de la gota.');
   let next=spawn?'El atomizador prepara otra gota.':contact||!inView()?'Pulveriza otra gota para continuar la observación.':measurement?.active?'El cronómetro se detendrá al completar 0,20 mm.':fallVelocity===null?'1. Mide cuánto tarda la gota en descender 0,20 mm con el campo apagado.':recorded.has(currentKey())?'Carga registrada. Captura un electrón o pulveriza otra gota y repite.':s.balanced?'3. La gota está casi suspendida: registra su carga en el cuaderno.':'2. Ajusta una tensión positiva hasta suspender la gota; también puedes usar la ayuda de equilibrio.';
-  put('next-step',next);put('play',paused?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches;
+  put('next-step',next);put('play',contact?'▶ Nueva gota':paused||auto&&(hover||focusHold)?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches;
   put('tour',reduced.matches?'Ver otro estado':'Demostración');$('tour').setAttribute('aria-pressed',String(auto));
   put('status',reduced.matches?'Movimiento reducido · avance manual':spawn?'Atomizador en funcionamiento':measurement?.active?'Cronometrando la caída libre':contact?'Observación terminada':paused?'Reloj en pausa':auto&&(hover||focusHold)?'Demostración en pausa':auto?'Demostración automática':'Exploración libre');
   Object.assign(lab.dataset,{u:String(U),target:String(target),z:String(drop.z),velocity:String(v),balanced:String(s.balanced),n:String(drop.n),serial:String(serial),radius:String(drop.radius),fallVelocity:String(fallVelocity??''),measuring:String(!!measurement?.active),elapsed:String(measurement?.elapsed??0),records:String(records.length),auto:String(auto),paused:String(paused),clock:String(clock),visible:String(visible),contact:contact??'',spawning:String(!!spawn),reduced:String(reduced.matches)});
@@ -79,7 +79,7 @@ function needsFrames(){return !reduced.matches&&(!!spawn||Math.abs(target-U)>1e-
 function tick(now){raf=0;if(!enabled()){last=0;return;}const dt=last?Math.min(.05,Math.max(0,(now-last)/1000)):0;last=now;advanceFrame(dt);render();if(needsFrames())raf=requestAnimationFrame(tick);else last=0;}
 function wake(){if(enabled()&&needsFrames()&&!raf){last=0;raf=requestAnimationFrame(tick);}}
 function stopClock(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;}
-function togglePlay(){if(reduced.matches)return;manual();paused=!paused;render();wake();}
+function togglePlay(){if(reduced.matches)return;if(contact){introduce();return;}const held=auto&&(hover||focusHold);manual();paused=held?false:!paused;render();wake();}
 function manualStep(){manual();paused=true;if(spawn){if(!spawn.applied)applyDrop();spawn=null;}advancePhysical(1,true);render();wake();}
 function measure(){
   if($('measure').disabled)return;manual();U=target=0;fallVelocity=null;measurement={active:true,start:drop.z,elapsed:0};paused=reduced.matches;
@@ -124,3 +124,5 @@ document.addEventListener('visibilitychange',()=>{stopClock();render();wake();})
 const observer=new IntersectionObserver(entries=>{for(const entry of entries)intersections.set(entry.target,entry.isIntersecting);visible=[...intersections.values()].some(Boolean);stopClock();render();wake();});observer.observe(stage);observer.observe(optic);
 reduced.addEventListener('change',()=>{stopClock();auto=false;paused=true;U=target;if(spawn){if(!spawn.applied)applyDrop();spawn=null;}render();wake();});
 updateTheme();renderRecords();render();wake();
+
+MechanicalPlayback.bind({stop:()=>{stopClock();},refresh:()=>{for(const el of [stage,optic])intersections.set(el,MechanicalPlayback.inView(el));visible=[...intersections.values()].some(Boolean);hover=lab.matches(':hover');focusHold=!!document.activeElement?.closest('.laboratory,.playback');drag=null;stage.classList.remove('dragging');},resume:()=>{render();wake();}});

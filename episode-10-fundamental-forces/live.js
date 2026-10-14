@@ -125,3 +125,5 @@ reduced.addEventListener('change',()=>{auto=false;paused=false;last=0;wake();});
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}
 $('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});
 themeLabel();controls();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(raf)cancelAnimationFrame(raf);raf=0;last=0;},refresh:()=>{for(const f of figures)intersections.set(f.stage,MechanicalPlayback.inView(f.stage));visible=[...intersections.values()].some(Boolean);hover=figures.some(f=>f.el.matches(':hover'));drag=null;},resume:()=>{wake();}});

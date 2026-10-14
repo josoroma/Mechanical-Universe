@@ -32,7 +32,7 @@ function render(draw=true){
   put('record-context',`Bola maciza · amplitud ${fmt(state.amplitude*100,0)} cm · salida por la ${state.side<0?'izquierda':'derecha'}`);
   put('motion-state',pending?'Preparando una nueva prueba':state.amplitude===0?'En el mínimo · reposo':state.t===0?`Preparado · amplitud ${fmt(state.amplitude*100,0)} cm`:'Cada cuerpo conserva su propia energía');
   put('status',reduced.matches?'Movimiento reducido · avance manual':pending?armed?'Preparando · salida programada':'Preparando una nueva prueba':state.amplitude===0?'Equilibrio · sin movimiento':auto&&(hover||focusHold)?'Demostración en pausa':auto&&delay>0?'Demostración lista para comenzar':paused?'Reloj en pausa':auto?'Demostración automática':'Exploración libre');
-  put('play',paused?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches||!!pending||state.amplitude===0;$('step').disabled=!!pending;
+  put('play',paused||auto&&(hover||focusHold)?'▶ Reanudar':'Ⅱ Pausar');$('play').disabled=reduced.matches||!!pending||state.amplitude===0;$('step').disabled=!!pending;
   put('release',reduced.matches?'Volver al inicio':pending?(armed?'Preparando…':'Soltar al preparar'):'Soltar los tres');$('release').disabled=!!pending&&armed;
   $('record').disabled=!!pending||records.length>=3||Math.abs(state.t-lastRecorded)<1e-8;$('tour').setAttribute('aria-pressed',String(auto));put('tour',reduced.matches?'Preparar demostración':'Demostración');
   Object.assign(lab.dataset,{time:String(state.t),amplitude:String(state.amplitude),side:String(state.side),factor:String(state.factor),k:String(s.k),initial:String(s.E),records:String(records.length),auto:String(auto),paused:String(paused),ready:String(!pending),opacity:String(opacity),visible:String(visible),reduced:String(reduced.matches),rate:String(rate)});
@@ -48,7 +48,7 @@ function stopClock(){if(raf)cancelAnimationFrame(raf);raf=0;last=0;}
 function tick(now){raf=0;if(!enabled()){last=0;return;}const dt=last?Math.min(1/30,Math.max(0,(now-last)/1000)):0;last=now;frame(dt);render();if(needsFrames())raf=requestAnimationFrame(tick);else last=0;}
 function wake(){if(enabled()&&needsFrames()&&!raf){last=0;raf=requestAnimationFrame(tick);}}
 function step(){if(pending)return;manual();paused=true;state=O.advance(state,.1);render();say(`Tiempo del modelo: ${fmt(state.t,2)} segundos.`);wake();}
-function togglePlay(){if(reduced.matches||pending||!state.amplitude)return;manual();paused=!paused;render(false);wake();}
+function togglePlay(){if(reduced.matches||pending||!state.amplitude)return;const held=auto&&(hover||focusHold);manual();paused=held?false:!paused;render(false);wake();}
 function chooseAmplitude(value){params={...params,amplitude:O.clamp(Math.round(value),0,50)/100};prepare();}
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}
 $('amplitude').addEventListener('input',event=>chooseAmplitude(Number(event.target.value)));$('stiffness').addEventListener('change',()=>{params={...params,factor:$('stiffness').checked?2:1};prepare();});
@@ -70,3 +70,5 @@ document.querySelector('.page').addEventListener('focusout',event=>{focusHold=!!
 document.addEventListener('visibilitychange',()=>{stopClock();render(false);wake();});new IntersectionObserver(entries=>{visible=entries.at(-1).isIntersecting;stopClock();render(false);wake();}).observe(lab);
 reduced.addEventListener('change',()=>{stopClock();manual();paused=true;if(pending){applyPreparation();pending=null;}opacity=1;render();wake();});
 themeLabel();describe();renderRecords();render();wake();
+
+MechanicalPlayback.bind({stop:()=>{stopClock();},refresh:()=>{visible=MechanicalPlayback.inView(lab,document.querySelector('.playback'));hover=lab.matches(':hover');focusHold=!!document.activeElement?.closest('.laboratory,.playback');drag=null;stage.classList.remove('dragging');},resume:()=>{render(false);wake();}});

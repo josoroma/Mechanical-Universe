@@ -606,7 +606,23 @@ body :is(.legend-brass, .key-a, .key-b, .swatch.iron, .swatch.brass) {
   box-shadow: 0 0 0 1px var(--metal-mid);
 }
 
-</style></head><body class="iso" data-theme="dark"><div class="page">
+</style><script data-playback-lifecycle>
+// Embedded in each standalone episode; no network request is required.
+window.MechanicalPlayback={
+ inView(...elements){return elements.some(el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.top<innerHeight&&r.left<innerWidth;});},
+ bind({stop,resume,refresh}){
+  // A restored document can retain an RAF id whose callback was discarded.
+  // Keep the reader's play/pause choice; only renew the browser's clock.
+  const recover=()=>{stop();refresh();if(!document.hidden)resume();};
+  addEventListener('pagehide',stop);
+  addEventListener('pageshow',recover);
+  addEventListener('focus',recover);
+  document.addEventListener('visibilitychange',recover);
+  document.addEventListener('click',event=>{if(event.target.closest('#play,#demo'))recover();},true);
+ }
+};
+
+</script></head><body class="iso" data-theme="dark"><div class="page">
 <header class="masthead"><a class="wordmark" href="../index.html" aria-label="El universo mecánico, índice de episodios"><svg class="brand-mark" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11"/><ellipse cx="15" cy="15" rx="5" ry="13" transform="rotate(45 15 15)"/><path d="M2 15h26M15 2v26"/><circle cx="15" cy="15" r="2"/></svg><span>El universo mecánico</span></a><div class="masthead-right"><span class="folio">Comprender el mundo a través del movimiento</span><button type="button" class="theme-toggle" id="theme" aria-label="Cambiar al tema claro"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 13.6A7 7 0 0 1 6.4 5a7 7 0 1 0 8.6 8.6Z"/></svg></button></div></header>
 <main><section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Episodio 08 <span>·</span> La manzana y la Luna</p><h1 id="page-title">Caer.<br><em>Sin llegar al suelo.</em></h1></div><p class="intro-copy">La manzana cae. La Luna también.<br>Newton imaginó un cañón para unir ambas ideas.<br><strong>Dale velocidad y descubre qué cambia.</strong></p></section>
 <div class="profiles" role="group" aria-label="Elige un lanzamiento"><button type="button" class="profile" data-preset="fall" aria-pressed="false"><span class="profile-number">01</span><span><span class="profile-name">Volver a la Tierra</span><span class="profile-math">4,000 km/s</span></span></button><button type="button" class="profile" data-preset="circle" aria-pressed="true"><span class="profile-number">02</span><span><span class="profile-name">Dar la vuelta</span><span class="profile-math">Órbita circular</span></span></button><button type="button" class="profile" data-preset="ellipse" aria-pressed="false"><span class="profile-number">03</span><span><span class="profile-name">Alargar la órbita</span><span class="profile-math">8,500 km/s</span></span></button><button type="button" class="profile" data-preset="escape" aria-pressed="false"><span class="profile-number">04</span><span><span class="profile-name">Escapar</span><span class="profile-math">Velocidad de escape</span></span></button></div>
@@ -2694,4 +2710,6 @@ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;stage.datas
 document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;last=0;}else wake();});
 reduced.addEventListener('change',()=>{if(reduced.matches){automatic=playing=false;cancelAnimationFrame(frame);frame=0;t=target;render();}else{render();wake();}});
 prepare();gravityRender();render();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(frame)cancelAnimationFrame(frame);frame=0;last=0;},refresh:()=>{visible=MechanicalPlayback.inView(stage);drag=null;},resume:()=>{render();wake();}});
 </script></body></html>

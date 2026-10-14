@@ -58,3 +58,5 @@ for(const f of figures){const id=f.kind==='gravity'?'distance':f.kind==='electri
 const observer=new IntersectionObserver(entries=>{for(const e of entries){const f=figures.find(f=>f.stage===e.target);f.visible=e.isIntersecting;}last=0;wake();},{threshold:.02});figures.forEach(f=>observer.observe(f.stage));document.addEventListener('visibilitychange',()=>{last=0;wake();});
 reduced.addEventListener('change',()=>{auto=false;paused=false;pending=0;manualRate=0;last=0;wake();});
 function themeLabel(){$('theme').setAttribute('aria-label',document.body.dataset.theme==='dark'?'Cambiar al tema claro':'Cambiar al tema oscuro');}$('theme').addEventListener('click',()=>{document.body.dataset.theme=document.body.dataset.theme==='dark'?'light':'dark';themeLabel();});themeLabel();controls();wake();
+
+MechanicalPlayback.bind({stop:()=>{if(raf)cancelAnimationFrame(raf);raf=0;last=0;},refresh:()=>{for(const f of figures){f.visible=MechanicalPlayback.inView(f.stage);f.hover=f.el.matches(':hover');}drag=null;},resume:()=>{wake();}});
