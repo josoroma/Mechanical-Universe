@@ -1,0 +1,6 @@
+import * as E from '../laboratory/electrical.mjs';
+export const DEFAULTS={speed:6,field:.5,resistance:4,mode:1},clamp=E.clamp,RADIUS=.10,INNER=.01,LENGTH=.16,AMPLITUDE=.06;
+export function create(p={}){return {...DEFAULTS,...p,t:0};}
+export const advance=(s,dt)=>({...s,t:Math.max(0,s.t+dt)});
+export function snapshot(s){const angle=s.speed*s.t,position=.12+AMPLITUDE*Math.sin(angle),velocity=AMPLITUDE*s.speed*Math.cos(angle),diskEmf=.5*s.field*s.speed*(RADIUS**2-INNER**2),rodEmf=s.field*LENGTH*velocity,diskCurrent=diskEmf/s.resistance,rodCurrent=rodEmf/s.resistance,force=-s.field*LENGTH*rodCurrent,torque=-.5*s.field*(RADIUS**2-INNER**2)*diskCurrent,emf=s.mode?rodEmf:diskEmf,current=s.mode?rodCurrent:diskCurrent,power=emf*current,k=(s.field*LENGTH*AMPLITUDE*s.speed)**2/s.resistance,rodEnergy=s.speed?k*(s.t/2+Math.sin(2*angle)/(4*s.speed)):0,diskEnergy=diskEmf*diskCurrent*s.t;return {angle,position,velocity,diskEmf,rodEmf,diskCurrent,rodCurrent,force,torque,emf,current,power,energy:s.mode?rodEnergy:diskEnergy,rodEnergy,diskEnergy,mechanical:s.mode?-force*velocity:-torque*s.speed,flux:-s.field*LENGTH*position,field:s.field,selected:s.mode?'Barra deslizante':'Disco de Faraday'};}
+export function plot(s){return {curve:Array.from({length:321},(_,i)=>[12*i/320,snapshot({...s,t:12*i/320}).emf*1000]),reference:[[0,0],[12,0]],marker:[s.t,snapshot(s).emf*1000]};}

@@ -1,6 +1,6 @@
 # El universo mecánico
 
-Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–36 están disponibles como explicaciones interactivas; los episodios 37–52 figuran como pendientes y no tienen enlaces vacíos.
+Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–37 están disponibles como explicaciones interactivas; los episodios 38–52 figuran como pendientes y no tienen enlaces vacíos.
 
 Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
 
@@ -28,7 +28,7 @@ Cada carpeta de episodio conserva su código fuente, documentación, pruebas y l
 
 [AGENTS.md](AGENTS.md) documenta el idioma, la paleta, los materiales, el espacio de las tablas y las reglas de selección para conservar este diseño en futuros episodios.
 
-Para actualizar las 73 páginas publicadas después de modificar el tema:
+Para actualizar las 75 páginas publicadas después de modificar el tema:
 
 ```sh
 node build-all.mjs
@@ -44,7 +44,19 @@ node tests/themes.mjs
 
 La prueba también comprueba que se muestran las máquinas y que los textos principales no se recortan. Guarda cuatro hojas de revisión en `shots/themes/`. Puedes indicar otro navegador Chromium mediante `CHROME_PATH`.
 
-`node tests/playback.mjs` comprueba la recuperación del reloj al navegar con Atrás, restaurar una página y volver de una pestaña oculta, a 1440 y 390 px. También verifica que no se dupliquen los relojes y que los episodios 17–26 conserven la pausa manual y puedan repetir el recorrido al terminar.
+`node tests/playback.mjs` comprueba la recuperación del reloj al navegar con Atrás, restaurar una página y volver de una pestaña oculta, a 1440 y 390 px. También verifica que no se dupliquen los relojes y que los episodios 17–37 conserven la pausa manual y puedan repetir el recorrido al terminar.
+
+## Laboratorios 27–37
+
+Los once episodios nuevos incluyen modelos físicos independientes, fuentes de consulta, controles de teclado y táctiles, avance manual y pruebas reproducibles en cada carpeta. El bloque recorre electricidad estática, campo y potencial, baterías, circuitos, magnetismo, flujos vectoriales e inducción.
+
+Para comprobar sus modelos matemáticos:
+
+```sh
+node --test episode-2[789]-*/tests/model.test.mjs episode-3[0-7]-*/tests/model.test.mjs
+```
+
+Cada `build.mjs --audit` comprueba las piezas reales y el orden de profundidad. Los escenarios `tests/browser.json`, `tests/mobile.json` y `tests/normal.json` verifican controles, lecturas, trazos, temas, movimiento reducido y pausa fuera de pantalla con `laboratory/scripts/drive.mjs`.
 
 ## GitHub Pages
 

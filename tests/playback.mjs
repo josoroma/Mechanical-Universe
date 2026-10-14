@@ -40,5 +40,5 @@ try{
   await send('Page.navigateToHistoryEntry',{entryId:entry});await until(`location.href===${JSON.stringify(url)}&&document.readyState==='complete'&&!!window.MechanicalPlayback`);await ev('document.activeElement.blur();window.before=__ticks');await until('__ticks>before+2');
   assert.equal(errors.length,0,errors.join('\n'));console.log(`${width}px · Episodio ${ep.number}: restauración, pestaña oculta y reloj único${ep.number>=17?', repetición y pausa manual':''} correctos`);
  }}
- console.log('26 episodios · 52 escenarios de reproducción · consola limpia.');
+ const count=episodes.filter(e=>e.folder).length;console.log(`${count} episodios · ${count*2} escenarios de reproducción · consola limpia.`);
 }finally{socket?.close();chrome.kill();server.close();await wait(120);rmSync(profile,{recursive:true,force:true});}

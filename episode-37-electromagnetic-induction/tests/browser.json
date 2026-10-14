@@ -1,0 +1,290 @@
+[
+  [
+    "eval",
+    "(()=>{if(document.body.dataset.theme!=='dark')throw Error('El tema inicial debe ser oscuro');if(document.querySelector('.laboratory').dataset.paused!=='true')throw Error('Movimiento reducido');})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-37-lines-dark.png"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(Math.abs(+document.getElementById('speed').value-7)>1e-8)throw Error('Teclado');document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"angle\":0,\"position\":0.12,\"velocity\":0.36,\"diskEmf\":0.014850000000000004,\"rodEmf\":0.0288,\"diskCurrent\":0.003712500000000001,\"rodCurrent\":0.0072,\"force\":-0.000576,\"torque\":-0.000009188437500000004,\"emf\":0.0288,\"current\":0.0072,\"power\":0.00020736,\"energy\":0,\"rodEnergy\":0,\"diskEnergy\":0,\"mechanical\":0.00020736,\"flux\":-0.0096,\"field\":0.5};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 0';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"angle\":18,\"position\":0.07494076519369942,\"velocity\":0.23771401496786884,\"diskEmf\":0.014850000000000004,\"rodEmf\":0.019017121197429508,\"diskCurrent\":0.003712500000000001,\"rodCurrent\":0.004754280299357377,\"force\":-0.0003803424239485902,\"torque\":-0.000009188437500000004,\"emf\":0.019017121197429508,\"current\":0.004754280299357377,\"power\":0.00009041272465943069,\"energy\":0.00030247103070625146,\"rodEnergy\":0.00030247103070625146,\"diskEnergy\":0.00016539187500000008,\"mechanical\":0.00009041272465943069,\"flux\":-0.005995261215495954,\"field\":0.5};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 3';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"angle\":36,\"position\":0.06049326879341305,\"velocity\":-0.046066928265865684,\"diskEmf\":0.014850000000000004,\"rodEmf\":-0.0036853542612692546,\"diskCurrent\":0.003712500000000001,\"rodCurrent\":-0.0009213385653173136,\"force\":0.00007370708522538509,\"torque\":-0.000009188437500000004,\"emf\":-0.0036853542612692546,\"current\":-0.0009213385653173136,\"power\":0.000003395459007763863,\"energy\":0.000624273033854264,\"rodEnergy\":0.000624273033854264,\"diskEnergy\":0.00033078375000000017,\"mechanical\":0.000003395459007763863,\"flux\":-0.004839461503473044,\"field\":0.5};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 6';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"angle\":72,\"position\":0.13522940176572218,\"velocity\":-0.3482102117785977,\"diskEmf\":0.014850000000000004,\"rodEmf\":-0.027856816942287813,\"diskCurrent\":0.003712500000000001,\"rodCurrent\":-0.006964204235571953,\"force\":0.0005571363388457563,\"torque\":-0.000009188437500000004,\"emf\":-0.027856816942287813,\"current\":-0.006964204235571953,\"power\":0.00019400056253903334,\"energy\":0.0012399175734287174,\"rodEnergy\":0.0012399175734287174,\"diskEnergy\":0.0006615675000000003,\"mechanical\":0.00019400056253903337,\"flux\":-0.010818352141257774,\"field\":0.5};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 12';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"speed\");e.value=-12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"speed\");e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"field\");e.value=-0.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"field\");e.value=0.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"resistance\");e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"resistance\");e.value=10;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mode\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"mode\");e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"0\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"1\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"2\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"3\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"4\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-37-lines-dark.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-detail-0-dark.png",
+    "[data-part=\"disk.rotor\"]",
+    4,
+    [
+      -160,
+      -160,
+      320,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-detail-1-dark.png",
+    "[data-part=\"slider.bar\"]",
+    4,
+    [
+      -100,
+      -120,
+      220,
+      260
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('theme').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-37-lines-light.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-detail-0-light.png",
+    "[data-part=\"disk.rotor\"]",
+    4,
+    [
+      -160,
+      -160,
+      320,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-37-detail-1-light.png",
+    "[data-part=\"slider.bar\"]",
+    4,
+    [
+      -100,
+      -120,
+      220,
+      260
+    ]
+  ],
+  [
+    "key",
+    "Enter",
+    "a.wordmark"
+  ],
+  [
+    "until",
+    "Boolean(document.querySelector('.episodes')) && location.pathname.endsWith('/index.html')"
+  ]
+]
