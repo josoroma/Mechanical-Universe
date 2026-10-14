@@ -1,0 +1,150 @@
+[
+  [
+    "eval",
+    "document.body.dataset.theme='dark'"
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('view');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('which');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const nodes=[...document.querySelectorAll('[data-hit]')];if(nodes.filter(n=>n.getAttribute('opacity')==='1').length!==600)throw Error('Recuento de impactos');for(const[i,x,y]of [[0,587.0817131027859,326.04888840762163],[299,581.4383606308543,280.4111016945941],[599,614.9222519643155,280.73363189317683]]){const n=nodes[i];if(Math.abs(+n.getAttribute('cx')-x)>1e-7||Math.abs(+n.getAttribute('cy')-y)>1e-7)throw Error('Muestreo y pantalla no coinciden');}return '600 impactos en sus posiciones calculadas';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-50-impacts-0-dark.png",
+    "[data-part=\"detector.screen\"]",
+    4,
+    [
+      -100,
+      -110,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('view');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('which');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const nodes=[...document.querySelectorAll('[data-hit]')];if(nodes.filter(n=>n.getAttribute('opacity')==='1').length!==600)throw Error('Recuento de impactos');for(const[i,x,y]of [[0,589.213646258849,326.843001301238],[299,578.428572645824,279.2900011389004],[599,614.5460284661867,280.59349432371505]]){const n=nodes[i];if(Math.abs(+n.getAttribute('cx')-x)>1e-7||Math.abs(+n.getAttribute('cy')-y)>1e-7)throw Error('Muestreo y pantalla no coinciden');}return '600 impactos en sus posiciones calculadas';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-50-impacts-1-dark.png",
+    "[data-part=\"detector.screen\"]",
+    4,
+    [
+      -100,
+      -110,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "document.body.dataset.theme='light'"
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('view');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('which');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const nodes=[...document.querySelectorAll('[data-hit]')];if(nodes.filter(n=>n.getAttribute('opacity')==='1').length!==600)throw Error('Recuento de impactos');for(const[i,x,y]of [[0,587.0817131027859,326.04888840762163],[299,581.4383606308543,280.4111016945941],[599,614.9222519643155,280.73363189317683]]){const n=nodes[i];if(Math.abs(+n.getAttribute('cx')-x)>1e-7||Math.abs(+n.getAttribute('cy')-y)>1e-7)throw Error('Muestreo y pantalla no coinciden');}return '600 impactos en sus posiciones calculadas';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-50-impacts-0-light.png",
+    "[data-part=\"detector.screen\"]",
+    4,
+    [
+      -100,
+      -110,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('view');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('which');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const nodes=[...document.querySelectorAll('[data-hit]')];if(nodes.filter(n=>n.getAttribute('opacity')==='1').length!==600)throw Error('Recuento de impactos');for(const[i,x,y]of [[0,589.213646258849,326.843001301238],[299,578.428572645824,279.2900011389004],[599,614.5460284661867,280.59349432371505]]){const n=nodes[i];if(Math.abs(+n.getAttribute('cx')-x)>1e-7||Math.abs(+n.getAttribute('cy')-y)>1e-7)throw Error('Muestreo y pantalla no coinciden');}return '600 impactos en sus posiciones calculadas';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-50-impacts-1-light.png",
+    "[data-part=\"detector.screen\"]",
+    4,
+    [
+      -100,
+      -110,
+      420,
+      350
+    ]
+  ]
+]
