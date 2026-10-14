@@ -16,7 +16,7 @@ export const episodes=[
   ['Conservación de la cantidad de movimiento','episode-15-conservation-of-momentum'],
   ['Movimiento armónico','episode-16-harmonic-motion'],
   ['Resonancia','episode-17-resonance'],
-  ['Ondas'],
+  ['Ondas','episode-18-waves'],
   ['Momento angular'],
   ['Momentos de fuerza y giróscopos'],
   ['Las tres leyes de Kepler'],
