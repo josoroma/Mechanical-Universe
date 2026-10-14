@@ -1,4 +1,8 @@
+![El universo mecánico: homenaje a The Mechanical Universe, con un planetario mecánico, un oscilador y bobinas de inducción sobre un fondo oscuro.](assets/homenaje-universo-mecanico.png)
+
 # El universo mecánico
+
+Un homenaje a [The Mechanical Universe… and Beyond](https://www.its.caltech.edu/~tmu/), la serie educativa de física de Caltech e INTELECOM.
 
 ## Contenido
 
@@ -9,7 +13,7 @@
 
 Índice de los 52 episodios de la colección, con títulos en español. Los 52 episodios están disponibles como explicaciones interactivas.
 
-Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
+El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
 
 Sitio: <https://josoroma.github.io/Mechanical-Universe/>
 
