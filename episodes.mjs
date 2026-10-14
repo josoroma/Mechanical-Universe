@@ -25,7 +25,7 @@ export const episodes=[
   ['Navegación en el espacio','episode-24-navigating-in-space'],
   ['De Kepler a Einstein','episode-25-from-kepler-to-einstein'],
   ['La armonía de las esferas','episode-26-harmony-of-the-spheres'],
-  ['Más allá del universo mecánico'],
+  ['Más allá del universo mecánico','episode-27-beyond-the-mechanical-universe'],
   ['Electricidad estática'],
   ['El campo eléctrico'],
   ['Capacitancia y potencial'],

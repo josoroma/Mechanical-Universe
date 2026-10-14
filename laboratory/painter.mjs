@@ -30,7 +30,7 @@ export function geometry(part,P){
     if(!round){edges=[F.a,...poly.map((p,i)=>{const q=poly[(i+1)%poly.length];return add(mul(F.u,q[0]-p[0]),mul(F.v,q[1]-p[1]));})];normals=[F.a,...edges.slice(1).map(e=>G.cross3(F.a,e))];}
   }
   const screen=hull(vertices.map(p=>K.iso(p,P))),xs=screen.map(p=>p[0]),ys=screen.map(p=>p[1]);
-  return{name:part.name,at:part.at,round,ball,sections,vertices,normals,edges,screen,screenAxes:axes(screen),bounds:[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)],depth:K.depthOf(part.at,P),route:s.route,chunk:s.chunk};
+  return{name:part.name,at:part.at,round,ball,sections,vertices,normals,edges,screen,screenAxes:axes(screen),bounds:[Math.min(...xs),Math.min(...ys),Math.max(...xs),Math.max(...ys)],depth:K.depthOf(part.at,P),route:s.route,chunk:s.chunk,cycleChunks:s.cycleChunks};
 }
 function interval(s,n){
   const n2=dot(n,n);
@@ -52,7 +52,7 @@ function relation(a,b,V){
 export function orderParts(parts,P,cache=new WeakMap()){
   const shapes=parts.map(p=>{const key=p.geometryKey??p;if(!cache.has(key))cache.set(key,geometry(p,P));return cache.get(key);}),V=G.viewOf(P),forward=shapes.map(()=>[]),degree=shapes.map(()=>0);
   for(let i=0;i<shapes.length;i++)for(let j=i+1;j<shapes.length;j++){
-    const a=shapes[i],b=shapes[j];if(a.route&&a.route===b.route&&Math.abs(a.chunk-b.chunk)<=1)continue;
+    const a=shapes[i],b=shapes[j];if(a.route&&a.route===b.route&&(Math.abs(a.chunk-b.chunk)<=1||a.cycleChunks&&Math.abs(a.chunk-b.chunk)===a.cycleChunks-1))continue;
     if(!pairCache.has(a))pairCache.set(a,new WeakMap());const row=pairCache.get(a);let r;
     if(row.has(b))r=row.get(b);else{r=overlap(a,b)?relation(a,b,V):0;row.set(b,r);}
     if(!r)continue;const from=r>0?i:j,to=r>0?j:i;forward[from].push(to);degree[to]++;
