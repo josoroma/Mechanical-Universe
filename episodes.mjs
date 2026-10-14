@@ -43,7 +43,7 @@ export const episodes=[
   ['La transformación de Lorentz','episode-42-the-lorentz-transformation'],
   ['Velocidad y tiempo','episode-43-velocity-and-time'],
   ['Energía, cantidad de movimiento y masa','episode-44-energy-momentum-and-mass'],
-  ['Temperatura y la ley de los gases'],
+  ['Temperatura y la ley de los gases','episode-45-temperature-and-the-gas-law'],
   ['El motor de la naturaleza'],
   ['Entropía'],
   ['Bajas temperaturas'],
