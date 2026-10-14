@@ -1,0 +1,14 @@
+import * as K from '../laboratory/kit/iso-kit.mjs';
+import * as G from '../laboratory/kit/lathe.mjs';
+import * as C from '../laboratory/geometry.mjs';
+import * as E from '../laboratory/electrical.mjs';
+import * as O from './model.mjs';
+export const WIDTH=1000,HEIGHT=750,PLAN={x:-155,y:-120,w:340,d:250,r:10},P=K.fitProjection(K.boxCorners(PLAN,-14,130),WIDTH,HEIGHT,{pad:40,azimuth:57,elevation:40});
+export const defs=C.defs;
+let fixedParts,gatePart;
+export function fixed(){if(fixedParts)return fixedParts;const a=C.base(P,PLAN,'ENTROPÍA · XLVII'),B=C.builders(a,P),particles=O.particles(O.create());let dots='';for(let i=0;i<60;i++){const q=particles[i]||{x:.5,y:.5},p=K.iso([-118+236*q.x,-48+96*q.y,25],P);dots+=`<circle data-molecule="${i}" cx="${p[0]}" cy="${p[1]}" r="2.4" fill="${q.group?'#ef91bc':'#71d9cb'}" opacity="${i<particles.length?1:0}"/>`;}B.slab('chamber.floor',{x:-123,y:-53,w:246,d:106,r:1},22,3,'iron',dots);for(const y of[-53,50])for(const x of[-123,1]){const plan={x,y,w:122,d:3,r:0};B.slab('chamber.wall.'+x+'.'+y,plan,25,30,'iron',C.line(K.sideSeam(plan,49,P,6)));for(const dx of[8,114])B.screw('wall.screw.'+x+'.'+y+'.'+dx,x+dx,y+1.5,55,.65);}for(const x of[-123,120])B.slab('chamber.end.'+x,{x,y:-50,w:3,d:100,r:0},25,30,'iron');
+ for(const y of[-60,60]){B.c('guide.foot.'+y,0,y,6,22,3,'iron');B.c('guide.post.'+y,0,y,2,25,80,'silver');B.c('guide.cap.'+y,0,y,4,108,3,'iron',C.line(K.knurl(0,y,4,108,111,28,P,0)));}B.slab('gantry',{x:-5,y:-60,w:10,d:120,r:1},105,3,'iron');E.knob(B,P,'gate.knob',0,0,108);E.meter(B,P,'entropy',151,-65);E.knob(B,P,'speed.knob',130,87);E.knob(B,P,'count.knob',166,87);fixedParts=a;return a;}
+export function moving(s){if(!gatePart){const a=[],B=C.builders(a,P),plan={x:-1,y:-58,w:2,d:116,r:0};gatePart=B.slab('gate',plan,25,30,'silver',C.line(K.sideSeam(plan,43,P,6)));}const lift=O.snapshot(s).lift,p={...gatePart,at:[...gatePart.at],shape:{...gatePart.shape,z:25+lift},translate:[0,0,lift]};p.at[2]+=lift;const a=[p],B=C.builders(a,P,true);B.slide('gate.spindle',{o:[0,0,0],a:[0,0,1],u:[1,0,0],v:[0,1,0]},55+lift,105,1.2,'silver');return a;}
+export function scene(s=O.create()){return [...fixed(),...moving(s)];}
+export const svgParts=(a,o)=>C.svgParts(a,o,P);
+export function afterPaint(s,root){const v=O.snapshot(s),particles=O.particles(s);for(let i=0;i<60;i++){const n=root.querySelector(`[data-molecule="${i}"]`),q=particles[i];n.setAttribute('opacity',q?1:0);if(q){const p=K.iso([-118+236*q.x,-48+96*q.y,25],P);n.setAttribute('cx',p[0]);n.setAttribute('cy',p[1]);n.setAttribute('fill',s.kind?'#d5dbdf':q.group?'#ef91bc':'#71d9cb');}}E.setMeter(root,P,'entropy',151,-65,v.entropy/(O.AMOUNT*O.R*Math.log(2)));E.setKnob(root,P,'speed.knob',130,87,(s.speed-.25)/1.75);E.setKnob(root,P,'count.knob',166,87,(s.count-20)/40);E.setKnob(root,P,'gate.knob',0,0,v.lift/45,115);}

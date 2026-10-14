@@ -1,0 +1,77 @@
+[
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-47-phone-dark.png",
+    ".page",
+    1,
+    [
+      0,
+      0,
+      390,
+      1600
+    ]
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(+document.getElementById('speed').value!==2)throw Error('Fin');})()"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(+document.getElementById('speed').value!==0.25)throw Error('Inicio');document.getElementById('reset').click();document.getElementById('theme').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-47-phone-light.png",
+    ".page",
+    1,
+    [
+      0,
+      0,
+      390,
+      1600
+    ]
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.3,
+    0.55,
+    0.6,
+    0.55,
+    8
+  ],
+  [
+    "eval",
+    "(()=>{if(+document.getElementById('speed').value<=1)throw Error('Arrastre');})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ]
+]
