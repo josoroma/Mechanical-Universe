@@ -1,0 +1,7 @@
+import * as E from '../laboratory/electrical.mjs';
+export const DEFAULTS={bath:1.5,initial:2,final:.1,mode:0},clamp=E.clamp,MU=.6717138156,R=8.314462618,N=.01;
+export function create(p={}){return {...DEFAULTS,...p,t:0};}
+export const advance=(s,dt)=>({...s,t:Math.max(0,s.t+dt)});
+export function spinEntropy(x){return Math.log(2*Math.cosh(x))-x*Math.tanh(x);}
+export function snapshot(s){const magnet=clamp(s.t/3,0,1),demagnet=clamp((s.t-4)/6,0,1),field=s.t<=3?s.initial*magnet:s.initial+(s.final-s.initial)*demagnet,isolated=!s.mode&&s.t>=4,temperature=isolated?s.bath*field/s.initial:s.bath,x=MU*field/temperature,entropy=N*R*spinEntropy(x),initialEntropy=N*R*spinEntropy(MU*s.initial/s.bath),switchAngle=s.mode?0:Math.PI/4*clamp(s.t-3,0,1),heatBath=s.mode?N*R*s.bath*(Math.log(2)-spinEntropy(x)):s.bath*(N*R*Math.log(2)-(s.t<3?entropy:initialEntropy));return {field,temperature,entropy,polarization:100*Math.tanh(x),x,switchAngle,heatBath,finalTemperature:s.mode?s.bath:s.bath*s.final/s.initial,cooling:temperature/s.bath,phase:s.t<3?'Magnetización isotérmica · expulsa calor':s.t<4?(s.mode?'Contacto térmico conservado':'Aislamiento · abre el interruptor'):s.t<10?(s.mode?'Desmagnetización isotérmica · entra calor':'Desmagnetización adiabática · se enfría'):'Estado final ideal',connection:switchAngle<1e-6?'En contacto con el baño':'Aislado del baño'};}
+export function plot(s){const v=snapshot(s);return {curve:Array.from({length:241},(_,i)=>[i*.05,snapshot({...s,t:i*.05}).temperature]),reference:[[0,s.bath],[12,s.bath]],marker:[s.t,v.temperature]};}

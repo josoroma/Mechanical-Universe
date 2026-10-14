@@ -46,7 +46,7 @@ export const episodes=[
   ['Temperatura y la ley de los gases','episode-45-temperature-and-the-gas-law'],
   ['El motor de la naturaleza','episode-46-engine-of-nature'],
   ['Entropía','episode-47-entropy'],
-  ['Bajas temperaturas'],
+  ['Bajas temperaturas','episode-48-low-temperatures'],
   ['El átomo'],
   ['Partículas y ondas'],
   ['De los átomos a los quarks'],
