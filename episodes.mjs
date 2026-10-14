@@ -36,7 +36,7 @@ export const episodes=[
   ['El campo magnético','episode-35-the-magnetic-field'],
   ['Campos vectoriales e hidrodinámica','episode-36-vector-fields-and-hydrodynamics'],
   ['Inducción electromagnética','episode-37-electromagnetic-induction'],
-  ['Corriente alterna'],
+  ['Corriente alterna','episode-38-alternating-current'],
   ['Las ecuaciones de Maxwell'],
   ['Óptica'],
   ['El experimento de Michelson-Morley'],
