@@ -2,18 +2,18 @@
 
 ![El universo mecánico: homenaje a la serie original. 52 episodios interactivos para explorar la física en español. Planetario mecánico, oscilador y bobinas de inducción sobre un fondo oscuro.](assets/homenaje-universo-mecanico.png)
 
+Índice de los 52 episodios de la colección, con títulos en español. Los 52 episodios están disponibles como explicaciones interactivas.
+
+El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
+
+Sitio: <https://josoroma.github.io/Mechanical-Universe/>
+
 ## Contenido
 
 - [Actualizar el índice](#actualizar-el-índice)
 - [Temas de la colección](#temas-de-la-colección)
 - [GitHub Pages](#github-pages)
 - [Prompts utilizados en el loop](#prompts-utilizados-en-el-loop)
-
-Índice de los 52 episodios de la colección, con títulos en español. Los 52 episodios están disponibles como explicaciones interactivas.
-
-El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
-
-Sitio: <https://josoroma.github.io/Mechanical-Universe/>
 
 ## Actualizar el índice
 
