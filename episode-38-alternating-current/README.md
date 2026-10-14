@@ -1,4 +1,4 @@
-# 38 · Laboratorio interactivo
+# 38 · Corriente alterna
 
 [Abre el episodio](index.html). Contenido en español, tema oscuro predeterminado, tema claro, teclado, arrastre táctil y avance manual con movimiento reducido. HTML autónomo y fuentes editables.
 

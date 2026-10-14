@@ -1,4 +1,4 @@
-# 40 · Laboratorio interactivo
+# 40 · Óptica
 
 [Abre el episodio](index.html). Contenido en español, tema oscuro predeterminado, tema claro, teclado, arrastre táctil y avance manual con movimiento reducido. HTML autónomo y fuentes editables.
 
@@ -13,3 +13,9 @@ node laboratory/scripts/drive.mjs episode-40-optics/index.html --actions episode
 ```
 
 El diseño y las piezas se documentan en concept.md; model.mjs contiene el modelo puro, scene.mjs la geometría real y lesson.mjs los textos y las fuentes. El registro comprueba las piezas y los cables dibujados, sin formas sustitutas ni sesgos de orden.
+
+Comprobación adicional de extremos y detalles móviles:
+
+```sh
+node laboratory/scripts/drive.mjs episode-40-optics/index.html --actions episode-40-optics/tests/limits.json --width 1440 --height 1800 --reduced
+```

@@ -1,4 +1,4 @@
-# 39 · Laboratorio interactivo
+# 39 · Las ecuaciones de Maxwell
 
 [Abre el episodio](index.html). Contenido en español, tema oscuro predeterminado, tema claro, teclado, arrastre táctil y avance manual con movimiento reducido. HTML autónomo y fuentes editables.
 

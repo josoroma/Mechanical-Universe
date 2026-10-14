@@ -1,0 +1,158 @@
+[
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('mode');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "window.pattern=[...document.querySelectorAll('[data-fringe]')].map(n=>+n.getAttribute('opacity'))"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=90;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "if([...document.querySelectorAll('[data-fringe]')].some((n,i)=>Math.abs(+n.getAttribute('opacity')-pattern[i])>1e-12))throw Error('Las franjas isotrópicas cambian con el giro')"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('mode');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "window.pattern=[...document.querySelectorAll('[data-fringe]')].map(n=>+n.getAttribute('opacity'))"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=90;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "if([...document.querySelectorAll('[data-fringe]')].reduce((v,n,i)=>v+Math.abs(+n.getAttribute('opacity')-pattern[i]),0)<5)throw Error('No aparece la predicción del éter')"
+  ],
+  [
+    "eval",
+    "if(document.body.dataset.theme!=='dark')document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('offset');e.value=-0.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"source.knob\",\"d\":\"M445.4 223.3L445.4 217.4M444.4 223.4L444.4 217.5M443.4 223.5L443.4 217.6M442.3 223.4L442.3 217.5M441.3 223.2L441.3 217.4M440.4 223L440.4 217.1M439.6 222.6L439.6 216.7M438.9 222.1L438.9 216.2M438.4 221.6L438.4 215.7M438.1 221L438.1 215.1M448.7 221L448.7 215.1M448.4 221.6L448.4 215.7M447.9 222.1L447.9 216.2M447.2 222.6L447.2 216.7M446.4 223L446.4 217.1M448.8 220.8L448.5 221.5L447.9 222.2L447 222.7L445.9 223.1L444.7 223.4L443.4 223.5L442.1 223.4L440.9 223.1L439.8 222.7L439 222.2L438.4 221.5L438.1 220.8M448.8 214.9L448.5 215.6L447.9 216.3L447 216.8L445.9 217.2L444.7 217.5L443.4 217.6L442.1 217.5L440.9 217.2L439.8 216.8L439 216.3L438.4 215.6L438.1 214.9\"},{\"name\":\"mirror.trim.a\",\"d\":\"M528.6 380.8L529.1 377.3L530.6 373.7L533 370.4L536.1 367.6L539.7 365.4L543.6 364.1L547.5 363.6L551.1 364.1L554.2 365.5L556.6 367.7L558.1 370.6L558.6 373.9L558.1 377.4L556.6 381L554.2 384.3L551.1 387.1L547.5 389.3L543.6 390.6L539.7 391.1L536.1 390.6L533 389.2L530.6 387L529.1 384.1Z\"},{\"name\":\"mirror.trim.b\",\"d\":\"M354.7 325.8L355 322.7L355.6 320.3L356.5 319L357.8 318.6L359.2 319.4L360.8 321.2L362.4 323.8L363.8 327.3L365.1 331.1L366.1 335.3L366.7 339.3L366.9 343L366.7 346.2L366.1 348.5L365.1 349.9L363.8 350.2L362.4 349.5L360.8 347.7L359.2 345L357.8 341.6L356.5 337.7L355.6 333.6L355 329.5Z\"},{\"name\":\"micrometer.drum\",\"d\":\"M558.1 408.9L561.5 413.7M558.3 407.6L561.6 412.4M558.7 406.2L562.1 411M559.5 404.9L562.9 409.7M560.6 403.8L564 408.5M561.9 402.8L565.2 407.5M563.3 402L566.6 406.8M564.8 401.5L568.1 406.3M566.2 401.3L569.6 406.1M567.7 401.4L571 406.2M568.9 401.8L572.3 406.6M558.3 410.2L561.6 415M558.6 411.1L558.2 410.1L558.1 409L558.2 407.8L558.6 406.6L559.2 405.4L560 404.3L561 403.4L562.2 402.5L563.5 401.9L564.8 401.5L566.1 401.3L567.4 401.4L568.5 401.7L569.5 402.2L570.4 402.9M562 415.9L561.6 414.9L561.5 413.8L561.6 412.6L562 411.4L562.6 410.2L563.4 409.1L564.4 408.1L565.6 407.3L566.8 406.7L568.2 406.3L569.5 406.1L570.7 406.2L571.9 406.4L572.9 407L573.7 407.7\"}])if(document.querySelector('[data-part=\"'+p.name+'\"] [data-detail]').getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);const phase=+document.querySelector('.laboratory').dataset.phase;if(Math.abs(phase-(-1.6338296690930123))>1e-10)throw Error('Fase incorrecta');for(let i=0;i<64;i++){const expected=.5*(1+Math.cos(2*Math.PI*(3*((i+.5)/64-.5)+phase)));if(Math.abs(+document.querySelector('[data-fringe=\"'+i+'\"]').getAttribute('opacity')-expected)>1e-12)throw Error('Intensidad incorrecta');}return 'Giro, micrómetro, texturas y franjas correctos';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-41-limite-minimo-dark.png",
+    "[data-part=\"mirror.back.a\"]",
+    4,
+    [
+      -180,
+      -180,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=145;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('offset');e.value=0.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"source.knob\",\"d\":\"M644.1 334L644.1 328.1M643.8 334.6L643.8 328.7M643.4 335.1L643.4 329.2M642.7 335.6L642.7 329.7M641.9 336L641.9 330.1M641 336.3L641 330.4M640 336.5L640 330.6M639 336.6L639 330.7M637.9 336.5L637.9 330.7M636.9 336.4L636.9 330.5M635.9 336.1L635.9 330.2M635.1 335.8L635.1 329.9M634.4 335.3L634.4 329.4M633.9 334.8L633.9 328.9M633.5 334.2L633.5 328.3M644.1 333.9L643.8 334.6L643.2 335.3L642.4 335.8L641.3 336.2L640.1 336.5L638.8 336.6L637.5 336.5L636.3 336.2L635.2 335.8L634.3 335.3L633.7 334.6L633.4 333.9M644.1 328L643.8 328.7L643.2 329.4L642.4 329.9L641.3 330.3L640.1 330.6L638.8 330.7L637.5 330.6L636.3 330.3L635.2 329.9L634.3 329.4L633.7 328.7L633.4 328\"},{\"name\":\"mirror.trim.a\",\"d\":\"M363.8 344.4L363.8 341.3L363.9 339.1L363.9 337.8L364.1 337.6L364.2 338.5L364.3 340.5L364.5 343.3L364.6 346.9L364.7 350.9L364.8 355.1L364.9 359.3L364.9 363L364.9 366.1L364.8 368.4L364.7 369.7L364.6 369.9L364.5 368.9L364.3 367L364.2 364.1L364.1 360.6L363.9 356.5L363.9 352.3L363.8 348.2Z\"},{\"name\":\"mirror.trim.b\",\"d\":\"M520.5 269.4L520 266L518.4 262.8L515.8 260.1L512.5 258.1L508.5 256.8L504.4 256.5L500.2 257L496.3 258.4L492.9 260.6L490.3 263.4L488.7 266.6L488.2 270.1L488.7 273.5L490.3 276.7L492.9 279.4L496.3 281.4L500.2 282.6L504.4 283L508.5 282.5L512.5 281.1L515.8 278.9L518.4 276.1L520 272.9Z\"},{\"name\":\"micrometer.drum\",\"d\":\"M315 347.6L306 347.8M315 348L306 348.2M315.1 348.8L306.1 349M315.1 349.9L306.1 350.1M315.2 351.2L306.2 351.4M315.2 352.7L306.2 352.9M315.3 354.3L306.3 354.4M315.3 355.9L306.3 356.1M315.3 357.4L306.3 357.6M315.3 358.8L306.3 359M315.3 360.1L306.3 360.2M315.3 361L306.3 361.2M315.3 361.6L306.3 361.8M315.1 349.7L315.2 350.8L315.2 352L315.2 353.3L315.3 354.7L315.3 356.1L315.3 357.4L315.3 358.7L315.3 359.8M306.1 349.9L306.2 350.9L306.2 352.2L306.2 353.5L306.3 354.9L306.3 356.3L306.3 357.6L306.3 358.8L306.3 359.9\"}])if(document.querySelector('[data-part=\"'+p.name+'\"] [data-detail]').getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);const phase=+document.querySelector('.laboratory').dataset.phase;if(Math.abs(phase-(1.7617560694468857))>1e-10)throw Error('Fase incorrecta');for(let i=0;i<64;i++){const expected=.5*(1+Math.cos(2*Math.PI*(3*((i+.5)/64-.5)+phase)));if(Math.abs(+document.querySelector('[data-fringe=\"'+i+'\"]').getAttribute('opacity')-expected)>1e-12)throw Error('Intensidad incorrecta');}return 'Giro, micrómetro, texturas y franjas correctos';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-41-limite-maximo-dark.png",
+    "[data-part=\"mirror.back.a\"]",
+    4,
+    [
+      -180,
+      -180,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "if(document.body.dataset.theme!=='light')document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('offset');e.value=-0.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"source.knob\",\"d\":\"M445.4 223.3L445.4 217.4M444.4 223.4L444.4 217.5M443.4 223.5L443.4 217.6M442.3 223.4L442.3 217.5M441.3 223.2L441.3 217.4M440.4 223L440.4 217.1M439.6 222.6L439.6 216.7M438.9 222.1L438.9 216.2M438.4 221.6L438.4 215.7M438.1 221L438.1 215.1M448.7 221L448.7 215.1M448.4 221.6L448.4 215.7M447.9 222.1L447.9 216.2M447.2 222.6L447.2 216.7M446.4 223L446.4 217.1M448.8 220.8L448.5 221.5L447.9 222.2L447 222.7L445.9 223.1L444.7 223.4L443.4 223.5L442.1 223.4L440.9 223.1L439.8 222.7L439 222.2L438.4 221.5L438.1 220.8M448.8 214.9L448.5 215.6L447.9 216.3L447 216.8L445.9 217.2L444.7 217.5L443.4 217.6L442.1 217.5L440.9 217.2L439.8 216.8L439 216.3L438.4 215.6L438.1 214.9\"},{\"name\":\"mirror.trim.a\",\"d\":\"M528.6 380.8L529.1 377.3L530.6 373.7L533 370.4L536.1 367.6L539.7 365.4L543.6 364.1L547.5 363.6L551.1 364.1L554.2 365.5L556.6 367.7L558.1 370.6L558.6 373.9L558.1 377.4L556.6 381L554.2 384.3L551.1 387.1L547.5 389.3L543.6 390.6L539.7 391.1L536.1 390.6L533 389.2L530.6 387L529.1 384.1Z\"},{\"name\":\"mirror.trim.b\",\"d\":\"M354.7 325.8L355 322.7L355.6 320.3L356.5 319L357.8 318.6L359.2 319.4L360.8 321.2L362.4 323.8L363.8 327.3L365.1 331.1L366.1 335.3L366.7 339.3L366.9 343L366.7 346.2L366.1 348.5L365.1 349.9L363.8 350.2L362.4 349.5L360.8 347.7L359.2 345L357.8 341.6L356.5 337.7L355.6 333.6L355 329.5Z\"},{\"name\":\"micrometer.drum\",\"d\":\"M558.1 408.9L561.5 413.7M558.3 407.6L561.6 412.4M558.7 406.2L562.1 411M559.5 404.9L562.9 409.7M560.6 403.8L564 408.5M561.9 402.8L565.2 407.5M563.3 402L566.6 406.8M564.8 401.5L568.1 406.3M566.2 401.3L569.6 406.1M567.7 401.4L571 406.2M568.9 401.8L572.3 406.6M558.3 410.2L561.6 415M558.6 411.1L558.2 410.1L558.1 409L558.2 407.8L558.6 406.6L559.2 405.4L560 404.3L561 403.4L562.2 402.5L563.5 401.9L564.8 401.5L566.1 401.3L567.4 401.4L568.5 401.7L569.5 402.2L570.4 402.9M562 415.9L561.6 414.9L561.5 413.8L561.6 412.6L562 411.4L562.6 410.2L563.4 409.1L564.4 408.1L565.6 407.3L566.8 406.7L568.2 406.3L569.5 406.1L570.7 406.2L571.9 406.4L572.9 407L573.7 407.7\"}])if(document.querySelector('[data-part=\"'+p.name+'\"] [data-detail]').getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);const phase=+document.querySelector('.laboratory').dataset.phase;if(Math.abs(phase-(-1.6338296690930123))>1e-10)throw Error('Fase incorrecta');for(let i=0;i<64;i++){const expected=.5*(1+Math.cos(2*Math.PI*(3*((i+.5)/64-.5)+phase)));if(Math.abs(+document.querySelector('[data-fringe=\"'+i+'\"]').getAttribute('opacity')-expected)>1e-12)throw Error('Intensidad incorrecta');}return 'Giro, micrómetro, texturas y franjas correctos';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-41-limite-minimo-light.png",
+    "[data-part=\"mirror.back.a\"]",
+    4,
+    [
+      -180,
+      -180,
+      420,
+      350
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('angle');e.value=145;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('offset');e.value=0.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"source.knob\",\"d\":\"M644.1 334L644.1 328.1M643.8 334.6L643.8 328.7M643.4 335.1L643.4 329.2M642.7 335.6L642.7 329.7M641.9 336L641.9 330.1M641 336.3L641 330.4M640 336.5L640 330.6M639 336.6L639 330.7M637.9 336.5L637.9 330.7M636.9 336.4L636.9 330.5M635.9 336.1L635.9 330.2M635.1 335.8L635.1 329.9M634.4 335.3L634.4 329.4M633.9 334.8L633.9 328.9M633.5 334.2L633.5 328.3M644.1 333.9L643.8 334.6L643.2 335.3L642.4 335.8L641.3 336.2L640.1 336.5L638.8 336.6L637.5 336.5L636.3 336.2L635.2 335.8L634.3 335.3L633.7 334.6L633.4 333.9M644.1 328L643.8 328.7L643.2 329.4L642.4 329.9L641.3 330.3L640.1 330.6L638.8 330.7L637.5 330.6L636.3 330.3L635.2 329.9L634.3 329.4L633.7 328.7L633.4 328\"},{\"name\":\"mirror.trim.a\",\"d\":\"M363.8 344.4L363.8 341.3L363.9 339.1L363.9 337.8L364.1 337.6L364.2 338.5L364.3 340.5L364.5 343.3L364.6 346.9L364.7 350.9L364.8 355.1L364.9 359.3L364.9 363L364.9 366.1L364.8 368.4L364.7 369.7L364.6 369.9L364.5 368.9L364.3 367L364.2 364.1L364.1 360.6L363.9 356.5L363.9 352.3L363.8 348.2Z\"},{\"name\":\"mirror.trim.b\",\"d\":\"M520.5 269.4L520 266L518.4 262.8L515.8 260.1L512.5 258.1L508.5 256.8L504.4 256.5L500.2 257L496.3 258.4L492.9 260.6L490.3 263.4L488.7 266.6L488.2 270.1L488.7 273.5L490.3 276.7L492.9 279.4L496.3 281.4L500.2 282.6L504.4 283L508.5 282.5L512.5 281.1L515.8 278.9L518.4 276.1L520 272.9Z\"},{\"name\":\"micrometer.drum\",\"d\":\"M315 347.6L306 347.8M315 348L306 348.2M315.1 348.8L306.1 349M315.1 349.9L306.1 350.1M315.2 351.2L306.2 351.4M315.2 352.7L306.2 352.9M315.3 354.3L306.3 354.4M315.3 355.9L306.3 356.1M315.3 357.4L306.3 357.6M315.3 358.8L306.3 359M315.3 360.1L306.3 360.2M315.3 361L306.3 361.2M315.3 361.6L306.3 361.8M315.1 349.7L315.2 350.8L315.2 352L315.2 353.3L315.3 354.7L315.3 356.1L315.3 357.4L315.3 358.7L315.3 359.8M306.1 349.9L306.2 350.9L306.2 352.2L306.2 353.5L306.3 354.9L306.3 356.3L306.3 357.6L306.3 358.8L306.3 359.9\"}])if(document.querySelector('[data-part=\"'+p.name+'\"] [data-detail]').getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);const phase=+document.querySelector('.laboratory').dataset.phase;if(Math.abs(phase-(1.7617560694468857))>1e-10)throw Error('Fase incorrecta');for(let i=0;i<64;i++){const expected=.5*(1+Math.cos(2*Math.PI*(3*((i+.5)/64-.5)+phase)));if(Math.abs(+document.querySelector('[data-fringe=\"'+i+'\"]').getAttribute('opacity')-expected)>1e-12)throw Error('Intensidad incorrecta');}return 'Giro, micrómetro, texturas y franjas correctos';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-41-limite-maximo-light.png",
+    "[data-part=\"mirror.back.a\"]",
+    4,
+    [
+      -180,
+      -180,
+      420,
+      350
+    ]
+  ]
+]

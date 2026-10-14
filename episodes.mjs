@@ -39,7 +39,7 @@ export const episodes=[
   ['Corriente alterna','episode-38-alternating-current'],
   ['Las ecuaciones de Maxwell','episode-39-maxwells-equations'],
   ['Óptica','episode-40-optics'],
-  ['El experimento de Michelson-Morley'],
+  ['El experimento de Michelson-Morley','episode-41-the-michelson-morley-experiment'],
   ['La transformación de Lorentz'],
   ['Velocidad y tiempo'],
   ['Energía, cantidad de movimiento y masa'],
