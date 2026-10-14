@@ -1,0 +1,142 @@
+[
+  [
+    "eval",
+    "document.body.dataset.theme='dark'"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('logQ');n.value=4;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('baryon');n.value=0;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('time');n.value=5;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.querySelector('[data-viewer=\"2\"]').getAttribute('opacity')!=='1')throw Error('Visor de quarks');if(+document.querySelector('.laboratory').dataset.charge!==1)throw Error('Carga');const n=[...document.querySelectorAll('[data-quark]')].filter(n=>n.getAttribute('fill')==='#f2d49b').length;if(n!==2)throw Error('Composición de valencia');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Notación científica');return 'Resolución, carga y visor coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-51-quarks-0-dark.png",
+    "[data-part=\"viewer.2.face\"]",
+    4,
+    [
+      -95,
+      -95,
+      270,
+      260
+    ]
+  ],
+  [
+    "eval",
+    "document.body.dataset.theme='dark'"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('logQ');n.value=4;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('baryon');n.value=1;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('time');n.value=5;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.querySelector('[data-viewer=\"2\"]').getAttribute('opacity')!=='1')throw Error('Visor de quarks');if(+document.querySelector('.laboratory').dataset.charge!==0)throw Error('Carga');const n=[...document.querySelectorAll('[data-quark]')].filter(n=>n.getAttribute('fill')==='#f2d49b').length;if(n!==1)throw Error('Composición de valencia');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Notación científica');return 'Resolución, carga y visor coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-51-quarks-1-dark.png",
+    "[data-part=\"viewer.2.face\"]",
+    4,
+    [
+      -95,
+      -95,
+      270,
+      260
+    ]
+  ],
+  [
+    "eval",
+    "document.body.dataset.theme='light'"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('logQ');n.value=4;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('baryon');n.value=0;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('time');n.value=5;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.querySelector('[data-viewer=\"2\"]').getAttribute('opacity')!=='1')throw Error('Visor de quarks');if(+document.querySelector('.laboratory').dataset.charge!==1)throw Error('Carga');const n=[...document.querySelectorAll('[data-quark]')].filter(n=>n.getAttribute('fill')==='#f2d49b').length;if(n!==2)throw Error('Composición de valencia');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Notación científica');return 'Resolución, carga y visor coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-51-quarks-0-light.png",
+    "[data-part=\"viewer.2.face\"]",
+    4,
+    [
+      -95,
+      -95,
+      270,
+      260
+    ]
+  ],
+  [
+    "eval",
+    "document.body.dataset.theme='light'"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('logQ');n.value=4;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('baryon');n.value=1;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const n=document.getElementById('time');n.value=5;n.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.querySelector('[data-viewer=\"2\"]').getAttribute('opacity')!=='1')throw Error('Visor de quarks');if(+document.querySelector('.laboratory').dataset.charge!==0)throw Error('Carga');const n=[...document.querySelectorAll('[data-quark]')].filter(n=>n.getAttribute('fill')==='#f2d49b').length;if(n!==1)throw Error('Composición de valencia');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Notación científica');return 'Resolución, carga y visor coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-51-quarks-1-light.png",
+    "[data-part=\"viewer.2.face\"]",
+    4,
+    [
+      -95,
+      -95,
+      270,
+      260
+    ]
+  ]
+]
