@@ -1,0 +1,54 @@
+[
+  [
+    "eval",
+    "(()=>{document.body.dataset.theme='dark';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Probabilidad redondeada a cero');for(const n of document.querySelectorAll('.readings strong'))if(n.getBoundingClientRect().right>n.parentElement.getBoundingClientRect().right+1)throw Error('Lectura fuera de su columna');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');return 'Probabilidad pequeña legible en móvil';})()"
+  ],
+  [
+    "shot",
+    "shots/episode-52-tiny-dark.png",
+    ".readings",
+    2
+  ],
+  [
+    "eval",
+    "(()=>{document.body.dataset.theme='light';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Probabilidad redondeada a cero');for(const n of document.querySelectorAll('.readings strong'))if(n.getBoundingClientRect().right>n.parentElement.getBoundingClientRect().right+1)throw Error('Lectura fuera de su columna');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');return 'Probabilidad pequeña legible en móvil';})()"
+  ],
+  [
+    "shot",
+    "shots/episode-52-tiny-light.png",
+    ".readings",
+    2
+  ]
+]

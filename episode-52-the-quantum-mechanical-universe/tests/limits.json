@@ -1,0 +1,776 @@
+[
+  [
+    "eval",
+    "(()=>{document.body.dataset.theme='dark';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(23.50188518726485))>1e-7||Math.abs(+d.wellRight-(9.302616495431415))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(9.40075407490594))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(37.60301629962376))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(84.60678667415345))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=4;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(150.41206519849504))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-well-0.2-dark.png",
+    "[data-part=\"well.screen\"]",
+    4,
+    [
+      -160,
+      -140,
+      390,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.41781129221804186))>1e-7||Math.abs(+d.wellRight-(8.662003053518298))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.16712451688721675))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.668498067548867))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(1.5041206519849506))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=4;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(2.673992270195468))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-well-1.5-dark.png",
+    "[data-part=\"well.screen\"]",
+    4,
+    [
+      -160,
+      -140,
+      390,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{window.cloud=[...document.querySelectorAll('[data-cloud=\"0\"]')].map(n=>+n.getAttribute('opacity'));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=1.85;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"0\"]')].map(n=>+n.getAttribute('opacity'));for(let i=0;i<now.length;i++)if(Math.abs(now[i]-cloud[now.length-1-i])>.001)throw Error('La densidad no se refleja en el paso más cercano a medio periodo');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(1.5960928397978633e-7))>1e-7||Math.abs(+d.reflection-(99.9999998403907))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Se perdió una probabilidad pequeña');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-barrier-0.2-dark.png",
+    ".apparatus",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(17.46898323454471))>1e-7||Math.abs(+d.reflection-(82.53101676545525))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-barrier-2-dark.png",
+    ".apparatus",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(99.84772370412699))>1e-7||Math.abs(+d.reflection-(0.15227629587299013))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{document.body.dataset.theme='light';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(23.50188518726485))>1e-7||Math.abs(+d.wellRight-(9.302616495431415))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(9.40075407490594))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(37.60301629962376))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(84.60678667415345))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=4;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(150.41206519849504))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(326.9913742299666))>.1||Math.abs(points.at(-1)-(215.43220812142866))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-well-0.2-light.png",
+    "[data-part=\"well.screen\"]",
+    4,
+    [
+      -160,
+      -140,
+      390,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.41781129221804186))>1e-7||Math.abs(+d.wellRight-(8.662003053518298))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.16712451688721675))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(0.668498067548867))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(1.5041206519849506))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=4;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.energy-(2.673992270195468))>1e-7||Math.abs(+d.wellRight-(50))>1e-7)throw Error('Estado o probabilidad del pozo');const points=document.querySelector('[data-wave=\"0\"]').getAttribute('d').match(/-?\\d+(?:\\.\\d+)?/g).map(Number);if(Math.abs(points.at(-2)-(527.10389026799))>.1||Math.abs(points.at(-1)-(295.44024113096066))>.1)throw Error('La onda no termina en su pared');return 'Pozo: espectro, probabilidad y pared coherentes';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-well-1.5-light.png",
+    "[data-part=\"well.screen\"]",
+    4,
+    [
+      -160,
+      -140,
+      390,
+      320
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('state');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{window.cloud=[...document.querySelectorAll('[data-cloud=\"0\"]')].map(n=>+n.getAttribute('opacity'));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=1.85;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"0\"]')].map(n=>+n.getAttribute('opacity'));for(let i=0;i<now.length;i++)if(Math.abs(now[i]-cloud[now.length-1-i])>.001)throw Error('La densidad no se refleja en el paso más cercano a medio periodo');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=0.2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(1.5960928397978633e-7))>1e-7||Math.abs(+d.reflection-(99.9999998403907))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');if(!document.getElementById('metric-1').textContent.includes('E'))throw Error('Se perdió una probabilidad pequeña');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-barrier-0.2-light.png",
+    ".apparatus",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=2;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(17.46898323454471))>1e-7||Math.abs(+d.reflection-(82.53101676545525))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-52-barrier-2-light.png",
+    ".apparatus",
+    1
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('experiment');e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('energy');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('length');e.value=0.6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(Math.abs(+d.transmission-(99.84772370412699))>1e-7||Math.abs(+d.reflection-(0.15227629587299013))>1e-7)throw Error('Flujo de la barrera');window.cloud=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));window.wave=document.querySelector('[data-wave=\"1\"]').getAttribute('d');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=0.35;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const now=[...document.querySelectorAll('[data-cloud=\"1\"]')].map(n=>+n.getAttribute('opacity'));if(now.some((x,i)=>Math.abs(x-cloud[i])>1e-10))throw Error('Densidad de dispersión no estacionaria');if(document.querySelector('[data-wave=\"1\"]').getAttribute('d')===wave)throw Error('La fase no avanza');return 'Barrera: flujo conservado, densidad estacionaria y fase móvil';})()"
+  ],
+  [
+    "lines"
+  ]
+]
