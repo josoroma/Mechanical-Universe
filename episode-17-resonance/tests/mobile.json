@@ -1,0 +1,81 @@
+[
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-phone-dark.png",
+    ".page",
+    1,
+    [
+      0,
+      0,
+      390,
+      1600
+    ]
+  ],
+  [
+    "key",
+    "End",
+    ".stage"
+  ],
+  [
+    "eval",
+    "if(+document.getElementById('frequency').value!==1.6)throw Error('Fin no selecciona el máximo')"
+  ],
+  [
+    "key",
+    "Home",
+    ".stage"
+  ],
+  [
+    "eval",
+    "if(+document.getElementById('frequency').value!==.4)throw Error('Inicio no selecciona el mínimo')"
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click();document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-phone-light.png",
+    ".page",
+    1,
+    [
+      0,
+      0,
+      390,
+      1600
+    ]
+  ],
+  [
+    "scroll",
+    ".stage"
+  ],
+  [
+    "drag",
+    ".stage",
+    0.3,
+    0.55,
+    0.6,
+    0.55,
+    8
+  ],
+  [
+    "eval",
+    "if(+document.getElementById('frequency').value<=1)throw Error('El arrastre no cambia la frecuencia')"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ]
+]

@@ -1,0 +1,167 @@
+[
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-17-lines-dark.png"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "if(Math.abs(+document.getElementById('frequency').value-1.01)>1e-8)throw Error('Teclado');document.activeElement.blur()"
+  ],
+  [
+    "eval",
+    "document.getElementById('time').value=0;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.getElementById('time').value=1;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.getElementById('time').value=4;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.getElementById('time').value=10;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.getElementById('time').value=20;document.getElementById('time').dispatchEvent(new Event('input',{bubbles:true}))"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset;if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento');if(!Number.isFinite(Number(d.x)))throw Error('Lectura inválida');return {time:d.time,x:d.x,A:d.A,paused:d.paused}})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "document.getElementById('reset').click()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-bank-dark.png",
+    "[data-part=\"spring.ruler\"]",
+    4,
+    [
+      -80,
+      -140,
+      320,
+      210
+    ]
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-generator-dark.png",
+    "[data-part=\"driver.case\"]",
+    4
+  ],
+  [
+    "eval",
+    "document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-17-lines-light.png"
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-bank-light.png",
+    "[data-part=\"spring.ruler\"]",
+    4,
+    [
+      -80,
+      -140,
+      320,
+      210
+    ]
+  ],
+  [
+    "eval",
+    "document.activeElement.blur()"
+  ],
+  [
+    "shot",
+    "shots/episode-17-generator-light.png",
+    "[data-part=\"driver.case\"]",
+    4
+  ],
+  [
+    "key",
+    "Enter",
+    "a.wordmark"
+  ],
+  [
+    "until",
+    "location.pathname.endsWith('/index.html') && Boolean(document.querySelector('.episodes'))"
+  ]
+]
