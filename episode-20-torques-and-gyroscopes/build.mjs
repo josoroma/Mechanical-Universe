@@ -1,0 +1,9 @@
+import {fileURLToPath} from 'node:url';
+import {buildLesson} from '../laboratory/build.mjs';
+import * as C from '../laboratory/geometry.mjs';
+import {lesson} from './lesson.mjs';
+import * as O from './model.mjs';
+import * as S from './scene.mjs';
+import {check} from './audit.mjs';
+if(process.argv.includes('--audit'))check();
+buildLesson(fileURLToPath(new URL('./',import.meta.url)),lesson,O,S,[{file:fileURLToPath(new URL('../laboratory/geometry.mjs',import.meta.url)),name:'C',exports:C}]);
