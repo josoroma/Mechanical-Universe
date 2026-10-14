@@ -50,5 +50,5 @@ export const episodes=[
   ['El átomo','episode-49-the-atom'],
   ['Partículas y ondas','episode-50-particles-and-waves'],
   ['De los átomos a los quarks','episode-51-atoms-to-quarks'],
-  ['El universo de la mecánica cuántica']
+  ['El universo de la mecánica cuántica','episode-52-the-quantum-mechanical-universe']
 ].map(([title,folder],i)=>({number:i+1,title,folder:folder||null}));
