@@ -1,0 +1,4 @@
+export const TAU=2*Math.PI,SOLAR_MU=4*Math.PI**2,AU_KM=149597870.7,YEAR_SECONDS=365.25*86400,KM_S=AU_KM/YEAR_SECONDS;
+export function eccentricAnomaly(M,e){const turns=Math.floor(M/TAU),m=M-turns*TAU;let E=m;for(let i=0;i<20;i++){const d=(E-e*Math.sin(E)-m)/(1-e*Math.cos(E));E-=d;if(Math.abs(d)<1e-14)break;}return E+turns*TAU;}
+export function orbit(a,e,mu,M,peri=0){const E=eccentricAnomaly(M,e),cs=Math.cos(E),sn=Math.sin(E),b=a*Math.sqrt(1-e*e),n=Math.sqrt(mu/a**3),r=a*(1-e*cs),x0=a*(cs-e),y0=b*sn,vx0=-a*n*sn/(1-e*cs),vy0=b*n*cs/(1-e*cs),c=Math.cos(peri),s=Math.sin(peri);let nu=Math.atan2(Math.sqrt(1-e*e)*sn,cs-e);nu+=TAU*Math.floor(E/TAU);if(nu<TAU*Math.floor(E/TAU)-1e-12)nu+=TAU;return {a,e,b,n,E,M,r,x:x0*c-y0*s,y:x0*s+y0*c,vx:vx0*c-vy0*s,vy:vx0*s+vy0*c,speed:Math.hypot(vx0,vy0),h:Math.sqrt(mu*a*(1-e*e)),energy:-mu/(2*a),period:TAU/n,nu:nu+peri};}
+export function atTime(a,e,mu,t,phase=0,peri=0){return orbit(a,e,mu,Math.sqrt(mu/a**3)*t+phase,peri);}
