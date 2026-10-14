@@ -1,0 +1,11 @@
+import * as E from '../laboratory/electrical.mjs';
+export const DEFAULTS={flow:10,circulation:20,stream:1},clamp=E.clamp,OFFSET=.08,CORE=.008,DT=.02;
+export function create(p={}){return {...DEFAULTS,...p,t:0};}
+export const advance=(s,dt)=>({...s,t:Math.max(0,s.t+dt)});
+export function velocity(s,x,y){let vx=s.stream*.01,vy=0;const q=s.flow*1e-4,gamma=s.circulation*1e-4;for(const[cx,strength]of[[-OFFSET,q],[OFFSET,-q]]){const dx=x-cx,r2=Math.max(CORE**2,dx*dx+y*y),k=strength/(E.TAU*r2);vx+=k*dx;vy+=k*y;}const k=gamma/(E.TAU*Math.max(CORE**2,x*x+y*y));return [vx-k*y,vy+k*x];}
+export function rk4(s,p,dt){const add=(a,b,k)=>[a[0]+b[0]*k,a[1]+b[1]*k],a=velocity(s,...p),b=velocity(s,...add(p,a,dt/2)),c=velocity(s,...add(p,b,dt/2)),d=velocity(s,...add(p,c,dt));return [p[0]+dt*(a[0]+2*b[0]+2*c[0]+d[0])/6,p[1]+dt*(a[1]+2*b[1]+2*c[1]+d[1])/6];}
+export function snapshot(s){const [vx,vy]=velocity(s,0,.04);return {vx,vy,speed:Math.hypot(vx,vy),flux:s.flow*1e-4,circulation:s.circulation*1e-4,uniform:s.stream*.01,divergence:0,vorticity:0,direction:Math.hypot(vx,vy)<1e-10?'Sin dirección definida':vx>=0?'Hacia +x':'Hacia −x'};}
+let trackKey='',tracks=[];
+export const seed=i=>[-.125,-.048+.096*i/19];
+export function tracers(s){const key=[s.flow,s.circulation,s.stream].join('|');if(key!==trackKey){trackKey=key;tracks=Array.from({length:20},(_,i)=>[{point:seed(i),alive:true}]);}return tracks.map((track,i)=>{const age=(s.t+i*.3)%6,index=Math.floor(age/DT);while(track.length<=index){const old=track.at(-1),point=old.alive?rk4(s,old.point,DT):old.point,alive=old.alive&&Math.abs(point[0])<.13&&Math.abs(point[1])<.055&&Math.hypot(point[0]-OFFSET,point[1])>CORE;track.push({point,alive});}const base=track[index],point=base.alive?rk4(s,base.point,age-index*DT):base.point,[x,y]=point,edge=Math.min(.13-Math.abs(x),.055-Math.abs(y)),port=Math.min(...[-OFFSET,0,OFFSET].map(cx=>Math.hypot(x-cx,y)-CORE)),opacity=base.alive?clamp(age/.3,0,1)*clamp((6-age)/.3,0,1)*clamp(edge/.008,0,1)*clamp(port/.006,0,1):0;return {point,opacity};});}
+export function plot(s){return {curve:Array.from({length:161},(_,i)=>{const g=-40+i/2;return [g,snapshot({...s,circulation:g}).speed*100];}),reference:[[-40,s.stream],[40,s.stream]],marker:[s.circulation,snapshot(s).speed*100]};}
