@@ -1,4 +1,4 @@
-![El universo mecánico: homenaje a la serie original. 52 episodios interactivos para explorar la física en español. Planetario mecánico, oscilador y bobinas de inducción sobre un fondo oscuro.](assets/homenaje-universo-mecanico.png)
+![El universo mecánico: homenaje a la serie original. 52 episodios interactivos para explorar la física en español. Planetario mecánico, oscilador y bobinas de inducción ante un fondo estelar.](assets/homenaje-universo-mecanico.png)
 
 # El universo mecánico
 
