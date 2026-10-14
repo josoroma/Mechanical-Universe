@@ -29,7 +29,7 @@ export const episodes=[
   ['Electricidad estática','episode-28-static-electricity'],
   ['El campo eléctrico','episode-29-the-electric-field'],
   ['Capacitancia y potencial','episode-30-capacitance-and-potential'],
-  ['Voltaje, energía y fuerza'],
+  ['Voltaje, energía y fuerza','episode-31-voltage-energy-and-force'],
   ['La batería eléctrica'],
   ['Circuitos eléctricos'],
   ['Magnetismo'],
