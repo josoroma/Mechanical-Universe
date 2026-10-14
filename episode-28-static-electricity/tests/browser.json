@@ -1,0 +1,266 @@
+[
+  [
+    "eval",
+    "(()=>{if(document.body.dataset.theme!=='dark')throw Error('El tema inicial debe ser oscuro');if(document.querySelector('.laboratory').dataset.paused!=='true')throw Error('Movimiento reducido');})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-28-lines-dark.png"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(Math.abs(+document.getElementById('current').value-19)>1e-8)throw Error('Teclado');document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"capacitance\":1.6689750831718057e-11,\"resistance\":1000000000000,\"tau\":16.689750831718058,\"voltage\":0,\"charge\":0,\"qBall\":0,\"theta\":0,\"degrees\":0,\"energy\":0,\"leak\":0};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 0';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"capacitance\":1.6689750831718057e-11,\"resistance\":1000000000000,\"tau\":16.689750831718058,\"voltage\":4659.737764149452,\"charge\":7.776986222480136e-8,\"qBall\":9.319475528298905e-10,\"theta\":0.13919412977281714,\"degrees\":7.975236168978698,\"energy\":0.0001811935819608034,\"leak\":4.659737764149452e-9};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 5';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=10;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"capacitance\":1.6689750831718057e-11,\"resistance\":1000000000000,\"tau\":16.689750831718058,\"voltage\":8113.189082152208,\"charge\":1.354071042317357e-7,\"qBall\":1.6226378164304418e-9,\"theta\":0.2226619315969528,\"degrees\":12.757588938736026,\"energy\":0.000549291719849382,\"leak\":8.113189082152209e-9};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 10';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=20;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"capacitance\":1.6689750831718057e-11,\"resistance\":1000000000000,\"tau\":16.689750831718058,\"voltage\":12569.498326373652,\"charge\":2.0978179514687339e-7,\"qBall\":2.5138996652747305e-9,\"theta\":0.31478495942980633,\"degrees\":18.035849629524748,\"energy\":0.0013184259615011426,\"leak\":1.2569498326373653e-8};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 20';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"current\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"current\");e.value=30;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"jar\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"jar\");e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"humidity\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"humidity\");e.value=1;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"0\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"1\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"2\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"3\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-28-lines-dark.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-detail-0-dark.png",
+    "[data-part=\"pendulum.beam\"]",
+    4,
+    [
+      -90,
+      -50,
+      180,
+      220
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-detail-1-dark.png",
+    "[data-part=\"jar.lid\"]",
+    4,
+    [
+      -80,
+      -100,
+      160,
+      200
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('theme').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-28-lines-light.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-detail-0-light.png",
+    "[data-part=\"pendulum.beam\"]",
+    4,
+    [
+      -90,
+      -50,
+      180,
+      220
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-28-detail-1-light.png",
+    "[data-part=\"jar.lid\"]",
+    4,
+    [
+      -80,
+      -100,
+      160,
+      200
+    ]
+  ],
+  [
+    "key",
+    "Enter",
+    "a.wordmark"
+  ],
+  [
+    "until",
+    "Boolean(document.querySelector('.episodes')) && location.pathname.endsWith('/index.html')"
+  ]
+]

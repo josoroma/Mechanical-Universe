@@ -26,7 +26,7 @@ export const episodes=[
   ['De Kepler a Einstein','episode-25-from-kepler-to-einstein'],
   ['La armonía de las esferas','episode-26-harmony-of-the-spheres'],
   ['Más allá del universo mecánico','episode-27-beyond-the-mechanical-universe'],
-  ['Electricidad estática'],
+  ['Electricidad estática','episode-28-static-electricity'],
   ['El campo eléctrico'],
   ['Capacitancia y potencial'],
   ['Voltaje, energía y fuerza'],
