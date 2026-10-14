@@ -40,7 +40,7 @@ export const episodes=[
   ['Las ecuaciones de Maxwell','episode-39-maxwells-equations'],
   ['Óptica','episode-40-optics'],
   ['El experimento de Michelson-Morley','episode-41-the-michelson-morley-experiment'],
-  ['La transformación de Lorentz'],
+  ['La transformación de Lorentz','episode-42-the-lorentz-transformation'],
   ['Velocidad y tiempo'],
   ['Energía, cantidad de movimiento y masa'],
   ['Temperatura y la ley de los gases'],
