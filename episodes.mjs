@@ -47,7 +47,7 @@ export const episodes=[
   ['El motor de la naturaleza','episode-46-engine-of-nature'],
   ['Entropía','episode-47-entropy'],
   ['Bajas temperaturas','episode-48-low-temperatures'],
-  ['El átomo'],
+  ['El átomo','episode-49-the-atom'],
   ['Partículas y ondas'],
   ['De los átomos a los quarks'],
   ['El universo de la mecánica cuántica']

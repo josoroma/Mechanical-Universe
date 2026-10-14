@@ -1,0 +1,7 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import * as O from '../model.mjs';
+const near=(a,b,t=1e-8)=>assert.ok(Math.abs(a-b)<t*Math.max(1,Math.abs(a),Math.abs(b)),`${a} ≠ ${b}`);
+test('Dispersión de Rutherford, límite frontal y dependencia de E y Z',()=>{const s=O.create(),v=O.snapshot(s);near(Math.tan(v.theta/2),O.KE*79/(5*25));near(O.snapshot(O.create({impact:0})).deflection,180);assert.ok(O.snapshot(O.create({energy:10})).deflection<v.deflection);assert.ok(O.snapshot(O.create({charge:29})).deflection<v.deflection);});
+test('La hipérbola conserva energía, alcanza r mínimo y termina a 500 fm',()=>{for(const energy of[2,10])for(const impact of[0,25,100])for(const charge of[29,79]){const s=O.create({energy,impact,charge}),a=O.snapshot(s),m=O.snapshot(O.advance(s,4)),b=O.snapshot(O.advance(s,8));near(a.r,500);near(b.r,500);near(m.r,m.closest);for(let t=0;t<=8;t+=.2){const v=O.snapshot(O.advance(s,t));near(Math.hypot(v.x,v.y),v.r);near(v.kinetic+v.potential,energy);assert.ok(Number.isFinite(v.x)&&v.kinetic>=0);}if(!impact)near(m.kinetic,0);}});
+test('La velocidad de la trayectoria satisface energía y momento angular',()=>{const s=O.create({impact:40,energy:6}),o=O.orbit(s),f=.3,h=1e-5,a=O.point(s,f-h),b=O.point(s,f+h),p=O.point(s,f),dt=4*h*o.half,vx=(b.x-a.x)*1e-15/dt,vy=(b.y-a.y)*1e-15/dt;near(.5*O.ALPHA_MASS*(vx*vx+vy*vy)/O.MEV,s.energy*(1-2*o.a/p.r),1e-6);near(Math.abs(p.x*vy-p.y*vx),s.impact*o.vinf,1e-6);});
