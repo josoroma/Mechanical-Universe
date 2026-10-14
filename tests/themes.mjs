@@ -163,5 +163,6 @@ try {
   console.log(`${pages.length} HTML autónomos · ${configurations} estados de tema y pantalla · consola limpia · 4 hojas de revisión`);
 } finally {
   socket?.close(); chrome.kill('SIGKILL');
+  chrome.stdout?.destroy(); chrome.stderr?.destroy(); chrome.unref();
   rmSync(profile,{recursive:true,force:true});
 }

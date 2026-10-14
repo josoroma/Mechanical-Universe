@@ -41,4 +41,4 @@ try{
   assert.equal(errors.length,0,errors.join('\n'));console.log(`${width}px · Episodio ${ep.number}: restauración, pestaña oculta y reloj único${ep.number>=17?', repetición y pausa manual':''} correctos`);
  }}
  const count=episodes.filter(e=>e.folder).length;console.log(`${count} episodios · ${count*2} escenarios de reproducción · consola limpia.`);
-}finally{socket?.close();chrome.kill();server.close();await wait(120);rmSync(profile,{recursive:true,force:true});}
+}finally{socket?.close();chrome.kill();chrome.stdout?.destroy();chrome.stderr?.destroy();chrome.unref();server.close();await wait(120);rmSync(profile,{recursive:true,force:true});}
