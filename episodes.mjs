@@ -24,7 +24,7 @@ export const episodes=[
   ['Energía y excentricidad','episode-23-energy-and-eccentricity'],
   ['Navegación en el espacio','episode-24-navigating-in-space'],
   ['De Kepler a Einstein','episode-25-from-kepler-to-einstein'],
-  ['La armonía de las esferas'],
+  ['La armonía de las esferas','episode-26-harmony-of-the-spheres'],
   ['Más allá del universo mecánico'],
   ['Electricidad estática'],
   ['El campo eléctrico'],

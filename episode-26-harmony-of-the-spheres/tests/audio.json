@@ -1,0 +1,94 @@
+[
+  [
+    "eval",
+    "(()=>{if(document.querySelector('#sound').getAttribute('aria-pressed')!=='false')throw Error('Audio activado sin gesto');window.createdContexts=0;const Native=window.AudioContext;window.AudioContext=class extends Native{constructor(...args){super(...args);window.createdContexts++;window.testContext=this;}createOscillator(){const o=super.createOscillator();window.testOscillator=o;return o;}createGain(){const g=super.createGain();window.testGain=g;return g;}};})()"
+  ],
+  [
+    "wait",
+    150
+  ],
+  [
+    "eval",
+    "(()=>{if(createdContexts!==0)throw Error('AudioContext creado automáticamente');})()"
+  ],
+  [
+    "scroll",
+    "#sound"
+  ],
+  [
+    "click",
+    "#sound"
+  ],
+  [
+    "wait",
+    400
+  ],
+  [
+    "eval",
+    "(()=>{if(createdContexts!==1||testContext.state!=='running'||document.querySelector('#sound').getAttribute('aria-pressed')!=='true')throw Error('El gesto no activó el sonido');const expected=+document.querySelector('.laboratory').dataset.tone;if(Math.abs(testOscillator.frequency.value-expected)>1)throw Error('Frecuencia inicial incorrecta');if(testGain.gain.value<.024)throw Error('Sonido inaudible');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('eccentricity');el.value='0.4';el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "wait",
+    350
+  ],
+  [
+    "eval",
+    "(()=>{if(Math.abs(testOscillator.frequency.value-220*49/9)>1)throw Error('No sigue el modelo');})()"
+  ],
+  [
+    "eval",
+    "(()=>{const el=document.getElementById('planet');el.value='2';el.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "wait",
+    350
+  ],
+  [
+    "eval",
+    "(()=>{if(+document.getElementById('eccentricity').value!==.0167)throw Error('No recuperó la excentricidad de Tierra');const expected=+document.querySelector('.laboratory').dataset.tone;if(Math.abs(testOscillator.frequency.value-expected)>1)throw Error('No seleccionó el tono de Tierra');Object.defineProperty(document,'hidden',{value:true,configurable:true});document.dispatchEvent(new Event('visibilitychange'));})()"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "(()=>{if(testGain.gain.value>.0001)throw Error('Audio activo en pestaña oculta');delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));})()"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "(()=>{if(testGain.gain.value<.024)throw Error('No recuperó el sonido');window.spacer=document.createElement('div');spacer.style.height='2600px';document.body.append(spacer);scrollTo(0,document.body.scrollHeight);})()"
+  ],
+  [
+    "wait",
+    250
+  ],
+  [
+    "eval",
+    "(()=>{if(testGain.gain.value>.0001)throw Error('Audio fuera de pantalla');spacer.remove();document.getElementById('sound').scrollIntoView({block:'center'});})()"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "click",
+    "#sound"
+  ],
+  [
+    "wait",
+    200
+  ],
+  [
+    "eval",
+    "(()=>{if(document.querySelector('#sound').getAttribute('aria-pressed')!=='false'||testGain.gain.value>.0001)throw Error('No se pudo silenciar');return 'Audio explícito, selección, frecuencia y silencios correctos';})()"
+  ]
+]

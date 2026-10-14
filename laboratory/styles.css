@@ -5,3 +5,5 @@
 body .apparatus.iso-plate{padding:0}
 
 .control-field select{width:100%;min-height:46px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--foreground);font:inherit;font-size:13px}.control-field select:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+
+.sound-controls{margin:24px;padding:16px;border:1px solid var(--border);border-radius:1rem}.sound-controls button{width:100%;padding:12px;border:1px solid var(--border);border-radius:.625rem;background:var(--secondary);color:var(--foreground);font-size:12px;line-height:1.5}.sound-controls button[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}.sound-controls .control-note{margin:14px 0 0}@media(max-width:760px){.sound-controls{margin:16px}}

@@ -1,6 +1,6 @@
 # El universo mecánico
 
-Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–25 están disponibles como explicaciones interactivas; los episodios 26–52 figuran como pendientes y no tienen enlaces vacíos.
+Índice de los 52 episodios de la colección, con títulos en español. Los episodios 1–26 están disponibles como explicaciones interactivas; los episodios 27–52 figuran como pendientes y no tienen enlaces vacíos.
 
 Abre [index.html](index.html) directamente en un navegador. El índice y los episodios funcionan sin servidor ni conexión. La interfaz se abre en tema oscuro, permite cambiar al tema claro y se adapta a pantallas pequeñas. El índice respeta la preferencia de tema que hayas guardado.
 
@@ -28,7 +28,7 @@ Cada carpeta de episodio conserva su código fuente, documentación, pruebas y l
 
 [AGENTS.md](AGENTS.md) documenta el idioma, la paleta, los materiales, el espacio de las tablas y las reglas de selección para conservar este diseño en futuros episodios.
 
-Para actualizar las 51 páginas publicadas después de modificar el tema:
+Para actualizar las 53 páginas publicadas después de modificar el tema:
 
 ```sh
 node build-all.mjs
