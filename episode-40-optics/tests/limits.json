@@ -1,0 +1,106 @@
+[
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('focus');e.value=80;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('distance');e.value=160;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('index');e.value=1.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=9;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-40-limite-cerca-dark.png",
+    ".drawing",
+    2
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('focus');e.value=80;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('distance');e.value=240;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('index');e.value=1.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-40-limite-lejos-dark.png",
+    ".drawing",
+    2
+  ],
+  [
+    "eval",
+    "document.getElementById('theme').click()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('focus');e.value=80;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('distance');e.value=160;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('index');e.value=1.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=9;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-40-limite-cerca-light.png",
+    ".drawing",
+    2
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('focus');e.value=80;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('distance');e.value=240;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('index');e.value=1.8;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById('time');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "shot",
+    "shots/episode-40-limite-lejos-light.png",
+    ".drawing",
+    2
+  ]
+]

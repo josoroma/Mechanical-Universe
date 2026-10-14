@@ -38,7 +38,7 @@ export const episodes=[
   ['Inducción electromagnética','episode-37-electromagnetic-induction'],
   ['Corriente alterna','episode-38-alternating-current'],
   ['Las ecuaciones de Maxwell','episode-39-maxwells-equations'],
-  ['Óptica'],
+  ['Óptica','episode-40-optics'],
   ['El experimento de Michelson-Morley'],
   ['La transformación de Lorentz'],
   ['Velocidad y tiempo'],
