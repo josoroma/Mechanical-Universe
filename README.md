@@ -4,9 +4,6 @@
 
 - [Actualizar el índice](#actualizar-el-índice)
 - [Temas de la colección](#temas-de-la-colección)
-- [Laboratorios 27–37](#laboratorios-2737)
-- [Laboratorios 38–41](#laboratorios-3841)
-- [Laboratorios 42–52](#laboratorios-4252)
 - [GitHub Pages](#github-pages)
 - [Prompts utilizados](#prompts-utilizados)
 
@@ -55,40 +52,6 @@ node tests/themes.mjs
 La prueba también comprueba que se muestran las máquinas y que los textos principales no se recortan. Guarda cuatro hojas de revisión en `shots/themes/`. Puedes indicar otro navegador Chromium mediante `CHROME_PATH`.
 
 `node tests/playback.mjs` comprueba la recuperación del reloj al navegar con Atrás, restaurar una página y volver de una pestaña oculta, a 1440 y 390 px. También verifica que no se dupliquen los relojes y que los episodios 17–52 conserven la pausa manual y puedan repetir el recorrido al terminar.
-
-## Laboratorios 27–37
-
-Los once episodios nuevos incluyen modelos físicos independientes, fuentes de consulta, controles de teclado y táctiles, avance manual y pruebas reproducibles en cada carpeta. El bloque recorre electricidad estática, campo y potencial, baterías, circuitos, magnetismo, flujos vectoriales e inducción.
-
-Para comprobar sus modelos matemáticos:
-
-```sh
-node --test episode-2[789]-*/tests/model.test.mjs episode-3[0-7]-*/tests/model.test.mjs
-```
-
-Cada `build.mjs --audit` comprueba las piezas reales y el orden de profundidad. Los escenarios `tests/browser.json`, `tests/mobile.json` y `tests/normal.json` verifican controles, lecturas, trazos, temas, movimiento reducido y pausa fuera de pantalla con `laboratory/scripts/drive.mjs`.
-
-## Laboratorios 38–41
-
-Cuatro instrumentos nuevos exploran corriente alterna, ecuaciones de Maxwell, óptica y el experimento de Michelson y Morley. Cada carpeta incluye HTML autónomo, modelo físico, fuentes de consulta y pruebas de escritorio y móvil. Los límites de cada aproximación se explican dentro del episodio.
-
-```sh
-node --test episode-3[89]-*/tests/model.test.mjs episode-4[01]-*/tests/model.test.mjs
-```
-
-Los escenarios adicionales `tests/limits.json` de los episodios 40 y 41 comprueban los extremos de los carros, las texturas de las piezas móviles y las franjas de interferencia. Se ejecutan con el mismo controlador de navegador de los demás escenarios.
-
-## Laboratorios 42–52
-
-Once instrumentos completan la colección: transformaciones de Lorentz, relojes de luz, energía y momento relativistas, teoría cinética, ciclo de Carnot, entropía, refrigeración magnética, dispersión de Rutherford, doble rendija, estructura de la materia y mecánica cuántica.
-
-```sh
-node --test episode-4[2-9]-*/tests/model.test.mjs episode-5[0-2]-*/tests/model.test.mjs
-```
-
-Las pruebas contrastan invariantes relativistas, balances termodinámicos, normalización de probabilidades y conservación del flujo cuántico. Cada episodio tiene auditorías de las piezas dibujadas y escenarios de navegador en escritorio y móvil. Los episodios 50–52 incluyen `tests/limits.json` para revisar detecciones individuales, cargas de valencia, estados del pozo y transmisión a través de la barrera. El episodio 52 añade `tests/tiny-mobile.json` para comprobar las probabilidades pequeñas en móvil.
-
-Las lecturas científicas conservan magnitudes que se redondearían a cero con decimales ordinarios. Las notas de cada experimento distinguen el modelo físico, la escala de la ilustración y sus límites.
 
 ## GitHub Pages
 
