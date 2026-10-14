@@ -21,7 +21,7 @@ export const episodes=[
   ['Momentos de fuerza y giróscopos','episode-20-torques-and-gyroscopes'],
   ['Las tres leyes de Kepler','episode-21-keplers-three-laws'],
   ['El problema de Kepler','episode-22-the-kepler-problem'],
-  ['Energía y excentricidad'],
+  ['Energía y excentricidad','episode-23-energy-and-eccentricity'],
   ['Navegación en el espacio'],
   ['De Kepler a Einstein'],
   ['La armonía de las esferas'],
