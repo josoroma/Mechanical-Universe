@@ -17,7 +17,7 @@ export const episodes=[
   ['Movimiento armónico','episode-16-harmonic-motion'],
   ['Resonancia','episode-17-resonance'],
   ['Ondas','episode-18-waves'],
-  ['Momento angular'],
+  ['Momento angular','episode-19-angular-momentum'],
   ['Momentos de fuerza y giróscopos'],
   ['Las tres leyes de Kepler'],
   ['El problema de Kepler'],
