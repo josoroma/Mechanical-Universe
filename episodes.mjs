@@ -28,7 +28,7 @@ export const episodes=[
   ['Más allá del universo mecánico','episode-27-beyond-the-mechanical-universe'],
   ['Electricidad estática','episode-28-static-electricity'],
   ['El campo eléctrico','episode-29-the-electric-field'],
-  ['Capacitancia y potencial'],
+  ['Capacitancia y potencial','episode-30-capacitance-and-potential'],
   ['Voltaje, energía y fuerza'],
   ['La batería eléctrica'],
   ['Circuitos eléctricos'],
