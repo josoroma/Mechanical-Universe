@@ -27,7 +27,7 @@ export const episodes=[
   ['La armonía de las esferas','episode-26-harmony-of-the-spheres'],
   ['Más allá del universo mecánico','episode-27-beyond-the-mechanical-universe'],
   ['Electricidad estática','episode-28-static-electricity'],
-  ['El campo eléctrico'],
+  ['El campo eléctrico','episode-29-the-electric-field'],
   ['Capacitancia y potencial'],
   ['Voltaje, energía y fuerza'],
   ['La batería eléctrica'],
