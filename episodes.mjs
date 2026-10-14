@@ -41,7 +41,7 @@ export const episodes=[
   ['Óptica','episode-40-optics'],
   ['El experimento de Michelson-Morley','episode-41-the-michelson-morley-experiment'],
   ['La transformación de Lorentz','episode-42-the-lorentz-transformation'],
-  ['Velocidad y tiempo'],
+  ['Velocidad y tiempo','episode-43-velocity-and-time'],
   ['Energía, cantidad de movimiento y masa'],
   ['Temperatura y la ley de los gases'],
   ['El motor de la naturaleza'],
