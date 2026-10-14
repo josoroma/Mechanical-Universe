@@ -31,7 +31,7 @@ export const episodes=[
   ['Capacitancia y potencial','episode-30-capacitance-and-potential'],
   ['Voltaje, energía y fuerza','episode-31-voltage-energy-and-force'],
   ['La batería eléctrica','episode-32-the-electric-battery'],
-  ['Circuitos eléctricos'],
+  ['Circuitos eléctricos','episode-33-electric-circuits'],
   ['Magnetismo'],
   ['El campo magnético'],
   ['Campos vectoriales e hidrodinámica'],
