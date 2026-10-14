@@ -44,7 +44,7 @@ export const episodes=[
   ['Velocidad y tiempo','episode-43-velocity-and-time'],
   ['Energía, cantidad de movimiento y masa','episode-44-energy-momentum-and-mass'],
   ['Temperatura y la ley de los gases','episode-45-temperature-and-the-gas-law'],
-  ['El motor de la naturaleza'],
+  ['El motor de la naturaleza','episode-46-engine-of-nature'],
   ['Entropía'],
   ['Bajas temperaturas'],
   ['El átomo'],

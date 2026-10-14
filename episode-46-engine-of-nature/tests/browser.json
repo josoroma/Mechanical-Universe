@@ -1,0 +1,266 @@
+[
+  [
+    "eval",
+    "(()=>{if(document.body.dataset.theme!=='dark')throw Error('El tema inicial debe ser oscuro');if(document.querySelector('.laboratory').dataset.paused!=='true')throw Error('Movimiento reducido');})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-46-lines-dark.png"
+  ],
+  [
+    "key",
+    "ArrowRight",
+    ".stage"
+  ],
+  [
+    "eval",
+    "(()=>{if(Math.abs(+document.getElementById('hot').value-620)>1e-8)throw Error('Teclado');document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=0;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"stage\":0,\"u\":0,\"volume\":1,\"temperature\":600,\"pressure\":99.773551416,\"work\":0,\"heatHot\":0,\"heatCold\":0,\"qh\":69.15775585845314,\"qc\":34.57887792922657,\"net\":34.57887792922657,\"efficiency\":50,\"entropy\":0,\"reservoirEntropy\":0,\"stroke\":0,\"slider\":-70,\"angle\":0};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 0';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"stage\":1,\"u\":0,\"volume\":2,\"temperature\":600,\"pressure\":49.886775708,\"work\":69.15775585845314,\"heatHot\":69.15775585845314,\"heatCold\":0,\"qh\":69.15775585845314,\"qc\":34.57887792922657,\"net\":34.57887792922657,\"efficiency\":50,\"entropy\":0.11526292643075522,\"reservoirEntropy\":-0.11526292643075524,\"stroke\":0.21473723385459292,\"slider\":-57.11576596872442,\"angle\":0.8540772738768209};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 3';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=6;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"stage\":2,\"u\":0,\"volume\":5.65685424949238,\"temperature\":300,\"pressure\":8.818819348664784,\"work\":143.98791942045315,\"heatHot\":69.15775585845314,\"heatCold\":0,\"qh\":69.15775585845314,\"qc\":34.57887792922657,\"net\":34.57887792922657,\"efficiency\":50,\"entropy\":0.1152629264307552,\"reservoirEntropy\":-0.11526292643075524,\"stroke\":1,\"slider\":-10,\"angle\":3.141592653589793};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 6';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"time\");e.value=12;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{const d=document.querySelector('.laboratory').dataset,expected={\"stage\":3,\"u\":1,\"volume\":1,\"temperature\":600,\"pressure\":99.773551416,\"work\":34.57887792922658,\"heatHot\":69.15775585845314,\"heatCold\":34.57887792922657,\"qh\":69.15775585845314,\"qc\":34.57887792922657,\"net\":34.57887792922657,\"efficiency\":50,\"entropy\":0,\"reservoirEntropy\":0,\"stroke\":0,\"slider\":-70,\"angle\":6.283185307179586};for(const [key,value]of Object.entries(expected))if(Math.abs(Number(d[key])-value)>1e-8*Math.max(1,Math.abs(value)))throw Error('Lectura distinta del modelo: '+key);return 'Dibujo y lecturas preparados para t = 12';})()"
+  ],
+  [
+    "lines"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"hot\");e.value=400;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"hot\");e.value=800;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"cold\");e.value=200;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"cold\");e.value=350;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"ratio\");e.value=1.5;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{const e=document.getElementById(\"ratio\");e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"0\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"1\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"2\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.querySelector('[data-preset=\"3\"]').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{if(document.documentElement.lang!=='es')throw Error('Idioma incorrecto');if(document.documentElement.scrollWidth>innerWidth+1)throw Error('Desbordamiento horizontal');for(const e of document.querySelectorAll('h1,h2,.readings strong,.details strong'))if(e.clientWidth&&e.scrollWidth>e.clientWidth+2)throw Error('Texto recortado: '+e.textContent);if(/NaN|undefined/.test(document.querySelector('main').textContent))throw Error('Lectura inválida');return 'Idioma, lecturas y disposición correctos';})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('reset').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-desktop-dark.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-46-lines-dark.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-detail-0-dark.png",
+    "[data-part=\"piston\"]",
+    4,
+    [
+      -100,
+      -130,
+      400,
+      340
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-detail-1-dark.png",
+    "[data-part=\"flywheel\"]",
+    4,
+    [
+      -110,
+      -150,
+      340,
+      340
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.getElementById('theme').click();})()"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-desktop-light.png",
+    ".page",
+    1
+  ],
+  [
+    "lines",
+    "shots/episode-46-lines-light.png"
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-detail-0-light.png",
+    "[data-part=\"piston\"]",
+    4,
+    [
+      -100,
+      -130,
+      400,
+      340
+    ]
+  ],
+  [
+    "eval",
+    "(()=>{document.activeElement.blur();})()"
+  ],
+  [
+    "shot",
+    "shots/episode-46-detail-1-light.png",
+    "[data-part=\"flywheel\"]",
+    4,
+    [
+      -110,
+      -150,
+      340,
+      340
+    ]
+  ],
+  [
+    "key",
+    "Enter",
+    "a.wordmark"
+  ],
+  [
+    "until",
+    "Boolean(document.querySelector('.episodes')) && location.pathname.endsWith('/index.html')"
+  ]
+]
