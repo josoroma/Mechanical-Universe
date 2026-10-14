@@ -20,7 +20,7 @@ export const episodes=[
   ['Momento angular','episode-19-angular-momentum'],
   ['Momentos de fuerza y giróscopos','episode-20-torques-and-gyroscopes'],
   ['Las tres leyes de Kepler','episode-21-keplers-three-laws'],
-  ['El problema de Kepler'],
+  ['El problema de Kepler','episode-22-the-kepler-problem'],
   ['Energía y excentricidad'],
   ['Navegación en el espacio'],
   ['De Kepler a Einstein'],
