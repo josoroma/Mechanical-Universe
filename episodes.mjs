@@ -33,7 +33,7 @@ export const episodes=[
   ['La batería eléctrica','episode-32-the-electric-battery'],
   ['Circuitos eléctricos','episode-33-electric-circuits'],
   ['Magnetismo','episode-34-magnetism'],
-  ['El campo magnético'],
+  ['El campo magnético','episode-35-the-magnetic-field'],
   ['Campos vectoriales e hidrodinámica'],
   ['Inducción electromagnética'],
   ['Corriente alterna'],
