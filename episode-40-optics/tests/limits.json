@@ -16,6 +16,10 @@
     "(()=>{const e=document.getElementById('time');e.value=9;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
   ],
   [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"lens.source.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M440 292.3L442.1 293.2\"},{\"name\":\"lens.screen.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M691.4 392.9L693.6 393.7\"},{\"name\":\"lens.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M444.3 254.2L444.3 249.9M443.5 254.7L443.5 250.4M442.5 255.1L442.5 250.8M441.4 255.2L441.4 250.9M440.2 255.2L440.2 250.8M439.2 254.9L439.2 250.5M438.3 254.4L438.3 250.1M437.8 253.8L437.8 249.5M444.7 253.6L444.7 249.2\"},{\"name\":\"prism.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M298 424.5L298 420.1M297 425.1L297 420.8M295.8 425.6L295.8 421.3M294.5 425.9L294.5 421.6M293.1 426L293.1 421.7M291.6 425.9L291.6 421.5M290.3 425.5L290.3 421.1M289.3 424.9L289.3 420.6M288.4 424.2L288.4 419.8M288 423.3L288 419M298.6 423.7L298.6 419.3\"}]){const n=document.querySelector('[data-part=\"'+p.name+'\"]');if(n.querySelector(p.selector).getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);}return 'Estrías y ranuras siguen a sus piezas';})()"
+  ],
+  [
     "lines"
   ],
   [
@@ -39,6 +43,10 @@
   [
     "eval",
     "(()=>{const e=document.getElementById('time');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"lens.source.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M347.6 255.4L349.8 256.3\"},{\"name\":\"lens.screen.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M636.7 371L638.8 371.9\"},{\"name\":\"lens.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M351.9 217.3L351.9 213M351.1 217.8L351.1 213.5M350.1 218.2L350.1 213.8M349 218.3L349 214M347.9 218.2L347.9 213.9M346.8 218L346.8 213.6M346 217.5L346 213.1M345.4 216.9L345.4 212.5M352.4 216.6L352.4 212.3\"},{\"name\":\"prism.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M298 424.5L298 420.1M297 425.1L297 420.8M295.8 425.6L295.8 421.3M294.5 425.9L294.5 421.6M293.1 426L293.1 421.7M291.6 425.9L291.6 421.5M290.3 425.5L290.3 421.1M289.3 424.9L289.3 420.6M288.4 424.2L288.4 419.8M288 423.3L288 419M298.6 423.7L298.6 419.3\"}]){const n=document.querySelector('[data-part=\"'+p.name+'\"]');if(n.querySelector(p.selector).getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);}return 'Estrías y ranuras siguen a sus piezas';})()"
   ],
   [
     "lines"
@@ -70,6 +78,10 @@
     "(()=>{const e=document.getElementById('time');e.value=9;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
   ],
   [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"lens.source.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M440 292.3L442.1 293.2\"},{\"name\":\"lens.screen.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M691.4 392.9L693.6 393.7\"},{\"name\":\"lens.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M444.3 254.2L444.3 249.9M443.5 254.7L443.5 250.4M442.5 255.1L442.5 250.8M441.4 255.2L441.4 250.9M440.2 255.2L440.2 250.8M439.2 254.9L439.2 250.5M438.3 254.4L438.3 250.1M437.8 253.8L437.8 249.5M444.7 253.6L444.7 249.2\"},{\"name\":\"prism.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M298 424.5L298 420.1M297 425.1L297 420.8M295.8 425.6L295.8 421.3M294.5 425.9L294.5 421.6M293.1 426L293.1 421.7M291.6 425.9L291.6 421.5M290.3 425.5L290.3 421.1M289.3 424.9L289.3 420.6M288.4 424.2L288.4 419.8M288 423.3L288 419M298.6 423.7L298.6 419.3\"}]){const n=document.querySelector('[data-part=\"'+p.name+'\"]');if(n.querySelector(p.selector).getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);}return 'Estrías y ranuras siguen a sus piezas';})()"
+  ],
+  [
     "lines"
   ],
   [
@@ -93,6 +105,10 @@
   [
     "eval",
     "(()=>{const e=document.getElementById('time');e.value=3;e.dispatchEvent(new Event('input',{bubbles:true}));})()"
+  ],
+  [
+    "eval",
+    "(()=>{for(const p of [{\"name\":\"lens.source.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M347.6 255.4L349.8 256.3\"},{\"name\":\"lens.screen.screw\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M636.7 371L638.8 371.9\"},{\"name\":\"lens.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M351.9 217.3L351.9 213M351.1 217.8L351.1 213.5M350.1 218.2L350.1 213.8M349 218.3L349 214M347.9 218.2L347.9 213.9M346.8 218L346.8 213.6M346 217.5L346 213.1M345.4 216.9L345.4 212.5M352.4 216.6L352.4 212.3\"},{\"name\":\"prism.source.knob\",\"selector\":\".iso-line[data-tone=\\\"lo\\\"]\",\"d\":\"M298 424.5L298 420.1M297 425.1L297 420.8M295.8 425.6L295.8 421.3M294.5 425.9L294.5 421.6M293.1 426L293.1 421.7M291.6 425.9L291.6 421.5M290.3 425.5L290.3 421.1M289.3 424.9L289.3 420.6M288.4 424.2L288.4 419.8M288 423.3L288 419M298.6 423.7L298.6 419.3\"}]){const n=document.querySelector('[data-part=\"'+p.name+'\"]');if(n.querySelector(p.selector).getAttribute('d')!==p.d)throw Error('Textura fuera de su pieza: '+p.name);}return 'Estrías y ranuras siguen a sus piezas';})()"
   ],
   [
     "lines"
